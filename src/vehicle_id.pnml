@@ -1,0 +1,14 @@
+item(FEAT_TRAINS, mu_car, 1000) {}
+item(FEAT_TRAINS, emu721) {}
+item(FEAT_TRAINS, emu731) {}
+item(FEAT_TRAINS, emu733) {}
+item(FEAT_TRAINS, emu735) {}
+item(FEAT_TRAINS, emu785_0) {}
+item(FEAT_TRAINS, emu785_300) {}
+item(FEAT_TRAINS, emu789_0) {}
+item(FEAT_TRAINS, emu789_1000) {}
+item(FEAT_TRAINS, dmu201) {}
+item(FEAT_TRAINS, dmu261_0) {}
+item(FEAT_TRAINS, dmu261_1000) {}
+item(FEAT_TRAINS, dmu281) {}
+item(FEAT_TRAINS, dmu283) {}

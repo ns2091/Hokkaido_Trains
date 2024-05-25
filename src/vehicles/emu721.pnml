@@ -1,0 +1,62 @@
+switch(FEAT_TRAINS, SELF, sw_721_subtypes, cargo_subtype) {
+	0: string(STR_LV_721_INITIAL);
+	1: string(STR_LV_721_6CAR_USEAT_INITIAL_MID);
+	2: string(STR_LV_721_3CAR_USEAT_INITIAL_CTL);
+	3: string(STR_LV_721_6CAR_USEAT_RENEWAL_MID);
+	4: string(STR_LV_721_3CAR_USEAT_RENEWAL_CTL);
+	5: string(STR_LV_721_VVVF);
+	6: string(STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID);
+	7: string(STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL);
+}
+
+item(FEAT_TRAINS, emu721) {
+    property {
+        name: string(STR_721_NAME);
+        introduction_date: date(1988, 11, 3);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        // cargo_allow_refit: [];
+        // cargo_disallow_refit: [];
+        loading_speed: param_loading_suburban;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 130 km/h;
+        refit_cost: 0;
+        power: 900 kW;
+        dual_headed: 1;
+        cargo_capacity: param_capacity_suburban;
+        weight: 90 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        // bitmask_vehicle_info: 0;
+    }
+	
+    graphics {
+        default           : sw_721_rvcheck;
+		purchase          : set_721_purchase;
+		additional_text   : string(STR_721_DESC);
+        cargo_subtype_text: sw_721_subtypes;
+        can_attach_wagon  :	sw_721and73xgroup_can_attach_wagon;
+    }
+	
+    livery_override(mu_car){
+        default           : sw_721_rvcheck;
+        cargo_capacity    : param_capacity_suburban;
+        loading_speed     : param_loading_suburban;
+        cargo_subtype_text: sw_721_subtypes;
+		// なぜかpowerもweightもkW/tonが使えない
+        power             : 600;
+        weight            : 45;
+    }
+}

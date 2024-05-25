@@ -1,0 +1,93 @@
+##grflangid 0x01
+STR_GRF_NAME                                                    :{GREEN}Hokkaido {BLACK}Trains
+STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
+
+STR_MUCAR_NAME         : MU Car
+STR_MUCAR_DESC         : Trailer Car
+
+STR_721_NAME: EC721 series
+STR_721_DESC:[3/6cars] Operated by JR Hokkaido
+STR_LV_721_INITIAL                     :Initial livery
+STR_LV_721_6CAR_USEAT_INITIAL_MID      :Consist by {RED}u{BLUE}seat{BLACK} at midcar(Early livery)
+STR_LV_721_3CAR_USEAT_INITIAL_CTL      :Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Early livery)
+STR_LV_721_6CAR_USEAT_RENEWAL_MID      :Consist by {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
+STR_LV_721_3CAR_USEAT_RENEWAL_CTL      :Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
+STR_LV_721_VVVF                        :VVVF livery
+STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
+STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
+
+STR_DC283_NAME :DC283 series
+STR_DC283_DESC :{YELLOW}FURICO {WHITE}283 {BLACK}Operated by JR {GREEN}Hokkaido
+STR_LV_KiHa283_L :KiHa283(BEGIN, controller car)
+STR_LV_KiHa283_R :KiHa283(END, controller car)
+STR_LV_KiRo282   :KiRo282(middle car, {GREEN}GREEN CAR{BLACK})
+STR_LV_KiHa282_0    :KiHa282-0(middle car, wheel chair)
+STR_LV_KiHa282_100  :KiHa282-100(middle car, smoking area)
+STR_LV_KiHa282_2000 :KiHa282-2000(middle car, mid-controller)
+
+STR_DC281_NAME :DC281 series
+STR_DC281_DESC :{YELLOW}FURICO {WHITE}281 {BLACK}Operated by JR {GREEN}Hokkaido
+STR_LV_KiHa281_INIT_L :KiHa281 {GRAY}HEAT {WHITE}281(BEGIN, controller car)
+STR_LV_KiHa281_INIT_R :KiHa281 {GRAY}HEAT {WHITE}281(END, controller car)
+STR_LV_KiHa281_L :KiHa281(BEGIN, controller car)
+STR_LV_KiHa281_R :KiHa281(END, controller car)
+STR_LV_KiHa281_900_INIT_L :KiHa281-900 {GRAY}HEAT {WHITE}281(BEGIN, controller car)
+STR_LV_KiHa281_900_INIT_R :KiHa281-900 {GRAY}HEAT {WHITE}281(END, controller car)
+STR_LV_KiHa281_900_L :KiHa281-900(BEGIN, controller car)
+STR_LV_KiHa281_900_R :KiHa281-900(END, controller car)
+STR_LV_KiHa281_900_EXPERIMENTAL_L :Kiha281-900 {WHITE}HE{GRAY}A{WHITE}T 281(BEGIN, controller car)
+STR_LV_KiHa281_900_EXPERIMENTAL_R :Kiha281-900 {WHITE}HE{GRAY}A{WHITE}T 281(END, controller car)
+STR_LV_KiHa280_0   :KiHa280-0(middle car, wheel chair)
+STR_LV_KiHa280_100 :KiHa280-100(middle car)
+STR_LV_KiRo280     :KiRo280(middlecar, {GREEN}GREEN CAR{BLACK})
+
+STR_737_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains(include MUCar).
+STR_737_NAME :EC737 series
+STR_737_DESC :[2cars] Ready for {GREEN}ONEMAN{BLACK}-operate
+
+STR_721AND73XGROUP_CANNOT_ATTACH_OTHER :This type can attach train types only MUCar, 721, 731, 733 and 735series.
+STR_731_CANNOT_ATTACH_OTHER            :This type can attach train types only MUCar, DC201, 721, 731, 733 and 735series.
+STR_DC201_CANNOT_ATTACH_OTHER          :This type can attach train types only MUCar, DC201 and EC731series.
+
+STR_731_NAME :EC731 series
+STR_731_DESC :[3cars] Can attach Diesel commuter train(DC201).
+
+STR_DC201_NAME :DC201 series
+STR_DC201_DESC :[3cars] Can attach Electric commuter train(EC731).
+
+STR_733_NAME :EC733 series
+STR_733_DESC :[3/6cars] Local / Rapid "{RED}AIRPORT{BLACK}" / "{PURPLE}Hakodate Liner{BLACK}"
+STR_LV_733_INITIAL :Initial livery (733-100)
+STR_LV_733_1000    :Hakodate area livery (733-1000)
+STR_LV_733_3000    :Rapid "{RED}AIRPORT{BLACK}" livery
+
+STR_735_NAME :EC735 series
+STR_735_DESC :[3cars] For local train
+
+STR_785_NAME :EC785 series
+STR_785_DESC :[2/4/5/6cars] Limited Express "Suzuran"|"Super Kamui"|"Super White Arrow" Rapid "AIRPORT"(2,4,5,2+4,2+2+2cars)
+STR_785_CANNOT_ATTACH_OTHER :785series can attach train types only MUCar, 785series.
+STR_LV_785_INITIAL :Initial livery(2/4/6cars)
+STR_LV_785_INITIAL_2CARS :Initial livery(2cars)
+STR_LV_785_INITIAL_4CARS :Initial livery(4cars)
+STR_LV_785_USEAT   :Consist by {RED}u{BLUE}seat{BLACK}(2002~)
+STR_LV_785_USEAT_MIDCAB :Consist by {RED}u{BLUE}seat{BLACK} and midcab car(2002~)
+
+STR_785_300_NAME :EC785-300 series
+STR_785_300_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". Must be attached 789-0series.
+STR_785_300_CANNOT_ATTACH_OTHER :This vehicle can only be attached to 789-0series.
+
+STR_H100_NAME :DC H100 series
+STR_H100_DESC :For local train
+STR_LV_H100_PROTOTYPE :Prototype model
+STR_LV_H100_INITIAL   :Common model
+STR_H100_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+
+STR_789_1000_NAME :EC789-1000 series
+STR_789_1000_DESC :[5cars] Limited Express "Suzuran"|"Super Kamui" Rapid "AIRPORT"
+STR_789_1000_CANNOT_ATTACH_OTHER :789-1000series can only be attached to MUCar.
+
+STR_789_0_NAME :EC789-0 series
+STR_789_0_DESC :[5/6/5+3/6+2cars] Limited Express "Super Hakucho"/"Tsugaru"/"Lilac"
+STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
+STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")

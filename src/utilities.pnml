@@ -1,0 +1,24 @@
+railtypetable {
+    RAIL, ELRL,
+}
+
+template tmpl_vehicle_basic(x, y) {
+    [x,      y,  8, 24,  -3, -12]
+    [x +  9, y, 22, 20, -14, -12]
+    [x + 32, y, 32, 16, -16, -12]
+    [x + 65, y, 22, 20,  -6, -12]
+}
+
+// template tmpl_vehicle_4_views(num) {
+    // tmpl_vehicle_basic(1, 1 + 25 * num)
+// }
+
+template tmpl_vehicle_8_views(num, reversed) {
+    tmpl_vehicle_basic(reversed ? 89 : 1, 1 + 25 * num)
+    tmpl_vehicle_basic(reversed ? 1 : 89, 1 + 25 * num)
+}
+
+// xrel, yrelは表示画面のオフセット
+template tmpl_vehicle_single(num, xsize, ysize, xrel, yrel) {
+    [1, 11 + 25 * num, xsize, ysize, xrel, yrel]
+}

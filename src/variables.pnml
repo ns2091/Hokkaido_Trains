@@ -1,0 +1,7 @@
+param_capacity_commuter = 120;
+param_capacity_suburban =  90;
+param_capacity_express  =  60;
+
+param_loading_commuter  = 100;
+param_loading_suburban  =  75;
+param_loading_express   =  50;

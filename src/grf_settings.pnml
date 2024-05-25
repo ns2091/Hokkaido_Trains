@@ -1,0 +1,25 @@
+grf {
+    grfid: "JHT\01";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 1;
+    min_compatible_version: 1;
+
+    // 設定画面のパラメータを定義する
+	
+    // param {
+        // colour_scheme {
+            // type: int;
+            // name: string(STR_PARAM_COLOUR_SCHEME_NAME);
+            // desc: string(STR_PARAM_COLOUR_SCHEME_DESC);
+            // min_value: 0;
+            // max_value: 2;
+            // def_value: 1;
+            // names: {
+                // 0: string(STR_PARAM_COLOUR_SCHEME_1CC);
+                // 1: string(STR_PARAM_COLOUR_SCHEME_2CC);
+                // 2: string(STR_PARAM_COLOUR_SCHEME_REAL);
+            // };
+        // }
+    // }
+}

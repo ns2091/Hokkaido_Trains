@@ -1,0 +1,88 @@
+##grflangid 0x39
+STR_GRF_NAME                                                    :{GREEN}Hokkaido {WHITE}Trains
+STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
+
+STR_MUCAR_NAME         : 付属車両
+STR_MUCAR_DESC         : 基本車両の中間に連結して使用してください
+
+STR_721_NAME :721系電車
+STR_721_DESC :[3/6両] 普通/ {RED}快速エアポート{BLACK}"
+STR_LV_721_INITIAL                     :登場時仕様(3連)
+STR_LV_721_6CAR_USEAT_INITIAL_MID      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(6連)
+STR_LV_721_3CAR_USEAT_INITIAL_CTL      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(3連)
+STR_LV_721_6CAR_USEAT_RENEWAL_MID      :サイリスタ位相制御 全室{RED}u{BLUE}seat{BLACK}連結(6連)
+STR_LV_721_3CAR_USEAT_RENEWAL_CTL      :サイリスタ位相制御 全室{RED}u{BLUE}seat{BLACK}連結(3連)
+STR_LV_721_VVVF                        :VVVF制御仕様(3連)
+STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(6連)
+STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(3連)
+
+STR_DC283_NAME :283系気動車
+STR_DC283_DESC :{YELLOW}FURICO {WHITE}281 {WHITE}JR{GREEN}北海道
+STR_LV_KiHa283_L :ｷﾊ283(左向き, 先頭車)
+STR_LV_KiHa283_R :ｷﾊ283(右向き, 先頭車)
+STR_LV_KiRo282   :ｷﾛ282(中間車, {GREEN}グリーン車{BLACK})
+STR_LV_KiHa282_0    :ｷﾊ282-0(中間車, 車いす設備)
+STR_LV_KiHa282_100  :ｷﾊ282-100(中間車, 喫煙コーナー)
+STR_LV_KiHa282_2000 :ｷﾊ282-2000(中間車, 中間運転台)
+
+STR_DC281_NAME :281系気動車
+STR_DC281_DESC :{YELLOW}FURICO {WHITE}281 {WHITE}JR{GREEN}北海道
+STR_LV_KiHa281_INIT_L :ｷﾊ281-0 {GRAY}HEAT {WHITE}281(左向き, 先頭車)
+STR_LV_KiHa281_INIT_R :ｷﾊ281-0 {GRAY}HEAT {WHITE}281(右向き, 先頭車)
+STR_LV_KiHa281_L :ｷﾊ281-0(左向き, 先頭車)
+STR_LV_KiHa281_R :ｷﾊ281-0(右向き, 先頭車)
+STR_LV_KiHa281_900_INIT_L :ｷﾊ281-900 {GRAY}HEAT {WHITE}281(左向き, 先頭車)
+STR_LV_KiHa281_900_INIT_R :ｷﾊ281-900 {GRAY}HEAT {WHITE}281(右向き, 先頭車)
+STR_LV_KiHa281_900_L :ｷﾊ281-900(左向き, 先頭車)
+STR_LV_KiHa281_900_R :ｷﾊ281-900(右向き, 先頭車)
+STR_LV_KiHa281_900_SPECIAL_L :ｷﾊ281-900 {WHITE}HE{GRAY}A{WHITE}T 281 (左向き, 先頭車)
+STR_LV_KiHa281_900_SPECIAL_R :ｷﾊ281-900 {WHITE}HE{GRAY}A{WHITE}T 281 (右向き, 先頭車)
+STR_LV_KiHa280_0   :ｷﾊ280-0(中間車, 車いす設備)
+STR_LV_KiHa280_100 :ｷﾊ280-100(中間車)
+STR_LV_KiRo280     :ｷﾛ280(中間車, {GREEN}グリーン車{BLACK})
+
+STR_737_CANNOT_ATTACH_OTHER :737系は他形式の車両と連結することはできません(MUCarを含む)
+STR_737_NAME:[2両] 737系電車
+STR_737_DESC:{BLACK}JR{GREEN}北海道{BLACK} {GREEN}ﾜﾝﾏﾝ{BLACK}運転対応
+
+STR_721AND73XGROUP_CANNOT_ATTACH_OTHER :MUCar, 721系, 731系, 733系, 735系とのみ連結することができます
+STR_731_CANNOT_ATTACH_OTHER            :MUCar,　201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
+STR_DC201_CANNOT_ATTACH_OTHER          :MUCar, 201系気動車, 731系電車とのみ連結することができます
+
+STR_731_NAME :731系電車
+STR_731_DESC :[3両] 201系気動車と連結できます
+
+STR_DC201_NAME :201系気動車
+STR_DC201_DESC :[3両] 731系電車と連結できます
+
+STR_733_NAME :733系電車
+STR_733_DESC :[3/6両] 普通/ {RED}快速エアポート{BLACK}"/ "{PURPLE}はこだてライナー{BLACK}"
+STR_LV_733_INITIAL :登場時仕様(3連)
+STR_LV_733_1000    :はこだてライナー仕様(3連)
+STR_LV_733_3000    :全室{RED}u{BLUE}seat{BLACK}連結(6連)
+
+STR_735_NAME :735系電車
+STR_735_DESC :[3両] 普通列車として使用されます
+
+STR_785_NAME :785系電車
+STR_785_DESC :[2/4/5/6両] 特急"すずらん"/"スーパーカムイ"/"スーパーホワイトアロー"/快速"エアポート"
+STR_785_CANNOT_ATTACH_OTHER :785系はMUcarおよび785系以外と連結することはできません
+STR_LV_785_INITIAL :登場時仕様(2/4/6連)
+STR_LV_785_INITIAL_2CARS :登場時仕様(2連)
+STR_LV_785_INITIAL_4CARS :登場時仕様(4連)
+STR_LV_785_USEAT         :{RED}u{BLUE}seat{BLACK}連結(2002~)
+STR_LV_785_USEAT_MIDCAB  :{RED}u{BLUE}seat{BLACK}連結 運転台封じ込め車つき(2002~)
+
+STR_785_300_NAME :785系電車 300番代
+STR_785_300_DESC :[2両] 789系"スーパー白鳥"の増結車両としてのみ運用されます。
+STR_785_300_CANNOT_ATTACH_OTHER :789系0番代とのみ連結できます。
+
+STR_H100_NAME :H100形気動車
+STR_H100_DESC :[1両] 普通列車として使用されます
+STR_LV_H100_PROTOTYPE :量産先行車
+STR_LV_H100_INITIAL   :量産車
+STR_H100_CANNOT_ATTACH_OTHER :H100形とのみ連結できます。
+
+STR_789_1000_NAME :789系電車1000番代
+STR_789_1000_DESC :[5両] 特急"すずらん"/"スーパーカムイ" 快速"エアポート"
+STR_789_1000_CANNOT_ATTACH_OTHER :MUCarのみ連結できます
