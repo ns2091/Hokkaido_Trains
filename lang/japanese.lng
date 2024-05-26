@@ -65,13 +65,18 @@ STR_735_NAME :735系電車
 STR_735_DESC :[3両] 普通列車として使用されます
 
 STR_785_NAME :785系電車
-STR_785_DESC :[2/4/5/6両] 特急"すずらん"/"スーパーカムイ"/"スーパーホワイトアロー"/快速"エアポート"
-STR_785_CANNOT_ATTACH_OTHER :785系はMUcarおよび785系以外と連結することはできません
-STR_LV_785_INITIAL :登場時仕様(2/4/6連)
+STR_785_5CARS_NAME :785系電車 5両編成
+STR_785_4CARS_NAME :785系電車 4両編成
+STR_785_2CARS_NAME :785系電車 2両編成
+STR_785_5CARS_DESC :[5両] (編成例: 5/5(2+3)){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_4CARS_DESC :[4両] (編成例: 4/4+2){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_2CARS_DESC :[2両] (編成例: 2/2+4/2+2+2){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_CANNOT_ATTACH_OTHER :785系は同系列以外と連結することはできません
+STR_LV_785_INITIAL :登場時仕様(2/4連)
 STR_LV_785_INITIAL_2CARS :登場時仕様(2連)
 STR_LV_785_INITIAL_4CARS :登場時仕様(4連)
-STR_LV_785_USEAT         :{RED}u{BLUE}seat{BLACK}連結(2002~)
-STR_LV_785_USEAT_MIDCAB  :{RED}u{BLUE}seat{BLACK}連結 運転台封じ込め車つき(2002~)
+STR_LV_785_USEAT         :{RED}u{BLUE}seat{BLACK}連結仕様(2002~)
+STR_LV_785_USEAT_MIDCAB  :{RED}u{BLUE}seat{BLACK}連結 運転台封じ込め車つき仕様(2002~)
 
 STR_785_300_NAME :785系電車 300番代
 STR_785_300_DESC :[2両] 789系"スーパー白鳥"の増結車両としてのみ運用されます。

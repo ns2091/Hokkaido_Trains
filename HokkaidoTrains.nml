@@ -81,51 +81,9 @@ item(FEAT_TRAINS, dmu281) {}
 item(FEAT_TRAINS, dmu283) {}
 # 5 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/vehicles.pnml" 1
-# 1 "src/vehicles/mu_car.pnml" 1
-spriteset (set_mucar_basic, "gfx/8bpp/mucar.png") { tmpl_vehicle_8_views(1, 0) }
-spriteset (set_mucar_purchase, "gfx/8bpp/mucar.png") { tmpl_vehicle_single(0, 31, 12, 0, -10) }
-
-item(FEAT_TRAINS, mu_car) {
- property {
-  name: string(STR_MUCAR_NAME);
-  introduction_date: date(1800, 1, 1);
-  climates_available: ALL_CLIMATES;
-  model_life: VEHICLE_NEVER_EXPIRES;
-  vehicle_life: 100;
-  loading_speed: 0;
-  cost_factor: 64;
-  running_cost_factor: 6;
-  speed: 0 km/h;
-  power: 0 kW;
-  cargo_capacity: 1;
-  weight: 0 ton;
-  tractive_effort_coefficient: 0.3;
-  air_drag_coefficient: 0;
-  reliability_decay: 20;
-  refittable_cargo_classes: bitmask(CC_PASSENGERS);
-  cargo_age_period: 185;
-  refit_cost: 0;
-  track_type: RAIL;
-  ai_special_flag: AI_FLAG_PASSENGER;
-  running_cost_base: RUNNING_COST_ELECTRIC;
-  engine_class: ENGINE_CLASS_ELECTRIC;
-  visual_effect_and_powered: visual_effect_and_powered(VISUAL_EFFECT_DISABLE, 0, DISABLE_WAGON_POWER);
-  sprite_id: SPRITE_ID_NEW_TRAIN;
-  dual_headed: 0;
-  length: 8;
-  extra_power_per_wagon: 0;
-  bitmask_vehicle_info: 0;
- }
-
- graphics {
-  default : set_mucar_basic;
-  purchase : set_mucar_purchase;
-  additional_text: return string(STR_MUCAR_DESC);
-    }
-}
-# 2 "src/vehicles.pnml" 2
 // #include "vehicles/721group.pnml"
-# 1 "src/vehicles/emu785.pnml" 1
+// #include "vehicles/emu785.pnml"
+# 1 "src/vehicles/emu785_series/emu785_0_main.pnml" 1
 spriteset(set_785_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
 
 spriteset(set_785_mu, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
@@ -192,9 +150,13 @@ alternative_sprites(set_785f_unlited_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gf
 alternative_sprites(set_785f_rear_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views(18, 1) }
 alternative_sprites(set_785f_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views(19, 1) }
 
-switch(FEAT_TRAINS, SELF, sw_785_can_attach_wagon, vehicle_type_id) {
- mu_car: CB_RESULT_ATTACH_ALLOW;
- emu785: CB_RESULT_ATTACH_ALLOW;
+switch(FEAT_TRAINS, SELF, sw_785_5cars_can_attach_wagon, vehicle_type_id) {
+    default: return string(STR_785_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_24cars_can_attach_wagon, vehicle_type_id) {
+ emu785_2cars: CB_RESULT_ATTACH_ALLOW;
+    emu785_4cars: CB_RESULT_ATTACH_ALLOW;
     default: return string(STR_785_CANNOT_ATTACH_OTHER);
 }
 
@@ -203,9 +165,9 @@ switch(FEAT_TRAINS, SELF, sw_785_front_tc, (position_in_consist == 0 || position
  default: set_785_front_tc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_rear_tc, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_785_unlited_tc;
- default: set_785_rear_tc;
+switch(FEAT_TRAINS, SELF, sw_785f_rear_tc, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
+ 0: set_785f_unlited_tc;
+ default: set_785f_rear_tc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_785_front_mc, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
@@ -213,9 +175,9 @@ switch(FEAT_TRAINS, SELF, sw_785_front_mc, (position_in_consist == 0 || position
  default: set_785_front_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_rear_mc, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_785_unlited_mc;
- default: set_785_rear_mc;
+switch(FEAT_TRAINS, SELF, sw_785f_rear_mc, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
+ 0: set_785f_unlited_mc;
+ default: set_785f_rear_mc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_785_front_tcp, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
@@ -223,129 +185,149 @@ switch(FEAT_TRAINS, SELF, sw_785_front_tcp, (position_in_consist == 0 || positio
  default: set_785_front_tcp;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_rear_tcp, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_785_unlited_tcp;
- default: set_785_rear_tcp;
+switch(FEAT_TRAINS, SELF, sw_785f_rear_tcp, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
+ 0: set_785f_unlited_tcp;
+ default: set_785f_rear_tcp;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_initial_2cars, position_in_consist) {
+switch(FEAT_TRAINS, SELF, sw_785_2cars_initial, position_in_articulated_veh) {
  0: sw_785_front_tcp;
- 1: sw_785_rear_mc;
+ 1: sw_785f_rear_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_initial_4cars, position_in_consist) {
+switch(FEAT_TRAINS, SELF, sw_785_4cars_initial, position_in_articulated_veh) {
  0: sw_785_front_tc;
  1: set_785_mn;
  2: set_785_tp;
- 3: sw_785_rear_mc;
+ 3: sw_785f_rear_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_initial_6cars, position_in_consist) {
- 0: sw_785_front_tc;
- 1: set_785_mn;
- 2: set_785_tp;
- 3: set_785f_unlited_mc;
- 4: set_785_unlited_tcp;
- 5: sw_785_rear_mc;
-}
-
-switch(FEAT_TRAINS, SELF, sw_785_initial, num_vehs_in_consist) {
- 2: sw_785_initial_2cars;
- 3..4: sw_785_initial_4cars;
- default: sw_785_initial_6cars;
-}
-
-switch(FEAT_TRAINS, SELF, sw_785_useat, position_in_consist) {
+switch(FEAT_TRAINS, SELF, sw_785_useat, position_in_articulated_veh) {
  0: sw_785_front_mc;
  1: set_785_tp;
  2: set_785_mn;
  3: set_785_mpu;
- 4: sw_785_rear_tc;
+ 4: sw_785f_rear_tc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_useat_midcab, position_in_consist) {
+switch(FEAT_TRAINS, SELF, sw_785_useat_midcab, position_in_articulated_veh) {
  0: sw_785_front_mc;
  1: set_785f_omitted_tcp;
  2: set_785_omitted_mc;
  3: set_785_mpu;
- 4: sw_785_rear_tc;
+ 4: sw_785f_rear_tc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785f_initial_2cars, position_in_consist) {
- 1: sw_785_rear_tcp;
- 0: sw_785_front_mc;
+switch(FEAT_TRAINS, SELF, sw_785f_2cars_initial, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%2]) {
+ 0: sw_785f_rear_tcp;
+ 1: sw_785_front_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785f_initial_4cars, position_in_consist) {
- 3: sw_785_rear_tc;
- 2: set_785f_mn;
- 1: set_785f_tp;
- 0: sw_785_front_mc;
+switch(FEAT_TRAINS, SELF, sw_785f_4cars_initial, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%4]) {
+ 0: sw_785f_rear_tc;
+ 1: set_785f_mn;
+ 2: set_785f_tp;
+ 3: sw_785_front_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785f_initial_6cars, position_in_consist) {
- 5: sw_785_rear_tc;
- 4: set_785f_mn;
- 3: set_785f_tp;
- 2: set_785_unlited_mc;
- 1: set_785f_unlited_tcp;
- 0: sw_785_front_mc;
-}
-
-switch(FEAT_TRAINS, SELF, sw_785f_initial, num_vehs_in_consist) {
- 2: sw_785f_initial_2cars;
- 3..4: sw_785f_initial_4cars;
- default: sw_785f_initial_6cars;
-}
-
-switch(FEAT_TRAINS, SELF, sw_785f_useat, position_in_consist) {
- 4: sw_785_rear_mc;
+switch(FEAT_TRAINS, SELF, sw_785f_useat, position_in_articulated_veh) {
+ 4: sw_785f_rear_mc;
  3: set_785f_tp;
  2: set_785f_mn;
  1: set_785f_mpu;
  0: sw_785_front_tc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785f_useat_midcab, position_in_consist) {
- 4: sw_785_rear_mc;
+switch(FEAT_TRAINS, SELF, sw_785f_useat_midcab, position_in_articulated_veh) {
+ 4: sw_785f_rear_mc;
  3: set_785_omitted_tcp;
  2: set_785f_omitted_mc;
  1: set_785f_mpu;
  0: sw_785_front_tc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785f_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
- 0: sw_785f_initial;
- // 0: sw_785f_initial_2cars;
- // 1: sw_785f_initial_4cars;
- 2: sw_785f_useat;
- 3: sw_785f_useat_midcab;
+// check: cargo_subtype
+switch(FEAT_TRAINS, SELF, sw_785f_2cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+    0: sw_785f_2cars_initial;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_formations, cargo_subtype) {
- 0: sw_785_initial;
- // 0: sw_785_initial_2cars;
- // 1: sw_785_initial_4cars;
- 2: sw_785_useat;
- 3: sw_785_useat_midcab;
+// check: cargo_subtype
+switch(FEAT_TRAINS, SELF, sw_785f_4cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+    0: sw_785f_4cars_initial;
 }
 
-switch(FEAT_TRAINS, PARENT, sw_785_rvcheck, vehicle_is_reversed) {
- 1: sw_785f_formations;
- default: sw_785_formations;
+// check: vehicle_id
+switch(FEAT_TRAINS, SELF, sw_785f_24cars_revesed_type, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+    emu785_2cars: sw_785f_2cars_formations;
+    emu785_4cars: sw_785f_4cars_formations;
 }
 
-switch(FEAT_TRAINS, SELF, sw_785_subtypes, cargo_subtype) {
- // 0: string(STR_LV_785_INITIAL_2CARS);
- // 1: string(STR_LV_785_INITIAL_4CARS);
+switch(FEAT_TRAINS, SELF, sw_785_2cars_formations, cargo_subtype) {
+ 0: sw_785_2cars_initial;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_4cars_formations, cargo_subtype) {
+ 0: sw_785_4cars_initial;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785f_5cars_formations, cargo_subtype) {
+ 0: sw_785f_useat;
+ 1: sw_785f_useat_midcab;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_5cars_formations, cargo_subtype) {
+ 0: sw_785_useat;
+ 1: sw_785_useat_midcab;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_785_5cars_gfx_main, vehicle_is_reversed) {
+ 1: sw_785f_5cars_formations;
+ default: sw_785_5cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_785_2cars_gfx_main, vehicle_is_reversed) {
+ 1: sw_785f_24cars_revesed_type;
+ default: sw_785_2cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_785_4cars_gfx_main, vehicle_is_reversed) {
+ 1: sw_785f_24cars_revesed_type;
+ default: sw_785_4cars_formations;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_5cars_subtypes, cargo_subtype) {
+ 0: string(STR_LV_785_USEAT);
+ 1: string(STR_LV_785_USEAT_MIDCAB);
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_4cars_subtypes, cargo_subtype) {
  0: string(STR_LV_785_INITIAL);
- 2: string(STR_LV_785_USEAT);
- 3: string(STR_LV_785_USEAT_MIDCAB);
 }
 
-item(FEAT_TRAINS, emu785) {
+switch(FEAT_TRAINS, SELF, sw_785_2cars_subtypes, cargo_subtype) {
+ 0: string(STR_LV_785_INITIAL);
+}
+
+
+switch (FEAT_TRAINS, SELF, sw_785_2cars_articulated_part, extra_callback_info1) {
+ 0..1: return emu785_2cars;
+ default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, sw_785_4cars_articulated_part, extra_callback_info1) {
+ 0..3: return emu785_4cars;
+ default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch (FEAT_TRAINS, SELF, sw_785_5cars_articulated_part, extra_callback_info1) {
+ 0..4: return emu785_5cars;
+ default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+item(FEAT_TRAINS, emu785_5cars) {
     property {
-        name: string(STR_785_NAME);
+        name: string(STR_785_5CARS_NAME);
         introduction_date: date(1990, 9, 1);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -364,38 +346,116 @@ item(FEAT_TRAINS, emu785) {
         speed: 130 km/h;
         refit_cost: 0;
         power: 800 kW;
-        dual_headed: 1;
+        dual_headed: 0;
         cargo_capacity: param_capacity_express;
         weight: 80 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.1;
         air_drag_coefficient: 0.06;
         length: 8;
+        variant_group: emu785_5cars;
     }
 
     graphics {
-        default : sw_785_rvcheck;
   purchase : set_785_purchase;
-  additional_text : string(STR_785_DESC);
-        cargo_subtype_text: sw_785_subtypes;
-        can_attach_wagon : sw_785_can_attach_wagon;
+
+        // Below items are depends on consist
+        default : sw_785_5cars_gfx_main;
+        can_attach_wagon : sw_785_5cars_can_attach_wagon;
+  additional_text : string(STR_785_5CARS_DESC);
+        cargo_subtype_text: sw_785_5cars_subtypes;
+  articulated_part : sw_785_5cars_articulated_part;
+    }
+}
+
+item(FEAT_TRAINS, emu785_4cars) {
+    property {
+        name: string(STR_785_4CARS_NAME);
+        introduction_date: date(1990, 9, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 130 km/h;
+        refit_cost: 0;
+        power: 800 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        variant_group: emu785_5cars;
     }
 
- livery_override(mu_car){
-  default : sw_785_rvcheck;
-  cargo_capacity : param_capacity_express;
-  loading_speed : param_loading_express;
+    graphics {
   purchase : set_785_purchase;
-  additional_text : string(STR_785_DESC);
-        cargo_subtype_text: sw_785_subtypes;
-  // なぜかpowerもweightもkW/tonが使えない
-  power : 400;
-  weight : 40;
+
+        // Below items are depends on consist
+        default : sw_785_4cars_gfx_main;
+        can_attach_wagon : sw_785_24cars_can_attach_wagon;
+  additional_text : string(STR_785_4CARS_DESC);
+        cargo_subtype_text: sw_785_4cars_subtypes;
+  articulated_part : sw_785_4cars_articulated_part;
+    }
+}
+
+item(FEAT_TRAINS, emu785_2cars) {
+    property {
+        name: string(STR_785_2CARS_NAME);
+        introduction_date: date(1990, 9, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 130 km/h;
+        refit_cost: 0;
+        power: 800 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        variant_group: emu785_5cars;
+    }
+
+    graphics {
+  purchase : set_785_purchase;
+
+        // Below items are depends on consist
+        default : sw_785_2cars_gfx_main;
+        can_attach_wagon : sw_785_24cars_can_attach_wagon;
+  additional_text : string(STR_785_2CARS_DESC);
+        cargo_subtype_text: sw_785_2cars_subtypes;
+  articulated_part : sw_785_2cars_articulated_part;
     }
 }
 # 4 "src/vehicles.pnml" 2
 // #include "vehicles/emu785_300.pnml"
-# 1 "src/vehicles/emu789_1000.pnml" 1
+# 1 "src/vehicles/emu789_series/emu789_1000_main.pnml" 1
 spriteset(set_789_1000_purchase, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
 
 spriteset(set_789_1000_rear_tc, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -432,7 +492,7 @@ switch(FEAT_TRAINS, SELF, sw_789f_1000_formations, position_in_consist) {
  3: set_789f_1000_mn;
  2: set_789f_1000_tp;
  1: set_789f_1000_mu;
- 0: set_789_1000_front_tc;
+ 0: set_789f_1000_front_tc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
@@ -441,13 +501,24 @@ switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
  1: set_789_1000_mn;
  2: set_789_1000_tp;
  3: set_789_1000_mu;
- 4: set_789_1000_rear_tc;
+ 4: set_789f_1000_rear_tc;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_789_1000_rvcheck, vehicle_is_reversed) {
  1: sw_789f_1000_formations;
  default: sw_789_1000_formations;
 }
+
+switch(FEAT_TRAINS, PARENT, sw_789_1000_artpart_5cars, extra_callback_info1) {
+    0..4: emu789_1000;
+ default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, sw_789_1000_articulated_part, cargo_subtype) {
+ default: sw_789_1000_artpart_5cars;
+}
+
 
 item(FEAT_TRAINS, emu789_1000) {
     property {
@@ -470,7 +541,7 @@ item(FEAT_TRAINS, emu789_1000) {
         speed: 130 km/h;
         refit_cost: 0;
         power: 640 kW;
-        dual_headed: 1;
+        dual_headed: 0;
         cargo_capacity: param_capacity_express;
         weight: 80 ton;
         ai_engine_rank: 0;
@@ -484,17 +555,7 @@ item(FEAT_TRAINS, emu789_1000) {
   purchase : set_789_1000_purchase;
   additional_text : string(STR_789_1000_DESC);
         can_attach_wagon : sw_789_1000_can_attach_wagon;
-    }
-
- livery_override(mu_car){
-  default : sw_789_1000_rvcheck;
-  cargo_capacity : param_capacity_express;
-  loading_speed : param_loading_express;
-  purchase : set_789_1000_purchase;
-  additional_text : string(STR_789_1000_DESC);
-  // なぜかpowerもweightもkW/tonが使えない
-  power : 320;
-  weight : 40;
+  articulated_part : sw_789_1000_articulated_part;
     }
 }
 # 6 "src/vehicles.pnml" 2

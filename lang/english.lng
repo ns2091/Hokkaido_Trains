@@ -65,13 +65,18 @@ STR_735_NAME :EC735 series
 STR_735_DESC :[3cars] For local train
 
 STR_785_NAME :EC785 series
-STR_785_DESC :[2/4/5/6cars] Limited Express "Suzuran"|"Super Kamui"|"Super White Arrow" Rapid "AIRPORT"(2,4,5,2+4,2+2+2cars)
-STR_785_CANNOT_ATTACH_OTHER :785series can attach train types only MUCar, 785series.
-STR_LV_785_INITIAL :Initial livery(2/4/6cars)
+STR_785_5CARS_NAME :EC785 series(5cars)
+STR_785_4CARS_NAME :EC785 series(4cars)
+STR_785_2CARS_NAME :EC785 series(2cars)
+STR_785_5CARS_DESC :[5cars] (consist: 5/5(2+3)){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_4CARS_DESC :[4cars] (consist: 4/2+4){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_2CARS_DESC :[2cars] (consist: 2/2+4/2+2+2){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_CANNOT_ATTACH_OTHER :785series can attach train types only same 785series.
+STR_LV_785_INITIAL :Initial livery(2/4/2+4cars)
 STR_LV_785_INITIAL_2CARS :Initial livery(2cars)
 STR_LV_785_INITIAL_4CARS :Initial livery(4cars)
-STR_LV_785_USEAT   :Consist by {RED}u{BLUE}seat{BLACK}(2002~)
-STR_LV_785_USEAT_MIDCAB :Consist by {RED}u{BLUE}seat{BLACK} and midcab car(2002~)
+STR_LV_785_USEAT   :{RED}u{BLUE}seat{BLACK} livery(2002~)
+STR_LV_785_USEAT_MIDCAB :{RED}u{BLUE}seat{BLACK} and midcab car livery(2002~)
 
 STR_785_300_NAME :EC785-300 series
 STR_785_300_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". Must be attached 789-0series.
