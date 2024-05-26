@@ -34,7 +34,7 @@ switch(FEAT_TRAINS, SELF, sw_789f_1000_formations, position_in_consist) {
 	3: set_789f_1000_mn;
 	2: set_789f_1000_tp;
 	1: set_789f_1000_mu;
-	0: set_789_1000_front_tc;
+	0: set_789f_1000_front_tc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
@@ -43,13 +43,24 @@ switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
 	1: set_789_1000_mn;
 	2: set_789_1000_tp;
 	3: set_789_1000_mu;
-	4: set_789_1000_rear_tc;
+	4: set_789f_1000_rear_tc;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_789_1000_rvcheck, vehicle_is_reversed) {
 	1: sw_789f_1000_formations;
 	default: sw_789_1000_formations;
 }
+
+switch(FEAT_TRAINS, PARENT, sw_789_1000_artpart_5cars, extra_callback_info1) {
+    0..4: emu789_1000;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+switch (FEAT_TRAINS, SELF, sw_789_1000_articulated_part, cargo_subtype) {
+	default: sw_789_1000_artpart_5cars;
+}
+
 
 item(FEAT_TRAINS, emu789_1000) {
     property {
@@ -72,7 +83,7 @@ item(FEAT_TRAINS, emu789_1000) {
         speed: 130 km/h;
         refit_cost: 0;
         power: 640 kW;
-        dual_headed: 1;
+        dual_headed: 0;
         cargo_capacity: param_capacity_express;
         weight: 80 ton;
         ai_engine_rank: 0;
@@ -86,16 +97,6 @@ item(FEAT_TRAINS, emu789_1000) {
 		purchase          : set_789_1000_purchase;
 		additional_text   : string(STR_789_1000_DESC);
         can_attach_wagon  :	sw_789_1000_can_attach_wagon;
-    }
-	
-	livery_override(mu_car){	
-		default           : sw_789_1000_rvcheck;
-		cargo_capacity    : param_capacity_express;
-		loading_speed     : param_loading_express;
-		purchase          : set_789_1000_purchase;
-		additional_text   : string(STR_789_1000_DESC);
-		// なぜかpowerもweightもkW/tonが使えない
-		power             : 320;
-		weight            : 40;
+		articulated_part  : sw_789_1000_articulated_part;
     }
 }
