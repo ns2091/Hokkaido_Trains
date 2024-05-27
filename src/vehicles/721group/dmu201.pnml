@@ -1,0 +1,53 @@
+// switch(FEAT_TRAINS, SELF, sw_dc201_subtypes, cargo_subtype) {
+	// 0: string(STR_LV_DC201_INITIAL);
+// }
+
+switch(FEAT_TRAINS, SELF, sw_dc201_3cars_artpart, extra_callback_info1) {
+    0..2: return dmu201_3cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, dmu201_3cars) {
+    property {
+        name: string(STR_DC201_NAME);
+        introduction_date: date(1997, 3, 22);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_DIESEL;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_DIESEL;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: RAIL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        // cargo_allow_refit: [];
+        // cargo_disallow_refit: [];
+        loading_speed: param_loading_commuter;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 120 km/h;
+        refit_cost: 0;
+        power: 615 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_commuter;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        // bitmask_vehicle_info: 0;
+    }
+
+    graphics {
+		purchase          : set_dc201_purchase;
+
+        // Below items are depends on consist
+        default           : sw_dc201_3cars_gfx_main;
+        can_attach_wagon  :	sw_dc201_3cars_can_attach_wagon;
+		additional_text   : string(STR_DC201_DESC);
+        // cargo_subtype_text: sw_dc201_subtypes;
+		articulated_part  : sw_dc201_3cars_artpart;
+    }
+}

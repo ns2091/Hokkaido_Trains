@@ -45,9 +45,9 @@ STR_737_CANNOT_ATTACH_OTHER :737系は他形式の車両と連結することは
 STR_737_NAME:[2両] 737系電車
 STR_737_DESC:{BLACK}JR{GREEN}北海道{BLACK} {GREEN}ﾜﾝﾏﾝ{BLACK}運転対応
 
-STR_721AND73XGROUP_CANNOT_ATTACH_OTHER :MUCar, 721系, 731系, 733系, 735系とのみ連結することができます
-STR_731_CANNOT_ATTACH_OTHER            :MUCar,　201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
-STR_DC201_CANNOT_ATTACH_OTHER          :MUCar, 201系気動車, 731系電車とのみ連結することができます
+STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
+STR_731_CANNOT_ATTACH_OTHER            :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
+STR_DC201_CANNOT_ATTACH_OTHER          :201系気動車, 731系電車とのみ連結することができます
 
 STR_731_NAME :731系電車
 STR_731_DESC :[3両] 201系気動車と連結できます

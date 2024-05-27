@@ -1,0 +1,109 @@
+switch(FEAT_TRAINS, SELF, sw_733_3cars_subtypes, cargo_subtype) {
+	0: string(STR_LV_733_INITIAL);
+	1: string(STR_LV_733_1000);
+}
+
+switch(FEAT_TRAINS, SELF, sw_733_6cars_subtypes, cargo_subtype) {
+	0: string(STR_LV_733_3000);
+}
+
+switch(FEAT_TRAINS, SELF, sw_733_3cars_artpart, extra_callback_info1) {
+    0..2: return emu733_3cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_733_6cars_artpart, extra_callback_info1) {
+    0..5: return emu733_6cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, emu733_3cars) {
+    property {
+        name: string(STR_733_NAME);
+        introduction_date: date(2012, 6, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        // cargo_allow_refit: [];
+        // cargo_disallow_refit: [];
+        loading_speed: param_loading_commuter;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 120 km/h;
+        refit_cost: 0;
+        power: 615 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_commuter;
+        weight: 65 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        // bitmask_vehicle_info: 0;
+    }
+	
+    graphics {
+		purchase          : set_733_purchase;
+
+        // Below items are depends on consist
+        default           : sw_733_3cars_gfx_main;
+        can_attach_wagon  :	sw_721group_can_attach_wagon;
+		additional_text   : string(STR_733_DESC);
+        cargo_subtype_text: sw_733_3cars_subtypes;
+		articulated_part  : sw_733_3cars_artpart;
+    }
+}
+
+item(FEAT_TRAINS, emu733_6cars) {
+    property {
+        name: string(STR_733_NAME);
+        introduction_date: date(2012, 6, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        // cargo_allow_refit: [];
+        // cargo_disallow_refit: [];
+        loading_speed: param_loading_commuter;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 120 km/h;
+        refit_cost: 0;
+        power: 615 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_commuter;
+        weight: 65 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        // bitmask_vehicle_info: 0;
+        variant_group: emu733_3cars;
+    }
+	
+    graphics {
+		purchase          : set_733_purchase;
+
+        // Below items are depends on consist
+        default           : sw_733_6cars_gfx_main;
+        can_attach_wagon  :	sw_733_6cars_can_attach_wagon;
+		additional_text   : string(STR_733_DESC);
+        cargo_subtype_text: sw_733_6cars_subtypes;
+		articulated_part  : sw_733_6cars_artpart;
+    }
+}

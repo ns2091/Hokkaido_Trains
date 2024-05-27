@@ -45,9 +45,11 @@ STR_737_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains(
 STR_737_NAME :EC737 series
 STR_737_DESC :[2cars] Ready for {GREEN}ONEMAN{BLACK}-operate
 
-STR_721AND73XGROUP_CANNOT_ATTACH_OTHER :This type can attach train types only MUCar, 721, 731, 733 and 735series.
-STR_731_CANNOT_ATTACH_OTHER            :This type can attach train types only MUCar, DC201, 721, 731, 733 and 735series.
-STR_DC201_CANNOT_ATTACH_OTHER          :This type can attach train types only MUCar, DC201 and EC731series.
+STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
+STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
+STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
+STR_731_CANNOT_ATTACH_OTHER            :This type can attach train types only DC201, 721, 731, 733 and 735series.
+STR_DC201_CANNOT_ATTACH_OTHER          :This type can attach train types only DC201 and EC731series.
 
 STR_731_NAME :EC731 series
 STR_731_DESC :[3cars] Can attach Diesel commuter train(DC201).

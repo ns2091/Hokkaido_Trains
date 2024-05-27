@@ -1,4 +1,4 @@
-// #include "vehicles/721group.pnml"
+#include "vehicles/721group/721group_main.pnml"
 // #include "vehicles/emu785.pnml"
 #include "vehicles/emu785_series/emu785_0_main.pnml"
 // #include "vehicles/emu785_300.pnml"
