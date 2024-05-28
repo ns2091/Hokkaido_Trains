@@ -1,7 +1,6 @@
 #include "vehicles/721group/721group_main.pnml"
-// #include "vehicles/emu785.pnml"
 #include "vehicles/emu785_series/emu785_0_main.pnml"
-// #include "vehicles/emu785_300.pnml"
+#include "vehicles/emu789_series/emu789_0group_main.pnml"
 #include "vehicles/emu789_series/emu789_1000_main.pnml"
 // #include "vehicles/emu789_0.pnml"
 // #include "vehicles/dmu261_0.pnml"

@@ -80,8 +80,8 @@ STR_LV_785_INITIAL_4CARS :Initial livery(4cars)
 STR_LV_785_USEAT   :{RED}u{BLUE}seat{BLACK} livery(2002~)
 STR_LV_785_USEAT_MIDCAB :{RED}u{BLUE}seat{BLACK} and midcab car livery(2002~)
 
-STR_785_300_NAME :EC785-300 series
-STR_785_300_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". Must be attached 789-0series.
+STR_785_300_2CARS_NAME :EC785-300 series
+STR_785_300_2CARS_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". Must be attached 789-0series.
 STR_785_300_CANNOT_ATTACH_OTHER :This vehicle can only be attached to 789-0series.
 
 STR_H100_NAME :DC H100 series
@@ -95,6 +95,16 @@ STR_789_1000_DESC :[5cars] Limited Express "Suzuran"|"Super Kamui" Rapid "AIRPOR
 STR_789_1000_CANNOT_ATTACH_OTHER :789-1000series can only be attached to MUCar.
 
 STR_789_0_NAME :EC789-0 series
-STR_789_0_DESC :[5/6/5+3/6+2cars] Limited Express "Super Hakucho"/"Tsugaru"/"Lilac"
+STR_789_0_2CARS_NAME :EC789-0 series (2cars)
+STR_789_0_3CARS_NAME :EC789-0 series (3cars)
+STR_789_0_6CARS_NAME :EC789-0 series (6cars)
+STR_789_0_2CARS_DESC :[2cars] (consist: 2+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
+STR_789_0_3CARS_DESC :[3cars] (consist: 2+3/3+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
+STR_789_0_6CARS_DESC :[6cars] (consist: 6/6+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
 STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
 STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
+STR_LV_789_0_2CARS_HE100 :HE-100 formation (Hakodate side)
+STR_LV_789_0_3CARS_HE100 :HE-100 formation (Hakodate side)
+STR_LV_789_0_3CARS_HE200 :HE-200 formation (Aomori side)
+STR_LV_789_0_2CARS_HE300 :HE-300 formation (Aomori side)
+STR_LV_789_0_6CARS       :Hakodate Area Livery 

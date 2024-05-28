@@ -1,0 +1,157 @@
+switch(FEAT_TRAINS, SELF, sw_789_0_2cars_subtypes, cargo_subtype) {
+	0: string(STR_LV_789_0_2CARS_HE100);
+	1: string(STR_LV_789_0_2CARS_HE300);
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_3cars_subtypes, cargo_subtype) {
+	0: string(STR_LV_789_0_3CARS_HE200);
+	1: string(STR_LV_789_0_3CARS_HE100);
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_6cars_subtypes, cargo_subtype) {
+    0: string(STR_LV_789_0_6CARS);
+	// 0: string(STR_LV_789_0_6CARS_LILAC);
+	// 1: string(STR_LV_789_0_6CARS_HAKUCHO);
+}
+
+
+switch(FEAT_TRAINS, SELF, sw_789_0_2cars_artpart, extra_callback_info1) {
+	0..1: emu789_0_2cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_3cars_artpart, extra_callback_info1) {
+	0..2: emu789_0_3cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_6cars_artpart, extra_callback_info1) {
+	0..5: emu789_0_6cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+item(FEAT_TRAINS, emu789_0_6cars) {
+    property {
+        name: string(STR_789_0_6CARS_NAME);
+        introduction_date: date(2002, 12, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 140 km/h;
+        refit_cost: 0;
+        power: 640 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+    }
+    graphics {
+		purchase          : set_789_0_purchase;
+
+        // Below items are depends on consist
+        default           : sw_789_0_6cars_gfx_main;
+        can_attach_wagon  :	sw_789_0_6cars_can_attach_wagon;
+		additional_text   : string(STR_789_0_6CARS_DESC);
+        // cargo_subtype_text: sw_789_0_6cars_subtypes;
+		articulated_part  : sw_789_0_6cars_artpart;
+    }
+}
+
+item(FEAT_TRAINS, emu789_0_2cars) {
+    property {
+        name: string(STR_789_0_2CARS_NAME);
+        introduction_date: date(2002, 12, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 140 km/h;
+        refit_cost: 0;
+        power: 640 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+		variant_group: emu789_0_6cars;
+    }
+    graphics {
+		purchase          : set_789_0_purchase;
+
+        // Below items are depends on consist
+        default           : sw_789_0_2cars_gfx_main;
+        can_attach_wagon  :	sw_789_0_2cars_can_attach_wagon;
+		additional_text   : string(STR_789_0_2CARS_DESC);
+        cargo_subtype_text: sw_789_0_2cars_subtypes;
+		articulated_part  : sw_789_0_2cars_artpart;
+    }
+}
+
+item(FEAT_TRAINS, emu789_0_3cars) {
+    property {
+        name: string(STR_789_0_3CARS_NAME);
+        introduction_date: date(2002, 12, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 140 km/h;
+        refit_cost: 0;
+        power: 640 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+		variant_group: emu789_0_6cars;
+    }
+    graphics {
+		purchase          : set_789_0_purchase;
+
+        // Below items are depends on consist
+        default           : sw_789_0_3cars_gfx_main;
+        can_attach_wagon  :	sw_789_0_3cars_can_attach_wagon;
+		additional_text   : string(STR_789_0_3CARS_DESC);
+        cargo_subtype_text: sw_789_0_3cars_subtypes;
+		articulated_part  : sw_789_0_3cars_artpart;
+    }
+}

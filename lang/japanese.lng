@@ -6,7 +6,7 @@ STR_MUCAR_NAME         : 付属車両
 STR_MUCAR_DESC         : 基本車両の中間に連結して使用してください
 
 STR_721_NAME :721系電車
-STR_721_DESC :[3/6両] 普通/ {RED}快速エアポート{BLACK}"
+STR_721_DESC :[3/6両] 普通/ {RED}快速{BLACK}"エアポート"
 STR_LV_721_INITIAL                     :登場時仕様(3連)
 STR_LV_721_6CAR_USEAT_INITIAL_MID      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(6連)
 STR_LV_721_3CAR_USEAT_INITIAL_CTL      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(3連)
@@ -62,7 +62,7 @@ STR_LV_733_1000    :はこだてライナー仕様(3連)
 STR_LV_733_3000    :全室{RED}u{BLUE}seat{BLACK}連結(6連)
 
 STR_735_NAME :735系電車
-STR_735_DESC :[3両] 普通列車として使用されます
+STR_735_DESC :[3両] 普通列車
 
 STR_785_NAME :785系電車
 STR_785_5CARS_NAME :785系電車 5両編成
@@ -78,8 +78,8 @@ STR_LV_785_INITIAL_4CARS :登場時仕様(4連)
 STR_LV_785_USEAT         :{RED}u{BLUE}seat{BLACK}連結仕様(2002~)
 STR_LV_785_USEAT_MIDCAB  :{RED}u{BLUE}seat{BLACK}連結 運転台封じ込め車つき仕様(2002~)
 
-STR_785_300_NAME :785系電車 300番代
-STR_785_300_DESC :[2両] 789系"スーパー白鳥"の増結車両としてのみ運用されます。
+STR_785_300_2CARS_NAME :785系電車 300番代
+STR_785_300_2CARS_DESC :[増結用2両] 789系"スーパー白鳥"の増結車両としてのみ運用されます。
 STR_785_300_CANNOT_ATTACH_OTHER :789系0番代とのみ連結できます。
 
 STR_H100_NAME :H100形気動車
@@ -91,3 +91,19 @@ STR_H100_CANNOT_ATTACH_OTHER :H100形とのみ連結できます。
 STR_789_1000_NAME :789系電車1000番代
 STR_789_1000_DESC :[5両] 特急"すずらん"/"スーパーカムイ" 快速"エアポート"
 STR_789_1000_CANNOT_ATTACH_OTHER :MUCarのみ連結できます
+
+STR_789_0_NAME :789系電車 0番代
+STR_789_0_2CARS_NAME :789系電車 0番代 2両
+STR_789_0_3CARS_NAME :789系電車 0番代 3両
+STR_789_0_6CARS_NAME :789系電車 0番代 6両編成
+STR_789_0_DESC :[5/6/5+3/6+2両]{}特急 "スーパー白鳥", "つがる", "ライラック"
+STR_789_0_2CARS_DESC :[2両] (編成例: 2+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
+STR_789_0_3CARS_DESC :[3両] (編成例: 2+3/3+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
+STR_789_0_6CARS_DESC :[6両] (編成例: 6/6+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
+STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
+STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
+STR_LV_789_0_2CARS_HE100 :HE-100編成(函館方編成)
+STR_LV_789_0_3CARS_HE100 :HE-100編成(函館方編成)
+STR_LV_789_0_3CARS_HE200 :HE-200編成(青森方編成)
+STR_LV_789_0_2CARS_HE300 :HE-300編成(青森方増結編成)
+STR_LV_789_0_6CARS       :函館地区仕様

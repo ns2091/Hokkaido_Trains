@@ -1,0 +1,261 @@
+spriteset(set_789_0_purchase, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+
+//788-200と788-300の向きが逆
+spriteset(set_789_0_front_tc,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_789_0_rear_tc,    "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+spriteset(set_789_0_unlited_tc, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+spriteset(set_789_0_788_200_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(10, 0) }
+spriteset(set_789_0_789_0_mn,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(11, 0) }
+spriteset(set_789_0_789_0_tn,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(12, 0) }
+spriteset(set_789_0_788_100_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(13, 0) }
+spriteset(set_789_0_788_300_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(14, 0) }
+spriteset(set_789_0_front_tcg,  "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
+spriteset(set_789_0_rear_tcg,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(16, 0) }
+
+spriteset(set_789f_0_front_tc,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_789f_0_rear_tc,    "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+spriteset(set_789f_0_unlited_tc, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+spriteset(set_789f_0_788_200_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(10, 1) }
+spriteset(set_789f_0_789_0_mn,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(11, 1) }
+spriteset(set_789f_0_789_0_tn,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(12, 1) }
+spriteset(set_789f_0_788_100_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(13, 1) }
+spriteset(set_789f_0_788_300_mp, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(14, 1) }
+spriteset(set_789f_0_front_tcg,  "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
+spriteset(set_789f_0_rear_tcg,   "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views(16, 1) }
+
+alternative_sprites(set_789_0_front_tc,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_789_0_rear_tc,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+alternative_sprites(set_789_0_unlited_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+alternative_sprites(set_789_0_788_200_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(10, 0) }
+alternative_sprites(set_789_0_789_0_mn,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(11, 0) }
+alternative_sprites(set_789_0_789_0_tn,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(12, 0) }
+alternative_sprites(set_789_0_788_100_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(13, 0) }
+alternative_sprites(set_789_0_788_300_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(14, 0) }
+alternative_sprites(set_789_0_front_tcg,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
+alternative_sprites(set_789_0_rear_tcg,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(16, 0) }
+
+alternative_sprites(set_789f_0_front_tc,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_789f_0_rear_tc,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+alternative_sprites(set_789f_0_unlited_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+alternative_sprites(set_789f_0_788_200_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(10, 1) }
+alternative_sprites(set_789f_0_789_0_mn,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(11, 1) }
+alternative_sprites(set_789f_0_789_0_tn,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(12, 1) }
+alternative_sprites(set_789f_0_788_100_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(13, 1) }
+alternative_sprites(set_789f_0_788_300_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(14, 1) }
+alternative_sprites(set_789f_0_front_tcg,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
+alternative_sprites(set_789f_0_rear_tcg,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views(16, 1) }
+
+
+
+spriteset(set_785_300_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+
+spriteset(set_785_300_mn,        "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_785_300_rear_tcp,  "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_785_300_front_tcp, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+
+spriteset(set_785f_300_mn,        "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_785f_300_rear_tcp,  "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_785f_300_front_tcp, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+
+alternative_sprites(set_785_300_mn,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_785_300_rear_tcp,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_785_300_front_tcp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+
+alternative_sprites(set_785f_300_mn,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_785f_300_rear_tcp,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_785f_300_front_tcp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+
+
+switch(FEAT_TRAINS, SELF, sw_789_0_2cars_can_attach_wagon, vehicle_type_id) {
+	emu789_0_2cars: CB_RESULT_ATTACH_ALLOW;
+	emu789_0_3cars: CB_RESULT_ATTACH_ALLOW;
+	emu785_300_2cars: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_789_0_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_3cars_can_attach_wagon, vehicle_type_id) {
+	emu789_0_2cars: CB_RESULT_ATTACH_ALLOW;
+	emu789_0_3cars: CB_RESULT_ATTACH_ALLOW;
+	emu785_300_2cars: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_789_0_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_6cars_can_attach_wagon, vehicle_type_id) {
+	emu785_300_2cars: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_789_0_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_300_2cars_can_attach_wagon, vehicle_type_id) {
+	emu789_0_2cars: CB_RESULT_ATTACH_ALLOW;
+	emu789_0_3cars: CB_RESULT_ATTACH_ALLOW;
+	emu785_300_2cars: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_789_0_CANNOT_ATTACH_OTHER);
+}
+
+// ライトを消灯させるギミックを追加すること
+
+switch(FEAT_TRAINS, SELF, sw_789_0_6cars, position_in_articulated_veh) {
+    // <- Hakodate/Asahikawa | Aomori/Sapporo ->
+    // Tcg + Mp788-100 + Tn + Mn + Mp788-200 + Tc
+
+	0: set_789_0_front_tcg;
+	1: set_789_0_788_100_mp;
+	2: set_789_0_789_0_tn;
+	3: set_789_0_789_0_mn;
+	4: set_789_0_788_200_mp;
+	5: set_789f_0_rear_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_6cars, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%6]) {
+    // <- Hakodate/Asahikawa | Aomori/Sapporo ->
+    // Tcg + Mp788-100 + Tn + Mn + Mp788-200 + Tc
+
+	0: set_789f_0_rear_tcg;
+	1: set_789f_0_788_100_mp;
+	2: set_789f_0_789_0_tn;
+	3: set_789f_0_789_0_mn;
+	4: set_789f_0_788_200_mp;
+	5: set_789_0_front_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_he100_3cars, position_in_articulated_veh) {
+	// <- Hakodate | Aomori ->
+	// Tcg + Mp788-100 + Tn 
+
+	0: set_789_0_front_tcg;
+	1: set_789_0_788_100_mp;
+	2: set_789_0_789_0_tn;
+} 
+
+switch(FEAT_TRAINS, SELF, sw_789_0_he100_2cars, position_in_articulated_veh) {
+	// <- Hakodate | Aomori ->
+	// Tcg + Mp788-100
+
+	0: set_789_0_front_tcg;
+	1: set_789_0_788_100_mp;
+} 
+
+switch(FEAT_TRAINS, SELF, sw_789_0_he200_3cars, position_in_articulated_veh) {
+	// <- Hakodate | Aomori ->
+	// Mn + Mp788-200 + Tc
+
+	0: set_789_0_789_0_mn;
+	1: set_789_0_788_200_mp;
+	2: set_789f_0_rear_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_he300_2cars, position_in_articulated_veh) {
+	// <- Hakodate | Aomori ->
+	// Mp788-300 + Tc
+
+	0: set_789_0_788_300_mp;
+	1: set_789f_0_rear_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_he100_3cars, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%3]) {
+	// <- Hakodate | Aomori ->
+	// Tcg + Mp788-100 + Tn 
+
+	0: set_789f_0_rear_tcg;
+	1: set_789f_0_788_100_mp;
+	2: set_789f_0_789_0_tn;
+} 
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_he100_2cars, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%2]) {
+	// <- Hakodate | Aomori ->
+	// Tcg + Mp788-100
+
+	0: set_789f_0_rear_tcg;
+	1: set_789f_0_788_100_mp;
+} 
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_he200_3cars, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%3]) {
+	// <- Hakodate | Aomori ->
+	// Mn + Mp788-200 + Tc
+
+	0: set_789f_0_789_0_mn;
+	1: set_789f_0_788_200_mp;
+	2: set_789_0_front_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_he300_2cars, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%2]) {
+	// <- Hakodate | Aomori ->
+	// Mp788-300 + Tc
+
+	0: set_789f_0_788_300_mp;
+	1: set_789_0_front_tc;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785f_300_2cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%2]) {
+    // <- Hakodate | Aomori ->
+	// Mn + Tcp
+
+	0: set_785f_300_mn;
+	1: set_785_300_front_tcp;
+}
+
+switch(FEAT_TRAINS, SELF, sw_785_300_2cars_formations, position_in_articulated_veh) {
+    // <- Hakodate | Aomori ->
+	// Mn + Tcp
+
+	0: set_785_300_mn;
+	1: set_785f_300_rear_tcp;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_2cars_formations, cargo_subtype) {
+	0: sw_789_0_he100_2cars;
+	1: sw_789_0_he300_2cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_3cars_formations, cargo_subtype) {
+	0: sw_789_0_he200_3cars;
+	1: sw_789_0_he100_3cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0_6cars_formations, cargo_subtype) {
+	0: sw_789_0_6cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_2cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+	0: sw_789f_0_he100_2cars;
+	1: sw_789f_0_he300_2cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_3cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+	0: sw_789f_0_he200_3cars;
+	1: sw_789f_0_he100_3cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789f_0_6cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+	0: sw_789f_0_6cars;
+}
+
+switch(FEAT_TRAINS, SELF, sw_789_0series_rvformation, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xC6]]) {
+    emu789_0_2cars:   sw_789f_0_2cars_formations;
+    emu789_0_3cars:   sw_789f_0_3cars_formations;
+    emu789_0_6cars:   sw_789f_0_6cars_formations;
+    emu785_300_2cars: sw_785f_300_2cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_789_0_2cars_gfx_main, vehicle_is_reversed) {
+    1: sw_789_0series_rvformation;
+    0: sw_789_0_2cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_789_0_3cars_gfx_main, vehicle_is_reversed) {
+    1: sw_789_0series_rvformation;
+    0: sw_789_0_3cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_789_0_6cars_gfx_main, vehicle_is_reversed) {
+    1: sw_789_0series_rvformation;
+    0: sw_789_0_6cars_formations;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_785_300_2cars_gfx_main, vehicle_is_reversed) {
+	1: sw_789_0series_rvformation;
+	0: sw_785_300_2cars_formations;
+}
+
+#include "./emu789_0.pnml"
+#include "./emu785_300.pnml"

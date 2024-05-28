@@ -1,0 +1,47 @@
+switch(FEAT_TRAINS, SELF, sw_785_300_2cars_artpart, extra_callback_info1) {
+	0..1: emu785_300_2cars;
+	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, emu785_300_2cars) {
+    property {
+        name: string(STR_785_300_2CARS_NAME);
+        introduction_date: date(2010,12, 4);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+        loading_speed: param_loading_express;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 140 km/h;
+        refit_cost: 0;
+        power: 800 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_express;
+        weight: 80 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+        variant_group: emu789_0_6cars;
+    }
+
+    graphics {
+		purchase          : set_785_300_purchase;
+
+        // Below items are depends on consist
+        default           : sw_785_300_2cars_gfx_main;
+        can_attach_wagon  :	sw_785_300_2cars_can_attach_wagon;
+		additional_text   : string(STR_785_300_2CARS_DESC);
+        // cargo_subtype_text: sw_785_300_2cars_subtypes;
+		articulated_part  : sw_785_300_2cars_artpart;
+    }
+}

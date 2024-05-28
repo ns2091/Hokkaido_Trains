@@ -52,17 +52,11 @@ switch(FEAT_TRAINS, PARENT, sw_789_1000_rvcheck, vehicle_is_reversed) {
 }
 
 switch(FEAT_TRAINS, PARENT, sw_789_1000_artpart_5cars, extra_callback_info1) {
-    0..4: emu789_1000;
+    0..4: emu789_1000_5cars;
 	default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
 }
 
-
-switch (FEAT_TRAINS, SELF, sw_789_1000_articulated_part, cargo_subtype) {
-	default: sw_789_1000_artpart_5cars;
-}
-
-
-item(FEAT_TRAINS, emu789_1000) {
+item(FEAT_TRAINS, emu789_1000_5cars) {
     property {
         name: string(STR_789_1000_NAME);
         introduction_date: date(2007, 10, 1);
@@ -97,6 +91,6 @@ item(FEAT_TRAINS, emu789_1000) {
 		purchase          : set_789_1000_purchase;
 		additional_text   : string(STR_789_1000_DESC);
         can_attach_wagon  :	sw_789_1000_can_attach_wagon;
-		articulated_part  : sw_789_1000_articulated_part;
+		articulated_part  : sw_789_1000_artpart_5cars;
     }
 }

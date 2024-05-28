@@ -1,13 +1,20 @@
+// IDを事前定義しておくと、動的にIDが変更されてセーブデータの互換性がなくなるのを防げる
 item(FEAT_TRAINS, mu_car, 1000) {}
-item(FEAT_TRAINS, emu721) {}
-item(FEAT_TRAINS, emu731) {}
-item(FEAT_TRAINS, emu733) {}
-item(FEAT_TRAINS, emu735) {}
-item(FEAT_TRAINS, emu785_0) {}
-item(FEAT_TRAINS, emu785_300) {}
-item(FEAT_TRAINS, emu789_0) {}
-item(FEAT_TRAINS, emu789_1000) {}
-item(FEAT_TRAINS, dmu201) {}
+item(FEAT_TRAINS, emu721_3cars) {}
+item(FEAT_TRAINS, emu721_6cars) {}
+item(FEAT_TRAINS, emu731_3cars) {}
+item(FEAT_TRAINS, emu733_3cars) {}
+item(FEAT_TRAINS, emu733_6cars) {}
+item(FEAT_TRAINS, emu735_3cars) {}
+item(FEAT_TRAINS, emu785_0_5cars) {}
+item(FEAT_TRAINS, emu785_0_4cars) {}
+item(FEAT_TRAINS, emu785_0_2cars) {}
+item(FEAT_TRAINS, emu785_300_2cars) {}
+item(FEAT_TRAINS, emu789_0_2cars) {}
+item(FEAT_TRAINS, emu789_0_3cars) {}
+item(FEAT_TRAINS, emu789_0_6cars) {}
+item(FEAT_TRAINS, emu789_1000_5cars) {}
+item(FEAT_TRAINS, dmu201_3cars) {}
 item(FEAT_TRAINS, dmu261_0) {}
 item(FEAT_TRAINS, dmu261_1000) {}
 item(FEAT_TRAINS, dmu281) {}
