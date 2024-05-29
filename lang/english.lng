@@ -108,3 +108,13 @@ STR_LV_789_0_3CARS_HE100 :HE-100 formation (Hakodate side)
 STR_LV_789_0_3CARS_HE200 :HE-200 formation (Aomori side)
 STR_LV_789_0_2CARS_HE300 :HE-300 formation (Aomori side)
 STR_LV_789_0_6CARS       :Hakodate Area Livery 
+
+STR_DC261_0_NAME :DC261-0 series
+STR_DC261_0_4CARS_NAME :DC261-0 series (4cars)
+STR_DC261_0_2CARS_NAME :DC261-0 series (2cars)
+STR_DC261_0_4CARS_DESC :[4cars] (consist: 4/2+4/4+2){}{RED}Limited Express{BLACK} "Super Soya", "Sarobetsu"
+STR_DC261_0_2CARS_DESC :[2cars] (consist: 2+2/2+2+2){}{RED}Limited Express{BLACK} "Super Soya", "Sarobetsu"
+STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+STR_LV_DC261_0_2CARS_SE100 :SE-100 formation (Sapporo side)
+STR_LV_DC261_0_2CARS_SE200 :SE-200 formation (Asahikawa/Wakkanai side)

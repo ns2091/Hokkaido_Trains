@@ -15,7 +15,8 @@ item(FEAT_TRAINS, emu789_0_3cars) {}
 item(FEAT_TRAINS, emu789_0_6cars) {}
 item(FEAT_TRAINS, emu789_1000_5cars) {}
 item(FEAT_TRAINS, dmu201_3cars) {}
-item(FEAT_TRAINS, dmu261_0) {}
+item(FEAT_TRAINS, dmu261_0_4cars) {}
+item(FEAT_TRAINS, dmu261_0_2cars) {}
 item(FEAT_TRAINS, dmu261_1000) {}
 item(FEAT_TRAINS, dmu281) {}
 item(FEAT_TRAINS, dmu283) {}

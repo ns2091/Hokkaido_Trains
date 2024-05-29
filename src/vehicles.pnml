@@ -3,5 +3,5 @@
 #include "vehicles/emu789_series/emu789_0group_main.pnml"
 #include "vehicles/emu789_series/emu789_1000_main.pnml"
 // #include "vehicles/emu789_0.pnml"
-// #include "vehicles/dmu261_0.pnml"
+#include "vehicles/dmu261_series/dmu261_0_main.pnml"
 // #include "vehicles/dmu281_283.pnml"
