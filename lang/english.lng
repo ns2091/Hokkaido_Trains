@@ -118,3 +118,38 @@ STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trai
 STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
 STR_LV_DC261_0_2CARS_SE100 :SE-100 formation (Sapporo side)
 STR_LV_DC261_0_2CARS_SE200 :SE-200 formation (Asahikawa/Wakkanai side)
+
+
+STR_DC261_1000_7CARS_NAME :DC261-1000 series (7cars)
+STR_DC261_1000_5CARS_NAME :DC261-1000 series (5cars)
+STR_DC261_1000_2CARS_NAME :DC261-1000 series (2cars)
+STR_DC261_1000_1CAR_NAME  :DC261-1000 series (1car)
+STR_DC261_1000_7CARS_DESC :[7cars] (consist: 7){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
+STR_DC261_1000_5CARS_DESC :[5cars] (consist: 5){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
+STR_DC261_1000_2CARS_DESC :[2cars] (consist: 2+2/2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
+STR_DC261_1000_1CAR_DESC  :[1car] (consist: 2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
+STR_DC261_1000_7CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
+STR_DC261_1000_5CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
+STR_DC261_1000_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+STR_DC261_1000_1CAR_CANNOT_ATTACH_OTHER  :This vehicle can only be attached to trains of same types.
+STR_LV_DC261_1000_7CARS_INIT     :Init Livery
+STR_LV_DC261_1000_7CARS_RENEW    :Renewal Livery
+STR_LV_DC261_1000_5CARS_INIT     :Init Livery
+STR_LV_DC261_1000_5CARS_RENEW    :Renewal Livery
+STR_LV_DC261_1000_5CARS_HAMANASU :Hamanasu Livery
+STR_LV_DC261_1000_5CARS_LAVENDER :Lavender Livery
+
+STR_LV_DC261_1000_2CARS_ST1100_INIT     :[Init] ST-1100 formation (Hakodate/Kushiro side)
+STR_LV_DC261_1000_2CARS_ST1200_INIT     :[Init] ST-1200 formation (Sapporo side)
+STR_LV_DC261_1000_2CARS_ST1100_RENEW    :[Renew] ST-1100 formation (Hakodate/Kushiro side)
+STR_LV_DC261_1000_2CARS_ST1200_RENEW    :[Renew] ST-1200 formation (Sapporo side)
+STR_LV_DC261_1000_2CARS_ST5101_HAMANASU :[Hamanasu] ST-5101 formation (Hakodate/Kushiro side)
+STR_LV_DC261_1000_2CARS_ST5201_HAMANASU :[Hamanasu] ST-5201 formation (Sapporo side)
+STR_LV_DC261_1000_2CARS_ST5102_LAVENDER :[Lavender] ST-5102 formation (Hakodate/Kushiro side)
+STR_LV_DC261_1000_2CARS_ST5202_LAVENDER :[Lavender] ST-5202 formation (Sapporo side)
+
+STR_LV_DC261_1000_1CAR_1300_INIT     :[Init] KiHa260-1300 (additional coach)
+STR_LV_DC261_1000_1CAR_1300_RENEW    :[Renew] KiHa260-1300 (additional coach)
+STR_LV_DC261_1000_1CAR_1400_RENEW    :[Renew] KiHa260-1400 (additional coach)
+STR_LV_DC261_1000_1CAR_5300_HAMANASU :[Hamanasu] KiHa260-5300
+STR_LV_DC261_1000_1CAR_5300_LAVENDER :[Lavender] KiHa260-5300
