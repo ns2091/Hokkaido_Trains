@@ -2,16 +2,46 @@
 STR_GRF_NAME                                                    :{GREEN}Hokkaido {BLACK}Trains
 STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
 
-STR_721_NAME: EC721 series
+STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
+STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
+STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
+STR_731_CANNOT_ATTACH_OTHER      :This type can attach train types only DC201, 721, 731, 733 and 735series.
+STR_DC201_CANNOT_ATTACH_OTHER    :This type can attach train types only DC201 and EC731series.
+
+STR_721_NAME:EC721 series
+STR_721_3CARS_NAME:EC721 series (3cars)
+STR_721_6CARS_NAME:EC721 series (6cars)
 STR_721_DESC:[3/6cars] Operated by JR Hokkaido
+STR_721_3CARS_DESC:[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "AIRPORT" "Ishikari Liner"
+STR_721_6CARS_DESC:[6cars] (consist: 6){}Local / {RED}Rapid{BLACK} "AIRPORT" "Ishikari Liner"
 STR_LV_721_INITIAL                     :Initial livery
-STR_LV_721_6CAR_USEAT_INITIAL_MID      :Consist by {RED}u{BLUE}seat{BLACK} at midcar(Early livery)
-STR_LV_721_3CAR_USEAT_INITIAL_CTL      :Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Early livery)
-STR_LV_721_6CAR_USEAT_RENEWAL_MID      :Consist by {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
-STR_LV_721_3CAR_USEAT_RENEWAL_CTL      :Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
+STR_LV_721_6CAR_USEAT_INITIAL_MID      :{RED}u{BLUE}seat{BLACK} at midcar(Early livery)
+STR_LV_721_3CAR_USEAT_INITIAL_CTL      :{RED}u{BLUE}seat{BLACK} at firstcar(Early livery)
+STR_LV_721_6CAR_USEAT_RENEWAL_MID      :{RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
+STR_LV_721_3CAR_USEAT_RENEWAL_CTL      :{RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
 STR_LV_721_VVVF                        :VVVF livery
-STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
-STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
+STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF and {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
+STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF and {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
+
+
+STR_731_NAME :EC731 series
+STR_731_DESC :[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "Ishikari Liner"{}Can attach Diesel commuter train(DC201).
+
+STR_DC201_NAME :DC201 series
+STR_DC201_DESC :[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "Niseko Liner" "Ishikari Liner"{}Can attach Electric commuter train(EC731).
+
+STR_733_NAME :EC733 series
+STR_733_3CARS_NAME :EC733 series (3cars)
+STR_733_6CARS_NAME :EC733 series (6cars)
+STR_733_DESC :[3/6cars] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
+STR_733_3CARS_DESC :[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "Ishikari Liner" / {PURPLE}Hakodate Liner{BLACK}
+STR_733_6CARS_DESC :[6cars] (consist: 6){}Local / {RED}Rapid{BLACK} "AIRPORT" "Ishikari Liner"
+STR_LV_733_INITIAL :Initial livery (733-100)
+STR_LV_733_1000    :Hakodate area livery (733-1000)
+STR_LV_733_3000    :{RED}Rapid{BLACK} "AIRPORT" livery (733-3000)
+
+STR_735_NAME :EC735 series (3cars)
+STR_735_DESC :[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "Ishikari Liner"
 
 STR_DC281_7CARS_NAME      :DC281 series (7cars)
 STR_DC281_1CAR_NAME       :DC281 series (1car)
@@ -37,8 +67,8 @@ STR_LV_DC281_1CAR_KIRO280_0                   :KiRo280-0
 
 STR_DC283_6CARS_NAME    :DC283 series (6cars)
 STR_DC283_1CAR_NAME     :DC283 series (1car)
-STR_DC283_6CARS_DESC    :[6cars] (consist: 6/6+1..){}{RED}Limited Express{BLACK} "Super Ozora", "Super Hokuto" and more..
-STR_DC283_1CAR_DESC     :[1car] (consist: 1..){}{RED}Limited Express{BLACK} "Super Ozora", "Super Hokuto" and more..
+STR_DC283_6CARS_DESC    :[6cars] (consist: 6/6+1..){}{RED}Limited Express{BLACK} "Super Ozora" "Super Hokuto" and more..
+STR_DC283_1CAR_DESC     :[1car] (consist: 1..){}{RED}Limited Express{BLACK} "Super Ozora" "Super Hokuto" and more..
 
 STR_LV_DC283_6CARS_INIT :Initial livery
 STR_LV_DC283_1CAR_INIT_KIHA283_0_SAPPORO :KiHa283-0 Front side
@@ -48,40 +78,17 @@ STR_LV_DC283_1CAR_INIT_KIHA282_0         :KiHa282-0
 STR_LV_DC283_1CAR_INIT_KIHA282_100       :KiHa282-100
 STR_LV_DC283_1CAR_INIT_KIHA282_2000      :KiHa282-2000
 
-
 STR_737_2CARS_NAME :EC737 series
 STR_737_2CARS_DESC :[2cars]{}{BLACK}Local train{BLACK}{}Ready for {GREEN}ONEMAN{BLACK}-operate
 STR_737_2CARS_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains.
-
-
-STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
-STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
-STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
-STR_731_CANNOT_ATTACH_OTHER            :This type can attach train types only DC201, 721, 731, 733 and 735series.
-STR_DC201_CANNOT_ATTACH_OTHER          :This type can attach train types only DC201 and EC731series.
-
-STR_731_NAME :EC731 series
-STR_731_DESC :[3cars] Can attach Diesel commuter train(DC201).
-
-STR_DC201_NAME :DC201 series
-STR_DC201_DESC :[3cars] Can attach Electric commuter train(EC731).
-
-STR_733_NAME :EC733 series
-STR_733_DESC :[3/6cars] Local / Rapid "{RED}AIRPORT{BLACK}" / "{PURPLE}Hakodate Liner{BLACK}"
-STR_LV_733_INITIAL :Initial livery (733-100)
-STR_LV_733_1000    :Hakodate area livery (733-1000)
-STR_LV_733_3000    :Rapid "{RED}AIRPORT{BLACK}" livery
-
-STR_735_NAME :EC735 series
-STR_735_DESC :[3cars] For local train
 
 STR_785_NAME :EC785 series
 STR_785_5CARS_NAME :EC785 series(5cars)
 STR_785_4CARS_NAME :EC785 series(4cars)
 STR_785_2CARS_NAME :EC785 series(2cars)
-STR_785_5CARS_DESC :[5cars] (consist: 5/5(2+3)){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
-STR_785_4CARS_DESC :[4cars] (consist: 4/2+4){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
-STR_785_2CARS_DESC :[2cars] (consist: 2/2+4/2+2+2){}{RED}Limited Express{BLACK}"Suzuran", "Super Kamui", "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_5CARS_DESC :[5cars] (consist: 5/5(2+3)){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_4CARS_DESC :[4cars] (consist: 4/2+4){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
+STR_785_2CARS_DESC :[2cars] (consist: 2/2+4/2+2+2){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
 STR_785_CANNOT_ATTACH_OTHER :785series can attach train types only same 785series.
 STR_LV_785_INITIAL :Initial livery(2/4/2+4cars)
 STR_LV_785_INITIAL_2CARS :Initial livery(2cars)
@@ -107,9 +114,9 @@ STR_789_0_NAME :EC789-0 series
 STR_789_0_2CARS_NAME :EC789-0 series (2cars)
 STR_789_0_3CARS_NAME :EC789-0 series (3cars)
 STR_789_0_6CARS_NAME :EC789-0 series (6cars)
-STR_789_0_2CARS_DESC :[2cars] (consist: 2+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
-STR_789_0_3CARS_DESC :[3cars] (consist: 2+3/3+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
-STR_789_0_6CARS_DESC :[6cars] (consist: 6/6+2){}{RED}Limited Express{BLACK} "Super Hakucho", "Tsugaru", "Lilac"
+STR_789_0_2CARS_DESC :[2cars] (consist: 2+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
+STR_789_0_3CARS_DESC :[3cars] (consist: 2+3/3+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
+STR_789_0_6CARS_DESC :[6cars] (consist: 6/6+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
 STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
 STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
 STR_LV_789_0_2CARS_HE100 :HE-100 formation (Hakodate side)
@@ -121,8 +128,8 @@ STR_LV_789_0_6CARS       :Hakodate Area Livery
 STR_DC261_0_NAME :DC261-0 series
 STR_DC261_0_4CARS_NAME :DC261-0 series (4cars)
 STR_DC261_0_2CARS_NAME :DC261-0 series (2cars)
-STR_DC261_0_4CARS_DESC :[4cars] (consist: 4/2+4/4+2){}{RED}Limited Express{BLACK} "Super Soya", "Sarobetsu"
-STR_DC261_0_2CARS_DESC :[2cars] (consist: 2+2/2+2+2){}{RED}Limited Express{BLACK} "Super Soya", "Sarobetsu"
+STR_DC261_0_4CARS_DESC :[4cars] (consist: 4/2+4/4+2){}{RED}Limited Express{BLACK} "Super Soya" "Sarobetsu"
+STR_DC261_0_2CARS_DESC :[2cars] (consist: 2+2/2+2+2){}{RED}Limited Express{BLACK} "Super Soya" "Sarobetsu"
 STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
 STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
 STR_LV_DC261_0_2CARS_SE100 :SE-100 formation (Sapporo side)
@@ -133,10 +140,10 @@ STR_DC261_1000_7CARS_NAME :DC261-1000 series (7cars)
 STR_DC261_1000_5CARS_NAME :DC261-1000 series (5cars)
 STR_DC261_1000_2CARS_NAME :DC261-1000 series (2cars)
 STR_DC261_1000_1CAR_NAME  :DC261-1000 series (1car)
-STR_DC261_1000_7CARS_DESC :[7cars] (consist: 7){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
-STR_DC261_1000_5CARS_DESC :[5cars] (consist: 5){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
-STR_DC261_1000_2CARS_DESC :[2cars] (consist: 2+2/2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
-STR_DC261_1000_1CAR_DESC  :[1car] (consist: 2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto", "Super Tokachi" and more...
+STR_DC261_1000_7CARS_DESC :[7cars] (consist: 7){}{RED}Limited Express{BLACK} "Super Hokuto" "Super Tokachi" and more...
+STR_DC261_1000_5CARS_DESC :[5cars] (consist: 5){}{RED}Limited Express{BLACK} "Super Hokuto" "Super Tokachi" and more...
+STR_DC261_1000_2CARS_DESC :[2cars] (consist: 2+2/2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto" "Super Tokachi" and more...
+STR_DC261_1000_1CAR_DESC  :[1car] (consist: 2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto" "Super Tokachi" and more...
 STR_DC261_1000_7CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
 STR_DC261_1000_5CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
 STR_DC261_1000_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.

@@ -93,6 +93,7 @@ item(FEAT_TRAINS, dmu281_1car , 3112) {}
 item(FEAT_TRAINS, dmu283_6cars , 3113) {}
 item(FEAT_TRAINS, dmu283_1car , 3114) {}
 item(FEAT_TRAINS, dmuH100 , 3121) {}
+item(FEAT_TRAINS, emu737_2cars , 3131) {}
 # 5 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/vehicles.pnml" 1
 # 1 "src/vehicles/721group/721group_main.pnml" 1
@@ -948,7 +949,7 @@ switch(FEAT_TRAINS, SELF, sw_721_6cars_artpart, extra_callback_info1) {
 
 item(FEAT_TRAINS, emu721_3cars) {
     property {
-        name: string(STR_721_NAME);
+        name: string(STR_721_3CARS_NAME);
         introduction_date: date(1988, 11, 3);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -985,7 +986,7 @@ item(FEAT_TRAINS, emu721_3cars) {
         // Below items are depends on consist
         default : sw_721_3cars_gfx_main;
         can_attach_wagon : sw_721group_can_attach_wagon;
-  additional_text : string(STR_721_DESC);
+  additional_text : string(STR_721_3CARS_DESC);
         cargo_subtype_text: sw_721_3cars_subtypes;
   articulated_part : sw_721_3cars_artpart;
     }
@@ -993,7 +994,7 @@ item(FEAT_TRAINS, emu721_3cars) {
 
 item(FEAT_TRAINS, emu721_6cars) {
     property {
-        name: string(STR_721_NAME);
+        name: string(STR_721_6CARS_NAME);
         introduction_date: date(1988, 11, 3);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -1031,7 +1032,7 @@ item(FEAT_TRAINS, emu721_6cars) {
         // Below items are depends on consist
         default : sw_721_6cars_gfx_main;
         can_attach_wagon : sw_721_6cars_can_attach_wagon;
-  additional_text : string(STR_721_DESC);
+  additional_text : string(STR_721_6CARS_DESC);
         cargo_subtype_text: sw_721_6cars_subtypes;
   articulated_part : sw_721_6cars_artpart;
     }
@@ -1114,7 +1115,7 @@ switch(FEAT_TRAINS, SELF, sw_733_6cars_artpart, extra_callback_info1) {
 
 item(FEAT_TRAINS, emu733_3cars) {
     property {
-        name: string(STR_733_NAME);
+        name: string(STR_733_3CARS_NAME);
         introduction_date: date(2012, 6, 1);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -1151,7 +1152,7 @@ item(FEAT_TRAINS, emu733_3cars) {
         // Below items are depends on consist
         default : sw_733_3cars_gfx_main;
         can_attach_wagon : sw_721group_can_attach_wagon;
-  additional_text : string(STR_733_DESC);
+  additional_text : string(STR_733_3CARS_DESC);
         cargo_subtype_text: sw_733_3cars_subtypes;
   articulated_part : sw_733_3cars_artpart;
     }
@@ -1159,7 +1160,7 @@ item(FEAT_TRAINS, emu733_3cars) {
 
 item(FEAT_TRAINS, emu733_6cars) {
     property {
-        name: string(STR_733_NAME);
+        name: string(STR_733_6CARS_NAME);
         introduction_date: date(2012, 6, 1);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -1197,7 +1198,7 @@ item(FEAT_TRAINS, emu733_6cars) {
         // Below items are depends on consist
         default : sw_733_6cars_gfx_main;
         can_attach_wagon : sw_733_6cars_can_attach_wagon;
-  additional_text : string(STR_733_DESC);
+  additional_text : string(STR_733_6CARS_DESC);
         cargo_subtype_text: sw_733_6cars_subtypes;
   articulated_part : sw_733_6cars_artpart;
     }
@@ -3178,40 +3179,40 @@ spriteset(set_dc261_0_purchase, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_sing
 alternative_sprites(set_dc261_0_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_dc261_0_KiHa261_100_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-spriteset(set_dc261_0_KiHa261_100_unlited, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_dc261_0_KiHa261_100_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 spriteset(set_dc261_0_KiHa261_100_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
 spriteset(set_dc261_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
 spriteset(set_dc261_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
-spriteset(set_dc261_0_KiRoHa261_200_unlited, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+spriteset(set_dc261_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 spriteset(set_dc261f_0_KiHa261_100_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-spriteset(set_dc261f_0_KiHa261_100_unlited, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_dc261f_0_KiHa261_100_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 spriteset(set_dc261f_0_KiHa261_100_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
 spriteset(set_dc261f_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
 spriteset(set_dc261f_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
-spriteset(set_dc261f_0_KiRoHa261_200_unlited, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+spriteset(set_dc261f_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 alternative_sprites(set_dc261_0_KiHa261_100_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-alternative_sprites(set_dc261_0_KiHa261_100_unlited, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_dc261_0_KiHa261_100_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 alternative_sprites(set_dc261_0_KiHa261_100_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
 alternative_sprites(set_dc261_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
 alternative_sprites(set_dc261_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
-alternative_sprites(set_dc261_0_KiRoHa261_200_unlited, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+alternative_sprites(set_dc261_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 alternative_sprites(set_dc261f_0_KiHa261_100_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-alternative_sprites(set_dc261f_0_KiHa261_100_unlited, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_dc261f_0_KiHa261_100_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 alternative_sprites(set_dc261f_0_KiHa261_100_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
 alternative_sprites(set_dc261f_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
 alternative_sprites(set_dc261f_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
-alternative_sprites(set_dc261f_0_KiRoHa261_200_unlited, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+alternative_sprites(set_dc261f_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_4cars_can_attach_wagon, vehicle_type_id) {
     dmu261_0_2cars: CB_RESULT_ATTACH_ALLOW;
@@ -3225,42 +3226,42 @@ switch(FEAT_TRAINS, SELF, sw_dc261_0_2cars_can_attach_wagon, vehicle_type_id) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_KiHa261_100_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261_0_KiHa261_100_unlited;
+ 0: set_dc261_0_KiHa261_100_unlighted;
  default: set_dc261_0_KiHa261_100_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_KiHa261_100_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261_0_KiHa261_100_unlited;
+ 0: set_dc261_0_KiHa261_100_unlighted;
  default: set_dc261_0_KiHa261_100_rear;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261f_0_KiHa261_100_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261f_0_KiHa261_100_unlited;
+ 0: set_dc261f_0_KiHa261_100_unlighted;
  default: set_dc261f_0_KiHa261_100_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261f_0_KiHa261_100_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261f_0_KiHa261_100_unlited;
+ 0: set_dc261f_0_KiHa261_100_unlighted;
  default: set_dc261f_0_KiHa261_100_rear;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_KiRoHa261_200_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261_0_KiRoHa261_200_unlited;
+ 0: set_dc261_0_KiRoHa261_200_unlighted;
  default: set_dc261_0_KiRoHa261_200_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_KiRoHa261_200_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261_0_KiRoHa261_200_unlited;
+ 0: set_dc261_0_KiRoHa261_200_unlighted;
  default: set_dc261_0_KiRoHa261_200_rear;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261f_0_KiRoHa261_200_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261f_0_KiRoHa261_200_unlited;
+ 0: set_dc261f_0_KiRoHa261_200_unlighted;
  default: set_dc261f_0_KiRoHa261_200_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_dc261f_0_KiRoHa261_200_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
- 0: set_dc261f_0_KiRoHa261_200_unlited;
+ 0: set_dc261f_0_KiRoHa261_200_unlighted;
  default: set_dc261f_0_KiRoHa261_200_rear;
 }
 

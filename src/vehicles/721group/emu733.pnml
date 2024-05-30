@@ -19,7 +19,7 @@ switch(FEAT_TRAINS, SELF, sw_733_6cars_artpart, extra_callback_info1) {
 
 item(FEAT_TRAINS, emu733_3cars) {
     property {
-        name: string(STR_733_NAME);
+        name: string(STR_733_3CARS_NAME);
         introduction_date: date(2012, 6, 1);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -56,7 +56,7 @@ item(FEAT_TRAINS, emu733_3cars) {
         // Below items are depends on consist
         default           : sw_733_3cars_gfx_main;
         can_attach_wagon  :	sw_721group_can_attach_wagon;
-		additional_text   : string(STR_733_DESC);
+		additional_text   : string(STR_733_3CARS_DESC);
         cargo_subtype_text: sw_733_3cars_subtypes;
 		articulated_part  : sw_733_3cars_artpart;
     }
@@ -64,7 +64,7 @@ item(FEAT_TRAINS, emu733_3cars) {
 
 item(FEAT_TRAINS, emu733_6cars) {
     property {
-        name: string(STR_733_NAME);
+        name: string(STR_733_6CARS_NAME);
         introduction_date: date(2012, 6, 1);
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_ELECTRIC;
@@ -102,7 +102,7 @@ item(FEAT_TRAINS, emu733_6cars) {
         // Below items are depends on consist
         default           : sw_733_6cars_gfx_main;
         can_attach_wagon  :	sw_733_6cars_can_attach_wagon;
-		additional_text   : string(STR_733_DESC);
+		additional_text   : string(STR_733_6CARS_DESC);
         cargo_subtype_text: sw_733_6cars_subtypes;
 		articulated_part  : sw_733_6cars_artpart;
     }

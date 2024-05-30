@@ -2,11 +2,16 @@
 STR_GRF_NAME                                                    :{GREEN}Hokkaido {WHITE}Trains
 STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
 
-STR_MUCAR_NAME         : 付属車両
-STR_MUCAR_DESC         : 基本車両の中間に連結して使用してください
+STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
+STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
+STR_DC201_CANNOT_ATTACH_OTHER    :201系気動車, 731系電車とのみ連結することができます
 
-STR_721_NAME :721系電車
-STR_721_DESC :[3/6両] 普通/ {RED}快速{BLACK}"エアポート"
+STR_721_NAME:721系電車
+STR_721_3CARS_NAME:721系電車 3両
+STR_721_6CARS_NAME:721系電車 6両
+STR_721_DESC:[3/6両] 普通/ {RED}快速{BLACK}"エアポート"
+STR_721_3CARS_DESC:[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
+STR_721_6CARS_DESC:[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
 STR_LV_721_INITIAL                     :登場時仕様(3連)
 STR_LV_721_6CAR_USEAT_INITIAL_MID      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(6連)
 STR_LV_721_3CAR_USEAT_INITIAL_CTL      :サイリスタ位相制御 半室{RED}u{BLUE}seat{BLACK}連結(3連)
@@ -15,6 +20,26 @@ STR_LV_721_3CAR_USEAT_RENEWAL_CTL      :サイリスタ位相制御 全室{RED}u
 STR_LV_721_VVVF                        :VVVF制御仕様(3連)
 STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(6連)
 STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(3連)
+
+
+STR_731_NAME :731系電車 3両
+STR_731_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"{}201系気動車と連結できます。
+
+STR_DC201_NAME :201系気動車 3両
+STR_DC201_DESC :[3cars] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "ニセコライナー" "いしかりライナー"{}731系電車と連結できます。
+
+STR_733_NAME :733系電車
+STR_733_3CARS_NAME :733系電車 3両
+STR_733_6CARS_NAME :733系電車 6両
+STR_733_DESC :[3/6cars] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
+STR_733_3CARS_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー" / {PURPLE}はこだてライナー{BLACK}
+STR_733_6CARS_DESC :[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
+STR_LV_733_INITIAL :札幌地区仕様
+STR_LV_733_1000    :函館地区仕様
+STR_LV_733_3000    :快速エアポート仕様
+
+STR_735_NAME :735系電車 3両
+STR_735_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"
 
 STR_DC281_7CARS_NAME      :281系気動車 7両編成
 STR_DC281_1CAR_NAME       :281系気動車 1両
@@ -40,8 +65,8 @@ STR_LV_DC281_1CAR_KIRO280_0                   :キロ280-0
 
 STR_DC283_6CARS_NAME    :283系気動車 6両編成
 STR_DC283_1CAR_NAME     :283系気動車 1両
-STR_DC283_6CARS_DESC    :[6両] (編成例: 6/6+1..){}{RED}特急{BLACK} "スーパーおおぞら", "スーパー北斗" ほか
-STR_DC283_1CAR_DESC     :[1両] (編成例: 1..){}{RED}特急{BLACK} "スーパーおおぞら", "スーパー北斗" ほか
+STR_DC283_6CARS_DESC    :[6両] (編成例: 6/6+1..){}{RED}特急{BLACK} "スーパーおおぞら" "スーパー北斗" ほか
+STR_DC283_1CAR_DESC     :[1両] (編成例: 1..){}{RED}特急{BLACK} "スーパーおおぞら" "スーパー北斗" ほか
 
 STR_LV_DC283_6CARS_INIT :登場時仕様
 STR_LV_DC283_1CAR_INIT_KIHA283_0_SAPPORO :キハ283-0 前側
@@ -55,33 +80,13 @@ STR_737_2CARS_NAME :737系電車
 STR_737_2CARS_DESC :[2両] (編成例: 2/2+2..){}{BLACK}普通列車{BLACK}{}{GREEN}ワンマン{BLACK}運転
 STR_737_2CARS_CANNOT_ATTACH_OTHER :737系は同系列以外と連結することはできません。
 
-
-STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
-STR_731_CANNOT_ATTACH_OTHER            :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
-STR_DC201_CANNOT_ATTACH_OTHER          :201系気動車, 731系電車とのみ連結することができます
-
-STR_731_NAME :731系電車
-STR_731_DESC :[3両] 201系気動車と連結できます
-
-STR_DC201_NAME :201系気動車
-STR_DC201_DESC :[3両] 731系電車と連結できます
-
-STR_733_NAME :733系電車
-STR_733_DESC :[3/6両] 普通/ {RED}快速エアポート{BLACK}"/ "{PURPLE}はこだてライナー{BLACK}"
-STR_LV_733_INITIAL :登場時仕様(3連)
-STR_LV_733_1000    :はこだてライナー仕様(3連)
-STR_LV_733_3000    :全室{RED}u{BLUE}seat{BLACK}連結(6連)
-
-STR_735_NAME :735系電車
-STR_735_DESC :[3両] 普通列車
-
 STR_785_NAME :785系電車
 STR_785_5CARS_NAME :785系電車 5両編成
 STR_785_4CARS_NAME :785系電車 4両編成
 STR_785_2CARS_NAME :785系電車 2両編成
-STR_785_5CARS_DESC :[5両] (編成例: 5/5(2+3)){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
-STR_785_4CARS_DESC :[4両] (編成例: 4/4+2){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
-STR_785_2CARS_DESC :[2両] (編成例: 2/2+4/2+2+2){}{RED}特急{BLACK}"すずらん", "スーパーカムイ", "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_5CARS_DESC :[5両] (編成例: 5/5(2+3)){}{RED}特急{BLACK}"すずらん" "スーパーカムイ" "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_4CARS_DESC :[4両] (編成例: 4/4+2){}{RED}特急{BLACK}"すずらん" "スーパーカムイ" "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
+STR_785_2CARS_DESC :[2両] (編成例: 2/2+4/2+2+2){}{RED}特急{BLACK}"すずらん" "スーパーカムイ" "スーパーホワイトアロー"{}{ORANGE}快速{BLACK}"エアポート"
 STR_785_CANNOT_ATTACH_OTHER :785系は同系列以外と連結することはできません。
 STR_LV_785_INITIAL :登場時仕様(2/4連)
 STR_LV_785_INITIAL_2CARS :登場時仕様(2連)
@@ -107,10 +112,10 @@ STR_789_0_NAME :789系電車0番代
 STR_789_0_2CARS_NAME :789系電車0番代 2両
 STR_789_0_3CARS_NAME :789系電車0番代 3両
 STR_789_0_6CARS_NAME :789系電車0番代 6両編成
-STR_789_0_DESC :[5/6/5+3/6+2両]{}特急 "スーパー白鳥", "つがる", "ライラック"
-STR_789_0_2CARS_DESC :[2両] (編成例: 2+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
-STR_789_0_3CARS_DESC :[3両] (編成例: 2+3/3+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
-STR_789_0_6CARS_DESC :[6両] (編成例: 6/6+2){}{RED}特急{BLACK} "スーパー白鳥", "つがる", "ライラック"
+STR_789_0_DESC :[5/6/5+3/6+2両]{}特急 "スーパー白鳥" "つがる" "ライラック"
+STR_789_0_2CARS_DESC :[2両] (編成例: 2+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
+STR_789_0_3CARS_DESC :[3両] (編成例: 2+3/3+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
+STR_789_0_6CARS_DESC :[6両] (編成例: 6/6+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
 STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
 STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
 STR_LV_789_0_2CARS_HE100 :HE-100編成(函館方編成)
@@ -122,8 +127,8 @@ STR_LV_789_0_6CARS       :函館地区仕様
 STR_DC261_0_NAME :261系気動車0番代
 STR_DC261_0_4CARS_NAME :261系気動車0番代 4両編成
 STR_DC261_0_2CARS_NAME :261系気動車0番代 2両
-STR_DC261_0_4CARS_DESC :[4両] (編成例: 4/2+4/4+2){}{RED}特急{BLACK} "スーパー宗谷", "サロベツ"
-STR_DC261_0_2CARS_DESC :[2両] (編成例: 2+2/2+2+2){}{RED}特急{BLACK} "スーパー宗谷", "サロベツ"
+STR_DC261_0_4CARS_DESC :[4両] (編成例: 4/2+4/4+2){}{RED}特急{BLACK} "スーパー宗谷" "サロベツ"
+STR_DC261_0_2CARS_DESC :[2両] (編成例: 2+2/2+2+2){}{RED}特急{BLACK} "スーパー宗谷" "サロベツ"
 STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :261系0番代車両とのみ連結できます。
 STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :261系0番代車両とのみ連結できます。
 STR_LV_DC261_0_2CARS_SE100 :SE-100編成(札幌方編成)
@@ -134,10 +139,10 @@ STR_DC261_1000_7CARS_NAME :261系気動車1000番代 7両編成
 STR_DC261_1000_5CARS_NAME :261系気動車1000番代 5両編成
 STR_DC261_1000_2CARS_NAME :261系気動車1000番代 2両
 STR_DC261_1000_1CAR_NAME  :261系気動車1000番代 1両
-STR_DC261_1000_7CARS_DESC :[7両] (編成例: 7){}{RED}特急{BLACK} "スーパー北斗", "スーパーとかち" ほか
-STR_DC261_1000_5CARS_DESC :[5両] (編成例: 5){}{RED}特急{BLACK} "スーパー北斗", "スーパーとかち" ほか
-STR_DC261_1000_2CARS_DESC :[2両] (編成例: 2+2/2+1..+2){}{RED}特急{BLACK} "スーパー北斗", "スーパーとかち" ほか
-STR_DC261_1000_1CAR_DESC  :[1両] (編成例: 2+1..+2){}{RED}特急{BLACK} "スーパー北斗", "スーパーとかち" ほか
+STR_DC261_1000_7CARS_DESC :[7両] (編成例: 7){}{RED}特急{BLACK} "スーパー北斗" "スーパーとかち" ほか
+STR_DC261_1000_5CARS_DESC :[5両] (編成例: 5){}{RED}特急{BLACK} "スーパー北斗" "スーパーとかち" ほか
+STR_DC261_1000_2CARS_DESC :[2両] (編成例: 2+2/2+1..+2){}{RED}特急{BLACK} "スーパー北斗" "スーパーとかち" ほか
+STR_DC261_1000_1CAR_DESC  :[1両] (編成例: 2+1..+2){}{RED}特急{BLACK} "スーパー北斗" "スーパーとかち" ほか
 STR_DC261_1000_7CARS_CANNOT_ATTACH_OTHER :この編成に他の車両を連結することはできません。
 STR_DC261_1000_5CARS_CANNOT_ATTACH_OTHER :この編成に他の車両を連結することはできません。
 STR_DC261_1000_2CARS_CANNOT_ATTACH_OTHER :この車両は261系1000番代のみ連結できます。
