@@ -2,9 +2,6 @@
 STR_GRF_NAME                                                    :{GREEN}Hokkaido {BLACK}Trains
 STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
 
-STR_MUCAR_NAME         : MU Car
-STR_MUCAR_DESC         : Trailer Car
-
 STR_721_NAME: EC721 series
 STR_721_DESC:[3/6cars] Operated by JR Hokkaido
 STR_LV_721_INITIAL                     :Initial livery
@@ -97,7 +94,7 @@ STR_785_300_2CARS_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". 
 STR_785_300_CANNOT_ATTACH_OTHER :This vehicle can only be attached to 789-0series.
 
 STR_H100_NAME :DC H100 series
-STR_H100_DESC :For local train
+STR_H100_DESC :[1car] (consist: 1..){}{BLACK}Local train{BLACK}
 STR_LV_H100_PROTOTYPE :Prototype model
 STR_LV_H100_INITIAL   :Common model
 STR_H100_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.

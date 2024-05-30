@@ -1,0 +1,201 @@
+spriteset(          set_H100_purchase,                                     "gfx/8bpp/H100-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+// rs: Ryosan-Senko
+// ry: RYosan
+
+//     <---
+// fr: Front     - Rear
+// rf: Rear      - Front
+// fu: Front     - unlighted
+// uf: unlighted - Front
+// uu: unlighted - unlighted
+// ru: Rear      - unlighted
+// ur: unlighted - Rear
+
+spriteset(set_H100_rs_fr, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+spriteset(set_H100_rs_fu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_H100_rs_ur, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_H100_rs_uu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+spriteset(set_H100_ry_fr, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+spriteset(set_H100_ry_fu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+spriteset(set_H100_ry_ur, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_H100_ry_uu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+spriteset(set_H100_rs_rf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+spriteset(set_H100_rs_ru, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(10, 0) }
+spriteset(set_H100_rs_uf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(11, 0) }
+spriteset(set_H100_ry_rf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(13, 0) }
+spriteset(set_H100_ry_ru, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(14, 0) }
+spriteset(set_H100_ry_uf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
+
+spriteset(set_H100f_rs_fr, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+spriteset(set_H100f_rs_fu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_H100f_rs_ur, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_H100f_rs_uu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+spriteset(set_H100f_ry_fr, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+spriteset(set_H100f_ry_fu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+spriteset(set_H100f_ry_ur, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_H100f_ry_uu, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+spriteset(set_H100f_rs_rf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+spriteset(set_H100f_rs_ru, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(10, 1) }
+spriteset(set_H100f_rs_uf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(11, 1) }
+spriteset(set_H100f_ry_rf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(13, 1) }
+spriteset(set_H100f_ry_ru, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(14, 1) }
+spriteset(set_H100f_ry_uf, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
+
+alternative_sprites(set_H100_rs_fr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_H100_rs_fu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_H100_rs_ur, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_H100_rs_uu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_H100_ry_fr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+alternative_sprites(set_H100_ry_fu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+alternative_sprites(set_H100_ry_ur, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_H100_ry_uu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+alternative_sprites(set_H100_rs_rf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+alternative_sprites(set_H100_rs_ru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(10, 0) }
+alternative_sprites(set_H100_rs_uf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(11, 0) }
+alternative_sprites(set_H100_ry_rf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(13, 0) }
+alternative_sprites(set_H100_ry_ru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(14, 0) }
+alternative_sprites(set_H100_ry_uf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
+
+alternative_sprites(set_H100f_rs_fr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_H100f_rs_fu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_H100f_rs_ur, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_H100f_rs_uu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_H100f_ry_fr, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+alternative_sprites(set_H100f_ry_fu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+alternative_sprites(set_H100f_ry_ur, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_H100f_ry_uu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+alternative_sprites(set_H100f_rs_rf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+alternative_sprites(set_H100f_rs_ru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(10, 1) }
+alternative_sprites(set_H100f_rs_uf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(11, 1) }
+alternative_sprites(set_H100f_ry_rf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(13, 1) }
+alternative_sprites(set_H100f_ry_ru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(14, 1) }
+alternative_sprites(set_H100f_ry_uf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
+
+switch(FEAT_TRAINS, SELF, sw_H100_can_attach_wagon, vehicle_type_id) {
+	dmuH100: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_H100_CANNOT_ATTACH_OTHER);
+}
+
+
+switch(FEAT_TRAINS, SELF, sw_H100_rs_isRear, position_in_consist_from_end == 0) {
+	1: set_H100_rs_ur;
+	default: set_H100_rs_uu;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_rs_isFront, position_in_consist == 0) {
+	1: set_H100_rs_fu;
+	default: sw_H100_rs_isRear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_rs_isAlone, (position_in_consist == 0 && position_in_consist_from_end == 0)) {
+	1: set_H100_rs_fr;
+	default: sw_H100_rs_isFront;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_rs_isRear, position_in_consist == 0) {
+	1: set_H100f_rs_uf;
+	default: set_H100f_rs_uu;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_rs_isFront, position_in_consist_from_end == 0) {
+	1: set_H100f_rs_ru;
+	default: sw_H100f_rs_isRear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_rs_isAlone, (position_in_consist == 0 && position_in_consist_from_end == 0)) {
+	1: set_H100f_rs_rf;
+	default: sw_H100f_rs_isFront;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_ry_isRear, position_in_consist_from_end == 0) {
+	1: set_H100_ry_ur;
+	default: set_H100_ry_uu;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_ry_isFront, position_in_consist == 0) {
+	1: set_H100_ry_fu;
+	default: sw_H100_ry_isRear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_ry_isAlone, (position_in_consist == 0 && position_in_consist_from_end == 0)) {
+	1: set_H100_ry_fr;
+	default: sw_H100_ry_isFront;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_ry_isRear, position_in_consist == 0) {
+	1: set_H100f_ry_uf;
+	default: set_H100f_ry_uu;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_ry_isFront, position_in_consist_from_end == 0) {
+	1: set_H100f_ry_ru;
+	default: sw_H100f_ry_isRear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_ry_isAlone, (position_in_consist == 0 && position_in_consist_from_end == 0)) {
+	1: set_H100f_ry_rf;
+	default: sw_H100f_ry_isFront;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_formations, cargo_subtype) {
+	0: sw_H100_ry_isAlone;
+	default: sw_H100_rs_isAlone;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100f_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
+	0: sw_H100f_ry_isAlone;
+	default: sw_H100f_rs_isAlone;
+}
+
+switch(FEAT_TRAINS, PARENT, sw_H100_gfx_main, vehicle_is_reversed) {
+	0: sw_H100_formations;
+	default: sw_H100f_formations;
+}
+
+switch(FEAT_TRAINS, SELF, sw_H100_subtypes, cargo_subtype) {
+	0: string(STR_LV_H100_INITIAL);
+	1: string(STR_LV_H100_PROTOTYPE);
+}
+
+item(FEAT_TRAINS, dmuH100) {
+    property {
+        name: string(STR_H100_NAME);
+        introduction_date: date(2020, 3, 14);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_DIESEL;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: RAIL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        // reliability_decay: 20;
+        loading_speed: param_loading_suburban;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 100 km/h;
+        refit_cost: 0;
+        power: 200 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_suburban;
+        weight: 40 ton;
+        // ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+    }
+	
+    graphics {
+		purchase          : set_H100_purchase;
+
+        // Below items are depends on consist
+        default           : sw_H100_gfx_main;
+        can_attach_wagon  :	sw_H100_can_attach_wagon;
+		additional_text   : string(STR_H100_DESC);
+        cargo_subtype_text: sw_H100_subtypes;
+		// articulated_part  : sw_H100_artpart;
+    }
+
+}

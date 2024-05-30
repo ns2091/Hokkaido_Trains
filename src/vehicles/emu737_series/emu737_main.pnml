@@ -1,0 +1,116 @@
+spriteset(set_737_purchase, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+
+spriteset(set_737_tc_unlited, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+spriteset(set_737_mc_unlited, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_737_tc_front  , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_737_tc_rear   , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+spriteset(set_737_mc_front  , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+spriteset(set_737_mc_rear   , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+
+spriteset(set_737f_tc_unlited, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+spriteset(set_737f_mc_unlited, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_737f_tc_front  , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_737f_tc_rear   , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+spriteset(set_737f_mc_front  , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+spriteset(set_737f_mc_rear   , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+
+alternative_sprites(set_737_purchase,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_737_tc_unlited,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_737_mc_unlited,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_737_tc_front,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_737_tc_rear,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_737_mc_front,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+alternative_sprites(set_737_mc_rear,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+
+alternative_sprites(set_737f_tc_unlited,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_737f_mc_unlited,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_737f_tc_front,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_737f_tc_rear,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_737f_mc_front,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+alternative_sprites(set_737f_mc_rear,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+
+switch(FEAT_TRAINS, SELF, sw_737_can_attach_wagon, vehicle_type_id) {
+	emu737: CB_RESULT_ATTACH_ALLOW;
+	emu721: CB_RESULT_ATTACH_ALLOW;
+    default: return string(STR_737_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_737_endcar_graphics, position_in_consist%2) {
+	0: set_737_mc_front;
+	1: set_737_tc_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_737_midcar_graphics, position_in_consist%2) {
+	0: set_737_mc_unlited;
+	1: set_737_tc_unlited;
+}
+
+switch(FEAT_TRAINS, SELF, sw_737f_endcar_graphics, position_in_consist%2) {
+	0: set_737_tc_front;
+	1: set_737_mc_rear;
+}
+
+switch(FEAT_TRAINS, SELF, sw_737f_midcar_graphics, position_in_consist%2) {
+	0: set_737_tc_unlited;
+	1: set_737_mc_unlited;
+}
+
+switch(FEAT_TRAINS, SELF, sw_737_poscheck, (position_in_consist == 0 || position_in_consist_from_end == 0)){
+	1: sw_737_endcar_graphics;
+	default: sw_737_midcar_graphics;
+}
+
+switch(FEAT_TRAINS, SELF, sw_737f_poscheck, (position_in_consist == 0 || position_in_consist_from_end == 0)){
+	1: sw_737f_endcar_graphics;
+	default: sw_737f_midcar_graphics;
+}
+
+// switch(FEAT_TRAINS, PARENT, sw_737_flcheck, vehicle_is_reversed) {
+	// 1: sw_737f_poscheck;
+	// default: sw_737_poscheck;
+// }
+
+switch(FEAT_TRAINS, SELF, sw_737_flcheck, num_vehs_in_vehid_chain) {
+	0: set_737_tc_front;
+	1: set_737_mc_unlited;
+	2: set_737_mc_rear;
+}
+
+
+item(FEAT_TRAINS, emu737) {
+    property {
+        name: string(STR_737_NAME);
+        introduction_date: date(2023, 5, 20);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: ELRL;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        // reliability_decay: 20;
+        loading_speed: param_loading_suburban;
+        cost_factor: 45;
+        running_cost_factor: 100;
+        speed: 120 km/h;
+        refit_cost: 0;
+        power: 760 kW;
+        dual_headed: 1;
+        cargo_capacity: param_capacity_suburban;
+        weight: 75 ton;
+        // ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.1;
+        air_drag_coefficient: 0.06;
+        length: 8;
+    }
+	
+    graphics {
+        default           : sw_737_flcheck;
+		purchase          : set_737_purchase;
+		additional_text   : string(STR_737_DESC);
+        // cargo_subtype_text: sw_737_subtypes;
+        can_attach_wagon  :	sw_737_can_attach_wagon;
+    }
+}

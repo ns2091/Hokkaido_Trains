@@ -1,27 +1,28 @@
-// IDを事前定義しておくと、動的にIDが変更されてセーブデータの互換性がなくなるのを防げる
-item(FEAT_TRAINS, mu_car, 1000) {}
-item(FEAT_TRAINS, emu721_3cars) {}
-item(FEAT_TRAINS, emu721_6cars) {}
-item(FEAT_TRAINS, emu731_3cars) {}
-item(FEAT_TRAINS, emu733_3cars) {}
-item(FEAT_TRAINS, emu733_6cars) {}
-item(FEAT_TRAINS, emu735_3cars) {}
-item(FEAT_TRAINS, emu785_0_5cars) {}
-item(FEAT_TRAINS, emu785_0_4cars) {}
-item(FEAT_TRAINS, emu785_0_2cars) {}
-item(FEAT_TRAINS, emu785_300_2cars) {}
-item(FEAT_TRAINS, emu789_0_2cars) {}
-item(FEAT_TRAINS, emu789_0_3cars) {}
-item(FEAT_TRAINS, emu789_0_6cars) {}
-item(FEAT_TRAINS, emu789_1000_5cars) {}
-item(FEAT_TRAINS, dmu201_3cars) {}
-item(FEAT_TRAINS, dmu261_0_4cars) {}
-item(FEAT_TRAINS, dmu261_0_2cars) {}
-item(FEAT_TRAINS, dmu261_1000_7cars) {}
-item(FEAT_TRAINS, dmu261_1000_5cars) {}
-item(FEAT_TRAINS, dmu261_1000_2cars) {}
-item(FEAT_TRAINS, dmu261_1000_1car) {}
-item(FEAT_TRAINS, dmu281_7cars) {}
-item(FEAT_TRAINS, dmu281_1car) {}
-item(FEAT_TRAINS, dmu283_6cars) {}
-item(FEAT_TRAINS, dmu283_1car) {}
+// ID(数字)を事前定義しておくと、動的にIDが変更されてセーブデータの互換性がなくなるのを防げる
+
+item(FEAT_TRAINS, emu721_3cars     , 3011) {}
+item(FEAT_TRAINS, emu721_6cars     , 3012) {}
+item(FEAT_TRAINS, emu731_3cars     , 3021) {}
+item(FEAT_TRAINS, emu733_3cars     , 3031) {}
+item(FEAT_TRAINS, emu733_6cars     , 3032) {}
+item(FEAT_TRAINS, emu735_3cars     , 3041) {}
+item(FEAT_TRAINS, dmu201_3cars     , 3051) {}
+item(FEAT_TRAINS, emu785_0_5cars   , 3061) {}
+item(FEAT_TRAINS, emu785_0_4cars   , 3062) {}
+item(FEAT_TRAINS, emu785_0_2cars   , 3063) {}
+item(FEAT_TRAINS, emu789_0_6cars   , 3071) {}
+item(FEAT_TRAINS, emu789_0_3cars   , 3072) {}
+item(FEAT_TRAINS, emu789_0_2cars   , 3073) {}
+item(FEAT_TRAINS, emu785_300_2cars , 3074) {}
+item(FEAT_TRAINS, emu789_1000_5cars, 3081) {}
+item(FEAT_TRAINS, dmu261_0_4cars   , 3091) {}
+item(FEAT_TRAINS, dmu261_0_2cars   , 3092) {}
+item(FEAT_TRAINS, dmu261_1000_7cars, 3101) {}
+item(FEAT_TRAINS, dmu261_1000_5cars, 3102) {}
+item(FEAT_TRAINS, dmu261_1000_2cars, 3103) {}
+item(FEAT_TRAINS, dmu261_1000_1car , 3104) {}
+item(FEAT_TRAINS, dmu281_7cars     , 3111) {}
+item(FEAT_TRAINS, dmu281_1car      , 3112) {}
+item(FEAT_TRAINS, dmu283_6cars     , 3113) {}
+item(FEAT_TRAINS, dmu283_1car      , 3114) {}
+item(FEAT_TRAINS, dmuH100          , 3121) {}
