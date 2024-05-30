@@ -214,7 +214,7 @@ alternative_sprites(set_721f_unlited_mc_otaru_hood, ZOOM_LEVEL_NORMAL, BIT_DEPTH
 
 
 spriteset(set_731_purchase, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_731_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+alternative_sprites(set_731_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
 
 spriteset(set_731_front_tc, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_731_rear_tc, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -226,15 +226,15 @@ spriteset(set_731f_rear_tc, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 2, 
 spriteset(set_731f_unlited_tc,"gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_731f_mp, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 
-alternative_sprites(set_731_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-alternative_sprites(set_731_rear_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
-alternative_sprites(set_731_unlited_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
-alternative_sprites(set_731_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_731_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_731_rear_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_731_unlited_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_731_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 0) }
 
-alternative_sprites(set_731f_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-alternative_sprites(set_731f_rear_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
-alternative_sprites(set_731f_unlited_tc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-alternative_sprites(set_731f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_731f_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_731f_rear_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_731f_unlited_tc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_731f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 1) }
 
 
 
@@ -329,7 +329,7 @@ alternative_sprites(set_735f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/
 
 
 spriteset(set_dc201_purchase, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_dc201_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+alternative_sprites(set_dc201_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
 
 spriteset(set_dc201_front_mc, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_dc201_rear_mc, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -341,15 +341,15 @@ spriteset(set_dc201f_rear_mc, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views(
 spriteset(set_dc201f_unlited_mc,"gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_dc201f_mn, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 
-alternative_sprites(set_dc201_front_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-alternative_sprites(set_dc201_rear_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
-alternative_sprites(set_dc201_unlited_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
-alternative_sprites(set_dc201_mn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_dc201_front_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_dc201_rear_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_dc201_unlited_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_dc201_mn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 0) }
 
-alternative_sprites(set_dc201f_front_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-alternative_sprites(set_dc201f_rear_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
-alternative_sprites(set_dc201f_unlited_mc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-alternative_sprites(set_dc201f_mn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_dc201f_front_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_dc201f_rear_mc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_dc201f_unlited_mc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_dc201f_mn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 1) }
 
 
 
