@@ -30,11 +30,11 @@ switch(FEAT_TRAINS, SELF, sw_789_1000_can_attach_wagon, vehicle_type_id) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_789f_1000_formations, position_in_consist) {
-	4: set_789_1000_rear_tc;
+	4: set_789f_1000_rear_tc;
 	3: set_789f_1000_mn;
 	2: set_789f_1000_tp;
 	1: set_789f_1000_mu;
-	0: set_789f_1000_front_tc;
+	0: set_789_1000_front_tc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
