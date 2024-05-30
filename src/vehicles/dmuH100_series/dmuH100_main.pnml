@@ -1,5 +1,5 @@
-spriteset(          set_H100_purchase,                                     "gfx/8bpp/H100-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -25, -10) }
-alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+spriteset(          set_H100_purchase,                                     "gfx/8bpp/H100-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -14, -10) }
+alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -14, -10) }
 // rs: Ryosan-Senko
 // ry: RYosan
 

@@ -6,3 +6,4 @@
 #include "vehicles/dmu261_series/dmu261_0_main.pnml"
 #include "vehicles/dmu281group/dmu281group_main.pnml"
 #include "vehicles/dmuH100_series/dmuH100_main.pnml"
+#include "vehicles/emu737_series/emu737_main.pnml"

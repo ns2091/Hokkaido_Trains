@@ -49,10 +49,10 @@ STR_LV_DC283_1CAR_INIT_KIHA282_100       :KiHa282-100
 STR_LV_DC283_1CAR_INIT_KIHA282_2000      :KiHa282-2000
 
 
+STR_737_2CARS_NAME :EC737 series
+STR_737_2CARS_DESC :[2cars]{}{BLACK}Local train{BLACK}{}Ready for {GREEN}ONEMAN{BLACK}-operate
+STR_737_2CARS_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains.
 
-STR_737_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains(include MUCar).
-STR_737_NAME :EC737 series
-STR_737_DESC :[2cars] Ready for {GREEN}ONEMAN{BLACK}-operate
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
 STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
