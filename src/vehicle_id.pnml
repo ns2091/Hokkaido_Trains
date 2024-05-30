@@ -21,5 +21,7 @@ item(FEAT_TRAINS, dmu261_1000_7cars) {}
 item(FEAT_TRAINS, dmu261_1000_5cars) {}
 item(FEAT_TRAINS, dmu261_1000_2cars) {}
 item(FEAT_TRAINS, dmu261_1000_1car) {}
-item(FEAT_TRAINS, dmu281) {}
-item(FEAT_TRAINS, dmu283) {}
+item(FEAT_TRAINS, dmu281_7cars) {}
+item(FEAT_TRAINS, dmu281_1car) {}
+item(FEAT_TRAINS, dmu283_6cars) {}
+item(FEAT_TRAINS, dmu283_1car) {}

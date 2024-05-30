@@ -16,30 +16,42 @@ STR_LV_721_VVVF                        :VVVF livery
 STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at midcar(Currently livery)
 STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF and Consist by {RED}u{BLUE}seat{BLACK} at firstcar(Currently livery)
 
-STR_DC283_NAME :DC283 series
-STR_DC283_DESC :{YELLOW}FURICO {WHITE}283 {BLACK}Operated by JR {GREEN}Hokkaido
-STR_LV_KiHa283_L :KiHa283(BEGIN, controller car)
-STR_LV_KiHa283_R :KiHa283(END, controller car)
-STR_LV_KiRo282   :KiRo282(middle car, {GREEN}GREEN CAR{BLACK})
-STR_LV_KiHa282_0    :KiHa282-0(middle car, wheel chair)
-STR_LV_KiHa282_100  :KiHa282-100(middle car, smoking area)
-STR_LV_KiHa282_2000 :KiHa282-2000(middle car, mid-controller)
+STR_DC281_7CARS_NAME      :DC281 series (7cars)
+STR_DC281_1CAR_NAME       :DC281 series (1car)
+STR_DC281_7CARS_DESC      :[7cars] (consist: 7/7+1..){}{RED}Limited Express{BLACK} "Super Hokuto"
+STR_DC281_1CAR_DESC       :[1car] (consist: 1..){}{RED}Limited Express{BLACK} "Super Hokuto"
 
-STR_DC281_NAME :DC281 series
-STR_DC281_DESC :{YELLOW}FURICO {WHITE}281 {BLACK}Operated by JR {GREEN}Hokkaido
-STR_LV_KiHa281_INIT_L :KiHa281 {GRAY}HEAT {WHITE}281(BEGIN, controller car)
-STR_LV_KiHa281_INIT_R :KiHa281 {GRAY}HEAT {WHITE}281(END, controller car)
-STR_LV_KiHa281_L :KiHa281(BEGIN, controller car)
-STR_LV_KiHa281_R :KiHa281(END, controller car)
-STR_LV_KiHa281_900_INIT_L :KiHa281-900 {GRAY}HEAT {WHITE}281(BEGIN, controller car)
-STR_LV_KiHa281_900_INIT_R :KiHa281-900 {GRAY}HEAT {WHITE}281(END, controller car)
-STR_LV_KiHa281_900_L :KiHa281-900(BEGIN, controller car)
-STR_LV_KiHa281_900_R :KiHa281-900(END, controller car)
-STR_LV_KiHa281_900_EXPERIMENTAL_L :Kiha281-900 {WHITE}HE{GRAY}A{WHITE}T 281(BEGIN, controller car)
-STR_LV_KiHa281_900_EXPERIMENTAL_R :Kiha281-900 {WHITE}HE{GRAY}A{WHITE}T 281(END, controller car)
-STR_LV_KiHa280_0   :KiHa280-0(middle car, wheel chair)
-STR_LV_KiHa280_100 :KiHa280-100(middle car)
-STR_LV_KiRo280     :KiRo280(middlecar, {GREEN}GREEN CAR{BLACK})
+STR_LV_DC281_7CARS_HET    :HET livery
+STR_LV_DC281_7CARS_FURICO :FURICO281 livery
+STR_LV_DC281_1CAR_HET_KIHA281_0_SAPPORO       :KiHa281-0 Front side [HET]
+STR_LV_DC281_1CAR_HET_KIHA281_0_HAKODATE      :KiHa281-0 Rear side [HET]
+STR_LV_DC281_1CAR_FURICO_KIHA281_0_SAPPORO    :KiHa281-0 Front side [FURICO]
+STR_LV_DC281_1CAR_FURICO_KIHA281_0_HAKODATE   :KiHa281-0 Rear side [FURICO]
+STR_LV_DC281_1CAR_HET_KIHA281_900_SAPPORO     :KiHa281-900 Front side [HET]
+STR_LV_DC281_1CAR_HET_KIHA281_900_HAKODATE    :KiHa281-900 Rear side [HET]
+STR_LV_DC281_1CAR_FURICO_KIHA281_900_SAPPORO  :KiHa281-900 Front side [FURICO]
+STR_LV_DC281_1CAR_FURICO_KIHA281_900_HAKODATE :KiHa281-900 Rear side [FURICO]
+STR_LV_DC281_1CAR_HEAT_KIHA281_900_SAPPORO    :KiHa281-900 Front side [HEAT]
+STR_LV_DC281_1CAR_HEAT_KIHA281_900_HAKODATE   :KiHa281-900 Rear side [HEAT]
+STR_LV_DC281_1CAR_KIHA280_0                   :KiHa280-0
+STR_LV_DC281_1CAR_KIHA280_100                 :KiHa280-100
+STR_LV_DC281_1CAR_KIRO280_0                   :KiRo280-0
+
+
+STR_DC283_6CARS_NAME    :DC283 series (6cars)
+STR_DC283_1CAR_NAME     :DC283 series (1car)
+STR_DC283_6CARS_DESC    :[6cars] (consist: 6/6+1..){}{RED}Limited Express{BLACK} "Super Ozora", "Super Hokuto" and more..
+STR_DC283_1CAR_DESC     :[1car] (consist: 1..){}{RED}Limited Express{BLACK} "Super Ozora", "Super Hokuto" and more..
+
+STR_LV_DC283_6CARS_INIT :Initial livery
+STR_LV_DC283_1CAR_INIT_KIHA283_0_SAPPORO :KiHa283-0 Front side
+STR_LV_DC283_1CAR_INIT_KIHA283_0_KUSHIRO :KiHa283-0 Rear side
+STR_LV_DC283_1CAR_INIT_KIRO282_0         :KiRo282-0
+STR_LV_DC283_1CAR_INIT_KIHA282_0         :KiHa282-0
+STR_LV_DC283_1CAR_INIT_KIHA282_100       :KiHa282-100
+STR_LV_DC283_1CAR_INIT_KIHA282_2000      :KiHa282-2000
+
+
 
 STR_737_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains(include MUCar).
 STR_737_NAME :EC737 series
