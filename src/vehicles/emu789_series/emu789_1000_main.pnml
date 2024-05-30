@@ -25,7 +25,6 @@ alternative_sprites(set_789f_1000_tp,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, 
 alternative_sprites(set_789f_1000_mu,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
 
 switch(FEAT_TRAINS, SELF, sw_789_1000_can_attach_wagon, vehicle_type_id) {
-	mu_car: CB_RESULT_ATTACH_ALLOW;
     default: return string(STR_789_1000_CANNOT_ATTACH_OTHER);
 }
 
