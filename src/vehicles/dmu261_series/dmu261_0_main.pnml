@@ -202,7 +202,7 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -213,12 +213,12 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 4 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 4 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -244,7 +244,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -255,12 +255,12 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_0_4cars;

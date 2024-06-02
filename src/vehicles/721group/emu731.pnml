@@ -16,7 +16,7 @@ item(FEAT_TRAINS, emu731_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -29,12 +29,12 @@ item(FEAT_TRAINS, emu731_3cars) {
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 65 ton;
+        weight: 100 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -45,7 +45,7 @@ item(FEAT_TRAINS, emu731_3cars) {
 
         // Below items are depends on consist
         default           : sw_731_3cars_gfx_main;
-        can_attach_wagon  :	sw_721group_can_attach_wagon;
+        can_attach_wagon  :	sw_731_3cars_can_attach_wagon;
 		additional_text   : string(STR_731_DESC);
         // cargo_subtype_text: sw_731_subtypes;
 		articulated_part  : sw_731_3cars_artpart;

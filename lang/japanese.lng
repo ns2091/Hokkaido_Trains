@@ -7,8 +7,8 @@ STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735�
 STR_DC201_CANNOT_ATTACH_OTHER    :201系気動車, 731系電車とのみ連結することができます
 
 STR_721_NAME:721系電車
-STR_721_3CARS_NAME:721系電車 3両
-STR_721_6CARS_NAME:721系電車 6両
+STR_721_3CARS_NAME:721系電車 3両編成
+STR_721_6CARS_NAME:721系電車 6両編成
 STR_721_DESC:[3/6両] 普通/ {RED}快速{BLACK}"エアポート"
 STR_721_3CARS_DESC:[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
 STR_721_6CARS_DESC:[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
@@ -22,15 +22,15 @@ STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF制御 全室{RED}u{BLUE}seat{BLACK}
 STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(3連)
 
 
-STR_731_NAME :731系電車 3両
+STR_731_NAME :731系電車 3両編成
 STR_731_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"{}201系気動車と連結できます。
 
-STR_DC201_NAME :201系気動車 3両
+STR_DC201_NAME :201系気動車 3両編成
 STR_DC201_DESC :[3cars] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "ニセコライナー" "いしかりライナー"{}731系電車と連結できます。
 
 STR_733_NAME :733系電車
-STR_733_3CARS_NAME :733系電車 3両
-STR_733_6CARS_NAME :733系電車 6両
+STR_733_3CARS_NAME :733系電車 3両編成
+STR_733_6CARS_NAME :733系電車 6両編成
 STR_733_DESC :[3/6cars] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
 STR_733_3CARS_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー" / {PURPLE}はこだてライナー{BLACK}
 STR_733_6CARS_DESC :[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
@@ -38,7 +38,7 @@ STR_LV_733_INITIAL :札幌地区仕様
 STR_LV_733_1000    :函館地区仕様
 STR_LV_733_3000    :快速エアポート仕様
 
-STR_735_NAME :735系電車 3両
+STR_735_NAME :735系電車 3両編成
 STR_735_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"
 
 STR_DC281_7CARS_NAME      :281系気動車 7両編成
@@ -76,7 +76,7 @@ STR_LV_DC283_1CAR_INIT_KIHA282_0         :キハ282-0
 STR_LV_DC283_1CAR_INIT_KIHA282_100       :キハ282-100
 STR_LV_DC283_1CAR_INIT_KIHA282_2000      :キハ282-2000
 
-STR_737_2CARS_NAME :737系電車
+STR_737_2CARS_NAME :737系電車 2両編成
 STR_737_2CARS_DESC :[2両] (編成例: 2/2+2..){}{BLACK}普通列車{BLACK}{}{GREEN}ワンマン{BLACK}運転
 STR_737_2CARS_CANNOT_ATTACH_OTHER :737系は同系列以外と連結することはできません。
 
@@ -104,7 +104,7 @@ STR_LV_H100_PROTOTYPE :量産先行車
 STR_LV_H100_INITIAL   :量産車
 STR_H100_CANNOT_ATTACH_OTHER :H100形とのみ連結できます。
 
-STR_789_1000_NAME :789系電車1000番代
+STR_789_1000_NAME :789系電車1000番代 5両編成
 STR_789_1000_DESC :[5両] 特急"すずらん"/"スーパーカムイ" 快速"エアポート"
 STR_789_1000_CANNOT_ATTACH_OTHER :MUCarのみ連結できます
 

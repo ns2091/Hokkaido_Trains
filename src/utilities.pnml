@@ -1,6 +1,10 @@
 railtypetable {
-    RAIL, ELRL,
+	RAIL,
+	ELRL,
+	RAILTYPE_ELECTRIC: [NABE, NAAE, RAIL],
+	RAILTYPE_DIESEL: [NAAN, RAIL],
 }
+
 
 template tmpl_vehicle_basic(x, y) {
     [x,      y,  8, 24,  -3, -12]

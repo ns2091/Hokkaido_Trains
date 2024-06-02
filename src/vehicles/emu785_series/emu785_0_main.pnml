@@ -1,4 +1,5 @@
-spriteset(set_785_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
+spriteset(          set_785_purchase,                                     "gfx/8bpp/785-8bpp.png")   { tmpl_vehicle_single(1, 64, 14, -25, -10) }
+alternative_sprites(set_785_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
 
 spriteset(set_785_mu,          "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
 spriteset(set_785_mpu,         "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
@@ -248,7 +249,7 @@ item(FEAT_TRAINS, emu785_5cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -259,12 +260,12 @@ item(FEAT_TRAINS, emu785_5cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 3 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 5 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;
@@ -291,7 +292,7 @@ item(FEAT_TRAINS, emu785_4cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -302,12 +303,12 @@ item(FEAT_TRAINS, emu785_4cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 3 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 4 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;
@@ -334,7 +335,7 @@ item(FEAT_TRAINS, emu785_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -345,12 +346,12 @@ item(FEAT_TRAINS, emu785_2cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;

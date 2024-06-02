@@ -12,7 +12,7 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -23,12 +23,12 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         running_cost_factor: 100;
         speed: 140 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu789_0_6cars;

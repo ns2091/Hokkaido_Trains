@@ -1,5 +1,5 @@
-spriteset(          set_H100_purchase,                                     "gfx/8bpp/H100-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -14, -10) }
-alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -14, -10) }
+spriteset(          set_H100_purchase,                                     "gfx/8bpp/H100-8bpp.png")   { tmpl_vehicle_single(0, 33, 14, -25, -10) }
+alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 33, 14, -25, -10) }
 // rs: Ryosan-Senko
 // ry: RYosan
 
@@ -165,9 +165,9 @@ item(FEAT_TRAINS, dmuH100) {
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
-        engine_class: ENGINE_CLASS_ELECTRIC;
+        engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         vehicle_life: 30;
@@ -177,12 +177,11 @@ item(FEAT_TRAINS, dmuH100) {
         running_cost_factor: 100;
         speed: 100 km/h;
         refit_cost: 0;
-        power: 200 kW;
+        power: 105 * 2 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_suburban;
         weight: 40 ton;
-        // ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }

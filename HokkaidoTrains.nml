@@ -31,8 +31,12 @@ grf {
 # 2 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/utilities.pnml" 1
 railtypetable {
-    RAIL, ELRL,
+ RAIL,
+ ELRL,
+ RAILTYPE_ELECTRIC: [NABE, NAAE, RAIL],
+ RAILTYPE_DIESEL: [NAAN, RAIL],
 }
+
 
 template tmpl_vehicle_basic(x, y) {
     [x, y, 8, 24, -3, -12]
@@ -63,6 +67,8 @@ param_capacity_express = 60;
 param_loading_commuter = 100;
 param_loading_suburban = 75;
 param_loading_express = 50;
+
+param_diesel_decay_factor = 2;
 # 4 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/vehicle_id.pnml" 1
 // ID(数字)を事前定義しておくと、動的にIDが変更されてセーブデータの互換性がなくなるのを防げる
@@ -92,13 +98,13 @@ item(FEAT_TRAINS, dmu281_7cars , 3111) {}
 item(FEAT_TRAINS, dmu281_1car , 3112) {}
 item(FEAT_TRAINS, dmu283_6cars , 3113) {}
 item(FEAT_TRAINS, dmu283_1car , 3114) {}
-item(FEAT_TRAINS, dmuH100 , 3121) {}
-item(FEAT_TRAINS, emu737_2cars , 3131) {}
+item(FEAT_TRAINS, emu737_2cars , 3121) {}
+item(FEAT_TRAINS, dmuH100 , 3131) {}
 # 5 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/vehicles.pnml" 1
 # 1 "src/vehicles/721group/721group_main.pnml" 1
-spriteset(set_721_purchase, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_721_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset( set_721_purchase, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_721_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_721_front_tc_tomakomai, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_721_rear_tc_tomakomai, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -111,10 +117,10 @@ spriteset(set_721_tu_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8, 
 spriteset(set_721_tn, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 0) }
 spriteset(set_721_front_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 0) }
 spriteset(set_721_rear_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 0) }
-spriteset(set_721_unlited_tcu_tomakomai_renew,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 0) }
+spriteset(set_721_unlited_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 0) }
 spriteset(set_721_front_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 0) }
 spriteset(set_721_rear_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 0) }
-spriteset(set_721_unlited_tcu_tomakomai_init,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
+spriteset(set_721_unlited_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
 spriteset(set_721_mp_vvvf, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 0) }
 spriteset(set_721_tu_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 0) }
 spriteset(set_721_front_mc_otaru, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 0) }
@@ -139,10 +145,10 @@ spriteset(set_721f_tu_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8,
 spriteset(set_721f_tn, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 1) }
 spriteset(set_721f_front_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 1) }
 spriteset(set_721f_rear_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 1) }
-spriteset(set_721f_unlited_tcu_tomakomai_renew,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 1) }
+spriteset(set_721f_unlited_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 1) }
 spriteset(set_721f_front_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 1) }
 spriteset(set_721f_rear_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 1) }
-spriteset(set_721f_unlited_tcu_tomakomai_init,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
+spriteset(set_721f_unlited_tcu_tomakomai_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
 spriteset(set_721f_mp_vvvf, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 1) }
 spriteset(set_721f_tu_init, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 1) }
 spriteset(set_721f_front_mc_otaru, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 1) }
@@ -167,10 +173,10 @@ alternative_sprites(set_721_tu_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/3
 alternative_sprites(set_721_tn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 0) }
 alternative_sprites(set_721_front_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 0) }
 alternative_sprites(set_721_rear_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 0) }
-alternative_sprites(set_721_unlited_tcu_tomakomai_renew,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 0) }
+alternative_sprites(set_721_unlited_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 0) }
 alternative_sprites(set_721_front_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 0) }
 alternative_sprites(set_721_rear_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 0) }
-alternative_sprites(set_721_unlited_tcu_tomakomai_init,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
+alternative_sprites(set_721_unlited_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
 alternative_sprites(set_721_mp_vvvf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 0) }
 alternative_sprites(set_721_tu_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 0) }
 alternative_sprites(set_721_front_mc_otaru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 0) }
@@ -195,10 +201,10 @@ alternative_sprites(set_721f_tu_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/
 alternative_sprites(set_721f_tn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 1) }
 alternative_sprites(set_721f_front_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 1) }
 alternative_sprites(set_721f_rear_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 1) }
-alternative_sprites(set_721f_unlited_tcu_tomakomai_renew,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 1) }
+alternative_sprites(set_721f_unlited_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 1) }
 alternative_sprites(set_721f_front_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 1) }
 alternative_sprites(set_721f_rear_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 1) }
-alternative_sprites(set_721f_unlited_tcu_tomakomai_init,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
+alternative_sprites(set_721f_unlited_tcu_tomakomai_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
 alternative_sprites(set_721f_mp_vvvf, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 1) }
 alternative_sprites(set_721f_tu_init, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 1) }
 alternative_sprites(set_721f_front_mc_otaru, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 1) }
@@ -214,8 +220,8 @@ alternative_sprites(set_721f_unlited_mc_otaru_hood, ZOOM_LEVEL_NORMAL, BIT_DEPTH
 
 
 
-spriteset(set_731_purchase, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_731_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_731_purchase, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_731_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_731_front_tc, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_731_rear_tc, "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -239,8 +245,8 @@ alternative_sprites(set_731f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/
 
 
 
-spriteset(set_733_purchase, "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_733_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/733-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_733_purchase, "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_733_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/733-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_733_front_tc, "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_733_rear_tc, "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -304,8 +310,8 @@ alternative_sprites(set_733f_unlited_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, 
 
 
 
-spriteset(set_735_purchase, "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_735_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/735-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_735_purchase, "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_735_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/735-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_735_front_tc, "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_735_rear_tc, "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -329,8 +335,8 @@ alternative_sprites(set_735f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/
 
 
 
-spriteset(set_dc201_purchase, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_dc201_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_dc201_purchase, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_dc201_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_dc201_front_mc, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_dc201_rear_mc, "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -956,7 +962,7 @@ item(FEAT_TRAINS, emu721_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -969,12 +975,12 @@ item(FEAT_TRAINS, emu721_3cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 900 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_suburban;
-        weight: 90 ton;
+        cargo_capacity: param_capacity_commuter;
+        weight: 105 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1001,7 +1007,7 @@ item(FEAT_TRAINS, emu721_6cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1014,12 +1020,12 @@ item(FEAT_TRAINS, emu721_6cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 900 kW;
+        power: 230 * 4 * 2 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_suburban;
-        weight: 90 ton;
+        cargo_capacity: param_capacity_commuter;
+        weight: 210 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1057,7 +1063,7 @@ item(FEAT_TRAINS, emu731_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1070,12 +1076,12 @@ item(FEAT_TRAINS, emu731_3cars) {
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 65 ton;
+        weight: 100 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1086,7 +1092,7 @@ item(FEAT_TRAINS, emu731_3cars) {
 
         // Below items are depends on consist
         default : sw_731_3cars_gfx_main;
-        can_attach_wagon : sw_721group_can_attach_wagon;
+        can_attach_wagon : sw_731_3cars_can_attach_wagon;
   additional_text : string(STR_731_DESC);
         // cargo_subtype_text: sw_731_subtypes;
   articulated_part : sw_731_3cars_artpart;
@@ -1122,7 +1128,7 @@ item(FEAT_TRAINS, emu733_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1135,12 +1141,12 @@ item(FEAT_TRAINS, emu733_3cars) {
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 65 ton;
+        weight: 110 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1167,7 +1173,7 @@ item(FEAT_TRAINS, emu733_6cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1180,12 +1186,12 @@ item(FEAT_TRAINS, emu733_6cars) {
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 230 * 4 * 2 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 65 ton;
+        weight: 220 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1223,7 +1229,7 @@ item(FEAT_TRAINS, emu735_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1236,12 +1242,12 @@ item(FEAT_TRAINS, emu735_3cars) {
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 65 ton;
+        weight: 105 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
@@ -1278,28 +1284,25 @@ item(FEAT_TRAINS, dmu201_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         vehicle_life: 30;
         reliability_decay: 20;
-        // cargo_allow_refit: [];
-        // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
         cost_factor: 45;
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 615 kW;
+        power: 450 * 2 * 3 * param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_commuter;
-        weight: 80 ton;
+        weight: 120 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
-        // bitmask_vehicle_info: 0;
     }
 
     graphics {
@@ -1316,7 +1319,8 @@ item(FEAT_TRAINS, dmu201_3cars) {
 # 831 "src/vehicles/721group/721group_main.pnml" 2
 # 2 "src/vehicles.pnml" 2
 # 1 "src/vehicles/emu785_series/emu785_0_main.pnml" 1
-spriteset(set_785_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
+spriteset( set_785_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
+alternative_sprites(set_785_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/785-32bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
 
 spriteset(set_785_mu, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
 spriteset(set_785_mpu, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
@@ -1566,7 +1570,7 @@ item(FEAT_TRAINS, emu785_5cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1577,12 +1581,12 @@ item(FEAT_TRAINS, emu785_5cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 3 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 5 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;
@@ -1609,7 +1613,7 @@ item(FEAT_TRAINS, emu785_4cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1620,12 +1624,12 @@ item(FEAT_TRAINS, emu785_4cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 3 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 4 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;
@@ -1652,7 +1656,7 @@ item(FEAT_TRAINS, emu785_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -1663,12 +1667,12 @@ item(FEAT_TRAINS, emu785_2cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu785_5cars;
@@ -1989,7 +1993,7 @@ item(FEAT_TRAINS, emu789_0_6cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -2000,12 +2004,12 @@ item(FEAT_TRAINS, emu789_0_6cars) {
         running_cost_factor: 100;
         speed: 140 km/h;
         refit_cost: 0;
-        power: 640 kW;
+        power: 230 * 4 * 3 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 6 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -2030,7 +2034,7 @@ item(FEAT_TRAINS, emu789_0_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -2041,12 +2045,12 @@ item(FEAT_TRAINS, emu789_0_2cars) {
         running_cost_factor: 100;
         speed: 140 km/h;
         refit_cost: 0;
-        power: 640 kW;
+        power: 230 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
   variant_group: emu789_0_6cars;
@@ -2072,7 +2076,7 @@ item(FEAT_TRAINS, emu789_0_3cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -2083,12 +2087,12 @@ item(FEAT_TRAINS, emu789_0_3cars) {
         running_cost_factor: 100;
         speed: 140 km/h;
         refit_cost: 0;
-        power: 640 kW;
+        power: 230 * 4 * 1.5 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 3 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
   variant_group: emu789_0_6cars;
@@ -2120,7 +2124,7 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -2131,12 +2135,12 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         running_cost_factor: 100;
         speed: 140 km/h;
         refit_cost: 0;
-        power: 800 kW;
+        power: 190 * 4 * 1 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: emu789_0_6cars;
@@ -2222,7 +2226,7 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -2233,12 +2237,12 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 640 kW;
+        power: 230 * 4 * 2 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 80 ton;
+        weight: 40 * 5 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -3012,7 +3016,7 @@ item(FEAT_TRAINS, dmu261_1000_7cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3023,12 +3027,12 @@ item(FEAT_TRAINS, dmu261_1000_7cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 7 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 7 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -3054,7 +3058,7 @@ item(FEAT_TRAINS, dmu261_1000_5cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3065,12 +3069,12 @@ item(FEAT_TRAINS, dmu261_1000_5cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 5 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 5 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_1000_7cars;
@@ -3097,7 +3101,7 @@ item(FEAT_TRAINS, dmu261_1000_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3108,12 +3112,12 @@ item(FEAT_TRAINS, dmu261_1000_2cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_1000_7cars;
@@ -3140,7 +3144,7 @@ item(FEAT_TRAINS, dmu261_1000_1car) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3151,12 +3155,12 @@ item(FEAT_TRAINS, dmu261_1000_1car) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 1 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 1 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_1000_7cars;
@@ -3379,7 +3383,7 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3390,12 +3394,12 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 4 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 4 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -3421,7 +3425,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3432,12 +3436,12 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 920 hp;
+        power: 460 * 2 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 40 ton;
+        weight: 40 * 2 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_0_4cars;
@@ -3456,8 +3460,8 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
 }
 # 7 "src/vehicles.pnml" 2
 # 1 "src/vehicles/dmu281group/dmu281group_main.pnml" 1
-spriteset( set_dc283_purchase, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_dc283_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
+spriteset( set_dc283_purchase, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_dc283_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_dc283_init_kiha283_front, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_dc283_init_kiha283_rear, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -3493,8 +3497,8 @@ alternative_sprites(set_dc283f_init_kiha282_2000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_3
 
 
 
-spriteset( set_dc281_purchase, "gfx/8bpp/dc281-8bpp.png") { tmpl_vehicle_single(0, 97, 14, -25, -10) }
-alternative_sprites(set_dc281_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc281-32bpp.png") { tmpl_vehicle_single(0, 97, 14, -25, -10) }
+spriteset( set_dc281_purchase, "gfx/8bpp/dc281-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_dc281_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc281-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_dc281_HET_kiha281_front, "gfx/8bpp/dc281-8bpp.png") { tmpl_vehicle_8_views ( 1, 0) }
 spriteset(set_dc281_HET_kiha281_rear, "gfx/8bpp/dc281-8bpp.png") { tmpl_vehicle_8_views ( 2, 0) }
@@ -3969,7 +3973,7 @@ item(FEAT_TRAINS, dmu281_7cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -3982,15 +3986,16 @@ item(FEAT_TRAINS, dmu281_7cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 355 hp;
+        power: 355 * 2 * 7 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 45 ton;
+        weight: 40 * 7 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
+        // curve_speed_mod: 0.2;
     }
 
     graphics {
@@ -4014,7 +4019,7 @@ item(FEAT_TRAINS, dmu281_1car) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -4027,16 +4032,17 @@ item(FEAT_TRAINS, dmu281_1car) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 355 hp;
+        power: 355 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 45 ton;
+        weight: 40 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
         variant_group: dmu281_7cars;
+        curve_speed_mod: 0.2;
     }
 
     graphics {
@@ -4060,7 +4066,7 @@ item(FEAT_TRAINS, dmu283_6cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -4073,15 +4079,16 @@ item(FEAT_TRAINS, dmu283_6cars) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 355 hp;
+        power: 355 * 2 * 6 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 45 ton;
+        weight: 43 * 6 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
+        // curve_speed_mod: 0.3;
     }
 
     graphics {
@@ -4105,7 +4112,7 @@ item(FEAT_TRAINS, dmu283_1car) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         non_refittable_cargo_classes: bitmask();
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
@@ -4118,16 +4125,17 @@ item(FEAT_TRAINS, dmu283_1car) {
         running_cost_factor: 100;
         speed: 130 km/h;
         refit_cost: 0;
-        power: 355 hp;
+        power: 355 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
         cargo_capacity: param_capacity_express;
-        weight: 45 ton;
+        weight: 43 ton;
         ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
         variant_group: dmu283_6cars;
+        curve_speed_mod: 0.3;
     }
 
     graphics {
@@ -4143,8 +4151,8 @@ item(FEAT_TRAINS, dmu283_1car) {
 }
 # 8 "src/vehicles.pnml" 2
 # 1 "src/vehicles/dmuH100_series/dmuH100_main.pnml" 1
-spriteset( set_H100_purchase, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -14, -10) }
-alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -14, -10) }
+spriteset( set_H100_purchase, "gfx/8bpp/H100-8bpp.png") { tmpl_vehicle_single(0, 33, 14, -25, -10) }
+alternative_sprites(set_H100_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/H100-32bpp.png") { tmpl_vehicle_single(0, 33, 14, -25, -10) }
 // rs: Ryosan-Senko
 // ry: RYosan
 
@@ -4310,9 +4318,9 @@ item(FEAT_TRAINS, dmuH100) {
         climates_available: ALL_CLIMATES;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
-        engine_class: ENGINE_CLASS_ELECTRIC;
+        engine_class: ENGINE_CLASS_DIESEL;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: RAIL;
+        track_type: RAILTYPE_DIESEL;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         vehicle_life: 30;
@@ -4322,12 +4330,11 @@ item(FEAT_TRAINS, dmuH100) {
         running_cost_factor: 100;
         speed: 100 km/h;
         refit_cost: 0;
-        power: 200 kW;
+        power: 105 * 2 kW;
         dual_headed: 0;
         cargo_capacity: param_capacity_suburban;
         weight: 40 ton;
-        // ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
@@ -4346,8 +4353,8 @@ item(FEAT_TRAINS, dmuH100) {
 }
 # 9 "src/vehicles.pnml" 2
 # 1 "src/vehicles/emu737_series/emu737_main.pnml" 1
-spriteset( set_737_purchase, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -14, 0) }
-alternative_sprites(set_737_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 53, 14, -14, 0) }
+spriteset( set_737_purchase, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_737_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25,-10) }
 
 
 spriteset(set_737_tc_unlighted, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
@@ -4364,7 +4371,6 @@ spriteset(set_737f_tc_rear , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 4,
 spriteset(set_737f_mc_front , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
 spriteset(set_737f_mc_rear , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
 
-alternative_sprites(set_737_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 alternative_sprites(set_737_tc_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 alternative_sprites(set_737_mc_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 alternative_sprites(set_737_tc_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
@@ -4469,22 +4475,22 @@ item(FEAT_TRAINS, emu737_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         vehicle_life: 30;
-        // reliability_decay: 20;
+        reliability_decay: 20;
         loading_speed: param_loading_suburban;
         cost_factor: 45;
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 760 kW;
-        dual_headed: 1;
+        power: 190 * 4 kW;
+        dual_headed: 0;
         cargo_capacity: param_capacity_suburban;
         weight: 75 ton;
         // ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }

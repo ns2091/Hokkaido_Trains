@@ -1,122 +1,122 @@
-spriteset(set_721_purchase,      "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_721_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(          set_721_purchase,                                          "gfx/8bpp/721-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_721_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
-spriteset(set_721_front_tc_tomakomai,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-spriteset(set_721_rear_tc_tomakomai,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
-spriteset(set_721_unlited_tc_tomakomai,      "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
-spriteset(set_721_front_tc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
-spriteset(set_721_rear_tc_otaru,             "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-spriteset(set_721_unlited_tc_otaru,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-spriteset(set_721_mp_thyristor,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
-spriteset(set_721_tu_renew,                  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
-spriteset(set_721_tn,                        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 0) }
-spriteset(set_721_front_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 0) }
-spriteset(set_721_rear_tcu_tomakomai_renew,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 0) }
-spriteset(set_721_unlited_tcu_tomakomai_renew,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 0) }
-spriteset(set_721_front_tcu_tomakomai_init,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 0) }
-spriteset(set_721_rear_tcu_tomakomai_init,   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 0) }
-spriteset(set_721_unlited_tcu_tomakomai_init,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
-spriteset(set_721_mp_vvvf,                   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 0) }
-spriteset(set_721_tu_init,                   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 0) }
-spriteset(set_721_front_mc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 0) }
-spriteset(set_721_rear_mc_otaru,             "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(19, 0) }
-spriteset(set_721_unlited_mc_otaru,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(20, 0) }
-spriteset(set_721_mn,                        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(21, 0) }
-spriteset(set_721_front_tc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(22, 0) }
-spriteset(set_721_rear_tc_otaru_hood,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(23, 0) }
-spriteset(set_721_unlited_tc_otaru_hood,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(24, 0) }
-spriteset(set_721_front_mc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(25, 0) }
-spriteset(set_721_rear_mc_otaru_hood,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(26, 0) }
-spriteset(set_721_unlited_mc_otaru_hood,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(27, 0) }
+spriteset(set_721_front_tc_tomakomai,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+spriteset(set_721_rear_tc_tomakomai,           "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_721_unlited_tc_tomakomai,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_721_front_tc_otaru,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+spriteset(set_721_rear_tc_otaru,               "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+spriteset(set_721_unlited_tc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+spriteset(set_721_mp_thyristor,                "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_721_tu_renew,                    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+spriteset(set_721_tn,                          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+spriteset(set_721_front_tcu_tomakomai_renew,   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 0) }
+spriteset(set_721_rear_tcu_tomakomai_renew,    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 0) }
+spriteset(set_721_unlited_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 0) }
+spriteset(set_721_front_tcu_tomakomai_init,    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 0) }
+spriteset(set_721_rear_tcu_tomakomai_init,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 0) }
+spriteset(set_721_unlited_tcu_tomakomai_init,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 0) }
+spriteset(set_721_mp_vvvf,                     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 0) }
+spriteset(set_721_tu_init,                     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 0) }
+spriteset(set_721_front_mc_otaru,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 0) }
+spriteset(set_721_rear_mc_otaru,               "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(19, 0) }
+spriteset(set_721_unlited_mc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(20, 0) }
+spriteset(set_721_mn,                          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(21, 0) }
+spriteset(set_721_front_tc_otaru_hood,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(22, 0) }
+spriteset(set_721_rear_tc_otaru_hood,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(23, 0) }
+spriteset(set_721_unlited_tc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(24, 0) }
+spriteset(set_721_front_mc_otaru_hood,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(25, 0) }
+spriteset(set_721_rear_mc_otaru_hood,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(26, 0) }
+spriteset(set_721_unlited_mc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(27, 0) }
 
-spriteset(set_721f_front_tc_tomakomai,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-spriteset(set_721f_rear_tc_tomakomai,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
-spriteset(set_721f_unlited_tc_tomakomai,      "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-spriteset(set_721f_front_tc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-spriteset(set_721f_rear_tc_otaru,             "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-spriteset(set_721f_unlited_tc_otaru,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-spriteset(set_721f_mp_thyristor,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
-spriteset(set_721f_tu_renew,                  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
-spriteset(set_721f_tn,                        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 1) }
-spriteset(set_721f_front_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 1) }
-spriteset(set_721f_rear_tcu_tomakomai_renew,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 1) }
-spriteset(set_721f_unlited_tcu_tomakomai_renew,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 1) }
-spriteset(set_721f_front_tcu_tomakomai_init,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 1) }
-spriteset(set_721f_rear_tcu_tomakomai_init,   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 1) }
-spriteset(set_721f_unlited_tcu_tomakomai_init,"gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
-spriteset(set_721f_mp_vvvf,                   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 1) }
-spriteset(set_721f_tu_init,                   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 1) }
-spriteset(set_721f_front_mc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 1) }
-spriteset(set_721f_rear_mc_otaru,             "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(19, 1) }
-spriteset(set_721f_unlited_mc_otaru,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(20, 1) }
-spriteset(set_721f_mn,                        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(21, 1) }
-spriteset(set_721f_front_tc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(22, 1) }
-spriteset(set_721f_rear_tc_otaru_hood,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(23, 1) }
-spriteset(set_721f_unlited_tc_otaru_hood,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(24, 1) }
-spriteset(set_721f_front_mc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(25, 1) }
-spriteset(set_721f_rear_mc_otaru_hood,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(26, 1) }
-spriteset(set_721f_unlited_mc_otaru_hood,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(27, 1) }
+spriteset(set_721f_front_tc_tomakomai,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+spriteset(set_721f_rear_tc_tomakomai,           "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_721f_unlited_tc_tomakomai,        "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_721f_front_tc_otaru,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+spriteset(set_721f_rear_tc_otaru,               "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+spriteset(set_721f_unlited_tc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+spriteset(set_721f_mp_thyristor,                "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_721f_tu_renew,                    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+spriteset(set_721f_tn,                          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+spriteset(set_721f_front_tcu_tomakomai_renew,   "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(10, 1) }
+spriteset(set_721f_rear_tcu_tomakomai_renew,    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(11, 1) }
+spriteset(set_721f_unlited_tcu_tomakomai_renew, "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(12, 1) }
+spriteset(set_721f_front_tcu_tomakomai_init,    "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(13, 1) }
+spriteset(set_721f_rear_tcu_tomakomai_init,     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(14, 1) }
+spriteset(set_721f_unlited_tcu_tomakomai_init,  "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(15, 1) }
+spriteset(set_721f_mp_vvvf,                     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(16, 1) }
+spriteset(set_721f_tu_init,                     "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(17, 1) }
+spriteset(set_721f_front_mc_otaru,              "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(18, 1) }
+spriteset(set_721f_rear_mc_otaru,               "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(19, 1) }
+spriteset(set_721f_unlited_mc_otaru,            "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(20, 1) }
+spriteset(set_721f_mn,                          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(21, 1) }
+spriteset(set_721f_front_tc_otaru_hood,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(22, 1) }
+spriteset(set_721f_rear_tc_otaru_hood,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(23, 1) }
+spriteset(set_721f_unlited_tc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(24, 1) }
+spriteset(set_721f_front_mc_otaru_hood,         "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(25, 1) }
+spriteset(set_721f_rear_mc_otaru_hood,          "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(26, 1) }
+spriteset(set_721f_unlited_mc_otaru_hood,       "gfx/8bpp/721-8bpp.png") { tmpl_vehicle_8_views(27, 1) }
 
-alternative_sprites(set_721_front_tc_tomakomai,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
-alternative_sprites(set_721_rear_tc_tomakomai,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
-alternative_sprites(set_721_unlited_tc_tomakomai,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
-alternative_sprites(set_721_front_tc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
-alternative_sprites(set_721_rear_tc_otaru,             ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-alternative_sprites(set_721_unlited_tc_otaru,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-alternative_sprites(set_721_mp_thyristor,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
-alternative_sprites(set_721_tu_renew,                  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
-alternative_sprites(set_721_tn,                        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 0) }
-alternative_sprites(set_721_front_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 0) }
-alternative_sprites(set_721_rear_tcu_tomakomai_renew,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 0) }
-alternative_sprites(set_721_unlited_tcu_tomakomai_renew,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 0) }
-alternative_sprites(set_721_front_tcu_tomakomai_init,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 0) }
-alternative_sprites(set_721_rear_tcu_tomakomai_init,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 0) }
-alternative_sprites(set_721_unlited_tcu_tomakomai_init,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
-alternative_sprites(set_721_mp_vvvf,                   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 0) }
-alternative_sprites(set_721_tu_init,                   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 0) }
-alternative_sprites(set_721_front_mc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 0) }
-alternative_sprites(set_721_rear_mc_otaru,             ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(19, 0) }
-alternative_sprites(set_721_unlited_mc_otaru,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(20, 0) }
-alternative_sprites(set_721_mn,                        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(21, 0) }
-alternative_sprites(set_721_front_tc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(22, 0) }
-alternative_sprites(set_721_rear_tc_otaru_hood,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(23, 0) }
-alternative_sprites(set_721_unlited_tc_otaru_hood,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(24, 0) }
-alternative_sprites(set_721_front_mc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(25, 0) }
-alternative_sprites(set_721_rear_mc_otaru_hood,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(26, 0) }
-alternative_sprites(set_721_unlited_mc_otaru_hood,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(27, 0) }
+alternative_sprites(set_721_front_tc_tomakomai,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_721_rear_tc_tomakomai,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_721_unlited_tc_tomakomai,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_721_front_tc_otaru,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_721_rear_tc_otaru,               ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+alternative_sprites(set_721_unlited_tc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+alternative_sprites(set_721_mp_thyristor,                ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_721_tu_renew,                    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
+alternative_sprites(set_721_tn,                          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 0) }
+alternative_sprites(set_721_front_tcu_tomakomai_renew,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 0) }
+alternative_sprites(set_721_rear_tcu_tomakomai_renew,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 0) }
+alternative_sprites(set_721_unlited_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 0) }
+alternative_sprites(set_721_front_tcu_tomakomai_init,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 0) }
+alternative_sprites(set_721_rear_tcu_tomakomai_init,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 0) }
+alternative_sprites(set_721_unlited_tcu_tomakomai_init,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 0) }
+alternative_sprites(set_721_mp_vvvf,                     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 0) }
+alternative_sprites(set_721_tu_init,                     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 0) }
+alternative_sprites(set_721_front_mc_otaru,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 0) }
+alternative_sprites(set_721_rear_mc_otaru,               ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(19, 0) }
+alternative_sprites(set_721_unlited_mc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(20, 0) }
+alternative_sprites(set_721_mn,                          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(21, 0) }
+alternative_sprites(set_721_front_tc_otaru_hood,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(22, 0) }
+alternative_sprites(set_721_rear_tc_otaru_hood,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(23, 0) }
+alternative_sprites(set_721_unlited_tc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(24, 0) }
+alternative_sprites(set_721_front_mc_otaru_hood,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(25, 0) }
+alternative_sprites(set_721_rear_mc_otaru_hood,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(26, 0) }
+alternative_sprites(set_721_unlited_mc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(27, 0) }
 
-alternative_sprites(set_721f_front_tc_tomakomai,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
-alternative_sprites(set_721f_rear_tc_tomakomai,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
-alternative_sprites(set_721f_unlited_tc_tomakomai,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-alternative_sprites(set_721f_front_tc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-alternative_sprites(set_721f_rear_tc_otaru,             ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-alternative_sprites(set_721f_unlited_tc_otaru,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-alternative_sprites(set_721f_mp_thyristor,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
-alternative_sprites(set_721f_tu_renew,                  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
-alternative_sprites(set_721f_tn,                        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 1) }
-alternative_sprites(set_721f_front_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 1) }
-alternative_sprites(set_721f_rear_tcu_tomakomai_renew,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 1) }
-alternative_sprites(set_721f_unlited_tcu_tomakomai_renew,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 1) }
-alternative_sprites(set_721f_front_tcu_tomakomai_init,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 1) }
-alternative_sprites(set_721f_rear_tcu_tomakomai_init,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 1) }
-alternative_sprites(set_721f_unlited_tcu_tomakomai_init,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
-alternative_sprites(set_721f_mp_vvvf,                   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 1) }
-alternative_sprites(set_721f_tu_init,                   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 1) }
-alternative_sprites(set_721f_front_mc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 1) }
-alternative_sprites(set_721f_rear_mc_otaru,             ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(19, 1) }
-alternative_sprites(set_721f_unlited_mc_otaru,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(20, 1) }
-alternative_sprites(set_721f_mn,                        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(21, 1) }
-alternative_sprites(set_721f_front_tc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(22, 1) }
-alternative_sprites(set_721f_rear_tc_otaru_hood,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(23, 1) }
-alternative_sprites(set_721f_unlited_tc_otaru_hood,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(24, 1) }
-alternative_sprites(set_721f_front_mc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(25, 1) }
-alternative_sprites(set_721f_rear_mc_otaru_hood,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(26, 1) }
-alternative_sprites(set_721f_unlited_mc_otaru_hood,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(27, 1) }
+alternative_sprites(set_721f_front_tc_tomakomai,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_721f_rear_tc_tomakomai,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_721f_unlited_tc_tomakomai,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_721f_front_tc_otaru,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_721f_rear_tc_otaru,               ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+alternative_sprites(set_721f_unlited_tc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+alternative_sprites(set_721f_mp_thyristor,                ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_721f_tu_renew,                    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
+alternative_sprites(set_721f_tn,                          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views( 9, 1) }
+alternative_sprites(set_721f_front_tcu_tomakomai_renew,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(10, 1) }
+alternative_sprites(set_721f_rear_tcu_tomakomai_renew,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(11, 1) }
+alternative_sprites(set_721f_unlited_tcu_tomakomai_renew, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(12, 1) }
+alternative_sprites(set_721f_front_tcu_tomakomai_init,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(13, 1) }
+alternative_sprites(set_721f_rear_tcu_tomakomai_init,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(14, 1) }
+alternative_sprites(set_721f_unlited_tcu_tomakomai_init,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(15, 1) }
+alternative_sprites(set_721f_mp_vvvf,                     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(16, 1) }
+alternative_sprites(set_721f_tu_init,                     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(17, 1) }
+alternative_sprites(set_721f_front_mc_otaru,              ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(18, 1) }
+alternative_sprites(set_721f_rear_mc_otaru,               ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(19, 1) }
+alternative_sprites(set_721f_unlited_mc_otaru,            ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(20, 1) }
+alternative_sprites(set_721f_mn,                          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(21, 1) }
+alternative_sprites(set_721f_front_tc_otaru_hood,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(22, 1) }
+alternative_sprites(set_721f_rear_tc_otaru_hood,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(23, 1) }
+alternative_sprites(set_721f_unlited_tc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(24, 1) }
+alternative_sprites(set_721f_front_mc_otaru_hood,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(25, 1) }
+alternative_sprites(set_721f_rear_mc_otaru_hood,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(26, 1) }
+alternative_sprites(set_721f_unlited_mc_otaru_hood,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/721-32bpp.png") { tmpl_vehicle_8_views(27, 1) }
 
 
 
-spriteset(set_731_purchase,      "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_731_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_731_purchase,      "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_731_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/731-32bpp_gradient.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_731_front_tc,   "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_731_rear_tc,    "gfx/8bpp/731-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -140,8 +140,8 @@ alternative_sprites(set_731f_mp,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx
 
 
 
-spriteset(set_733_purchase,      "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_733_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/733-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_733_purchase,      "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_733_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/733-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_733_front_tc,         "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_733_rear_tc,          "gfx/8bpp/733-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -205,8 +205,8 @@ alternative_sprites(set_733f_unlited_tc_nh,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BP
 
 
 
-spriteset(set_735_purchase,      "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_735_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/735-32bpp.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_735_purchase,      "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_735_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/735-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_735_front_tc,   "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_735_rear_tc,    "gfx/8bpp/735-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
@@ -230,8 +230,8 @@ alternative_sprites(set_735f_mp,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx
 
 
 
-spriteset(set_dc201_purchase,      "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_single(0, 53, 14, -25, -10) }
-alternative_sprites(set_dc201_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_single(0, 53, 14, 15, -10) }
+spriteset(set_dc201_purchase,      "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_dc201_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 
 spriteset(set_dc201_front_mc,   "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 spriteset(set_dc201_rear_mc,    "gfx/8bpp/dc201-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }

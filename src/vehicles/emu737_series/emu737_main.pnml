@@ -1,5 +1,5 @@
-spriteset(          set_737_purchase,                                     "gfx/8bpp/737-8bpp.png")   { tmpl_vehicle_single(0, 53, 14, -14, 0) }
-alternative_sprites(set_737_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 53, 14, -14, 0) }
+spriteset(          set_737_purchase,                                     "gfx/8bpp/737-8bpp.png")   { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_737_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25,-10) }
 
 
 spriteset(set_737_tc_unlighted, "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
@@ -16,7 +16,6 @@ spriteset(set_737f_tc_rear     , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views
 spriteset(set_737f_mc_front    , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
 spriteset(set_737f_mc_rear     , "gfx/8bpp/737-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
 
-alternative_sprites(set_737_purchase,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
 alternative_sprites(set_737_tc_unlighted,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 alternative_sprites(set_737_mc_unlighted,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 alternative_sprites(set_737_tc_front,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/737-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
@@ -121,22 +120,22 @@ item(FEAT_TRAINS, emu737_2cars) {
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
         model_life: VEHICLE_NEVER_EXPIRES;
-        track_type: ELRL;
+        track_type: RAILTYPE_ELECTRIC;
         sprite_id: SPRITE_ID_NEW_TRAIN;
         refittable_cargo_classes: bitmask(CC_PASSENGERS);
         vehicle_life: 30;
-        // reliability_decay: 20;
+        reliability_decay: 20;
         loading_speed: param_loading_suburban;
         cost_factor: 45;
         running_cost_factor: 100;
         speed: 120 km/h;
         refit_cost: 0;
-        power: 760 kW;
-        dual_headed: 1;
+        power: 190 * 4 kW;
+        dual_headed: 0;
         cargo_capacity: param_capacity_suburban;
         weight: 75 ton;
         // ai_engine_rank: 0;
-        tractive_effort_coefficient: 0.1;
+        tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
     }
