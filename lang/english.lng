@@ -1,6 +1,29 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :{GREEN}Hokkaido {BLACK}Trains
-STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
+STR_GRF_NAME                                                    :{GREEN}Hokkaido Trains
+STR_GRF_DESC                                                    :{GREEN}Hokkaido Trains
+
+
+
+STR_PARAM_CAPACITY_SETTINGS_NAME :Vehicle capacities
+STR_PARAM_CAPACITY_SETTINGS_DESC :Commuter train capacities are more than 50% greater than Express train.{}Suburban train capacities are more than 33% greater than Express train.
+STR_PARAM_CAPACITY_SETTINGS_REAL :Realistic
+STR_PARAM_CAPACITY_SETTINGS_LOW  :Low
+STR_PARAM_CAPACITY_SETTINGS_MID  :Medium
+STR_PARAM_CAPACITY_SETTINGS_HIGH :High
+
+STR_PARAM_ISVARIABLE_CAPACITY_NAME :Using variable capacities
+STR_PARAM_ISVARIABLE_CAPACITY_DESC :Will be able to set any integer for the field below.{}When this setting is enabled, the 'Vehicle capacities' setting is disabled.
+
+STR_PARAM_VARIABLE_CAPACITY_NAME :Variable capacities
+STR_PARAM_VARIABLE_CAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(1-1200) can be set for capacities.
+
+STR_PARAM_LOADING_SETTINGS_NAME :Loading speed
+STR_PARAM_LOADING_SETTINGS_DESC :
+STR_PARAM_LOADING_SETTINGS_LOW  :Low
+STR_PARAM_LOADING_SETTINGS_MID  :Medium
+STR_PARAM_LOADING_SETTINGS_HIGH :High
+
+
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
 STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.

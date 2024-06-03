@@ -526,7 +526,7 @@ item(FEAT_TRAINS, dmu281_7cars) {
         refit_cost: 0;
         power: 355 * 2 * 7 / param_diesel_decay_factor hp;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express;
+        cargo_capacity: param_capacity_express * 7;
         weight: 40 * 7 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
@@ -572,7 +572,7 @@ item(FEAT_TRAINS, dmu281_1car) {
         refit_cost: 0;
         power: 355 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express;
+        cargo_capacity: param_capacity_express * 1;
         weight: 40 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
@@ -619,7 +619,7 @@ item(FEAT_TRAINS, dmu283_6cars) {
         refit_cost: 0;
         power: 355 * 2 * 6 / param_diesel_decay_factor hp;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express;
+        cargo_capacity: param_capacity_express * 6;
         weight: 43 * 6 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
@@ -665,7 +665,7 @@ item(FEAT_TRAINS, dmu283_1car) {
         refit_cost: 0;
         power: 355 * 2 / param_diesel_decay_factor hp;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express;
+        cargo_capacity: param_capacity_express * 1;
         weight: 43 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;

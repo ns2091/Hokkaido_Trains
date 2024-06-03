@@ -1,9 +1,16 @@
-param_capacity_commuter = 120;
-param_capacity_suburban =  90;
-param_capacity_express  =  60;
+param_capacity_commuter = param_capacity_express * (3 / 2); // param_exp * 1.5
+param_capacity_suburban = param_capacity_express * (4 / 3); // param_exp * (1 + 1/3)
+param_capacity_express  = 
+    param_isenable_variable_capacity ? param_variable_capacity :
+        param_capacity_settings == 0 ? 60 :
+            param_capacity_settings == 1 ? 40 :
+                param_capacity_settings == 2 ? 80 : 120;
 
-param_loading_commuter  = 100;
-param_loading_suburban  =  75;
-param_loading_express   =  50;
+param_loading_commuter  = param_loading_express * 3;
+param_loading_suburban  = param_loading_express * 2;
+param_loading_express   = 
+    param_loading_settings == 1 ? 20 :
+        param_loading_settings == 2 ? 30 : 50;
+
 
 param_diesel_decay_factor = 2;

@@ -77,7 +77,7 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
         refit_cost: 0;
         power: 230 * 4 * 2 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express;
+        cargo_capacity: param_capacity_express * 5;
         weight: 40 * 5 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;

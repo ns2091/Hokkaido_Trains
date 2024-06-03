@@ -179,7 +179,7 @@ item(FEAT_TRAINS, dmuH100) {
         refit_cost: 0;
         power: 105 * 2 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_suburban;
+        cargo_capacity: param_capacity_suburban * 1;
         weight: 40 ton;
         tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;

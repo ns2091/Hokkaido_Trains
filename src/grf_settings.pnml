@@ -7,19 +7,56 @@ grf {
 
     // 設定画面のパラメータを定義する
 	
-    // param {
-        // colour_scheme {
-            // type: int;
-            // name: string(STR_PARAM_COLOUR_SCHEME_NAME);
-            // desc: string(STR_PARAM_COLOUR_SCHEME_DESC);
-            // min_value: 0;
-            // max_value: 2;
-            // def_value: 1;
-            // names: {
-                // 0: string(STR_PARAM_COLOUR_SCHEME_1CC);
-                // 1: string(STR_PARAM_COLOUR_SCHEME_2CC);
-                // 2: string(STR_PARAM_COLOUR_SCHEME_REAL);
-            // };
-        // }
-    // }
+    param 0 {
+        param_capacity_settings {
+            type: int;
+            name: string(STR_PARAM_CAPACITY_SETTINGS_NAME);
+            desc: string(STR_PARAM_CAPACITY_SETTINGS_DESC);
+            min_value: 0;
+            max_value: 3;
+            def_value: 0;
+            names: {
+                0: string(STR_PARAM_CAPACITY_SETTINGS_REAL);
+                1: string(STR_PARAM_CAPACITY_SETTINGS_LOW);
+                2: string(STR_PARAM_CAPACITY_SETTINGS_MID);
+                3: string(STR_PARAM_CAPACITY_SETTINGS_HIGH);
+            };
+        }
+    }
+    
+    param 1 {
+        param_isenable_variable_capacity {
+            type: bool;
+            name: string(STR_PARAM_ISVARIABLE_CAPACITY_NAME);
+            desc: string(STR_PARAM_ISVARIABLE_CAPACITY_DESC);
+            bit: 1;
+        }
+    }
+
+    param 2 {
+        param_variable_capacity {
+            type: int;
+            name: string(STR_PARAM_VARIABLE_CAPACITY_NAME);
+            desc: string(STR_PARAM_VARIABLE_CAPACITY_DESC);
+            min_value: 1;
+            max_value: 1200;
+            def_value: 60;
+        }
+    }
+
+    param 3 {
+        param_loading_settings {
+            type: int;
+            name: string(STR_PARAM_LOADING_SETTINGS_NAME);
+            desc: string(STR_PARAM_LOADING_SETTINGS_DESC);
+            min_value: 1;
+            max_value: 3;
+            def_value: 3;
+            names: {
+                1: string(STR_PARAM_LOADING_SETTINGS_LOW);
+                2: string(STR_PARAM_LOADING_SETTINGS_MID);
+                3: string(STR_PARAM_LOADING_SETTINGS_HIGH);
+            };
+        }
+    }
 }

@@ -1,6 +1,29 @@
 ##grflangid 0x39
-STR_GRF_NAME                                                    :{GREEN}Hokkaido {WHITE}Trains
-STR_GRF_DESC                                                    :{GREEN}Hokkaido {WHITE}Trains
+STR_GRF_NAME                                                    :{GREEN}Hokkaido Trains
+STR_GRF_DESC                                                    :{GREEN}Hokkaido Trains
+
+
+
+STR_PARAM_CAPACITY_SETTINGS_NAME :車両定員
+STR_PARAM_CAPACITY_SETTINGS_DESC :近郊型車両の定員は特急型車両の3割増し、通勤型は5割増しです。
+STR_PARAM_CAPACITY_SETTINGS_REAL :現実的
+STR_PARAM_CAPACITY_SETTINGS_LOW  :低
+STR_PARAM_CAPACITY_SETTINGS_MID  :中
+STR_PARAM_CAPACITY_SETTINGS_HIGH :高
+
+STR_PARAM_ISVARIABLE_CAPACITY_NAME :"任意の車両定員"を使用
+STR_PARAM_ISVARIABLE_CAPACITY_DESC :この設定を有効にすると、下の項目に任意の定員を設定できます。
+
+STR_PARAM_VARIABLE_CAPACITY_NAME :任意の車両定員
+STR_PARAM_VARIABLE_CAPACITY_DESC :任意の定員(1~1200名)を設定できます。{}この設定を使用するには、"定員を自由に設定する"を有効にしている必要があります。
+
+STR_PARAM_LOADING_SETTINGS_NAME :乗降速度
+STR_PARAM_LOADING_SETTINGS_DESC :
+STR_PARAM_LOADING_SETTINGS_LOW  :低
+STR_PARAM_LOADING_SETTINGS_MID  :中
+STR_PARAM_LOADING_SETTINGS_HIGH :高
+
+
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
 STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます

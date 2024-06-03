@@ -29,7 +29,7 @@ item(FEAT_TRAINS, dmu201_3cars) {
         refit_cost: 0;
         power: 450 * 2 * 3 * param_diesel_decay_factor hp;
         dual_headed: 0;
-        cargo_capacity: param_capacity_commuter;
+        cargo_capacity: param_capacity_commuter * 3;
         weight: 120 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
