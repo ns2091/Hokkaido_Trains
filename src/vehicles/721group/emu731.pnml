@@ -31,7 +31,7 @@ item(FEAT_TRAINS, emu731_3cars) {
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_commuter * 3;
+        cargo_capacity: param_capacity_commuter;
         weight: 100 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;

@@ -132,7 +132,7 @@ item(FEAT_TRAINS, emu737_2cars) {
         refit_cost: 0;
         power: 190 * 4 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_suburban * 2;
+        cargo_capacity: param_capacity_suburban;
         weight: 75 ton;
         // ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;

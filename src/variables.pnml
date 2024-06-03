@@ -1,6 +1,6 @@
-param_capacity_commuter = param_capacity_express * (3 / 2); // param_exp * 1.5
-param_capacity_suburban = param_capacity_express * (4 / 3); // param_exp * (1 + 1/3)
-param_capacity_express  = 
+param_capacity_commuter = param_capacity_express * 3 / 2; // param_exp * 1.5
+param_capacity_suburban = param_capacity_express * 4 / 3; // param_exp * (1 + 1/3)
+param_capacity_express  =
     param_isenable_variable_capacity ? param_variable_capacity :
         param_capacity_settings == 0 ? 60 :
             param_capacity_settings == 1 ? 40 :

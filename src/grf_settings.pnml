@@ -38,7 +38,7 @@ grf {
             type: int;
             name: string(STR_PARAM_VARIABLE_CAPACITY_NAME);
             desc: string(STR_PARAM_VARIABLE_CAPACITY_DESC);
-            min_value: 1;
+            min_value: 0;
             max_value: 1200;
             def_value: 60;
         }
@@ -49,13 +49,13 @@ grf {
             type: int;
             name: string(STR_PARAM_LOADING_SETTINGS_NAME);
             desc: string(STR_PARAM_LOADING_SETTINGS_DESC);
-            min_value: 1;
-            max_value: 3;
-            def_value: 3;
+            min_value: 0;
+            max_value: 2;
+            def_value: 2;
             names: {
-                1: string(STR_PARAM_LOADING_SETTINGS_LOW);
-                2: string(STR_PARAM_LOADING_SETTINGS_MID);
-                3: string(STR_PARAM_LOADING_SETTINGS_HIGH);
+                0: string(STR_PARAM_LOADING_SETTINGS_LOW);
+                1: string(STR_PARAM_LOADING_SETTINGS_MID);
+                2: string(STR_PARAM_LOADING_SETTINGS_HIGH);
             };
         }
     }

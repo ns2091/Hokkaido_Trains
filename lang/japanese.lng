@@ -15,7 +15,7 @@ STR_PARAM_ISVARIABLE_CAPACITY_NAME :"任意の車両定員"を使用
 STR_PARAM_ISVARIABLE_CAPACITY_DESC :この設定を有効にすると、下の項目に任意の定員を設定できます。
 
 STR_PARAM_VARIABLE_CAPACITY_NAME :任意の車両定員
-STR_PARAM_VARIABLE_CAPACITY_DESC :任意の定員(1~1200名)を設定できます。{}この設定を使用するには、"定員を自由に設定する"を有効にしている必要があります。
+STR_PARAM_VARIABLE_CAPACITY_DESC :任意の定員(0~1200名)を設定できます。{}この設定を使用するには、"任意の車両定員を使用"を有効にしている必要があります。
 
 STR_PARAM_LOADING_SETTINGS_NAME :乗降速度
 STR_PARAM_LOADING_SETTINGS_DESC :

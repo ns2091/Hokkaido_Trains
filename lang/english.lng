@@ -15,7 +15,7 @@ STR_PARAM_ISVARIABLE_CAPACITY_NAME :Using variable capacities
 STR_PARAM_ISVARIABLE_CAPACITY_DESC :Will be able to set any integer for the field below.{}When this setting is enabled, the 'Vehicle capacities' setting is disabled.
 
 STR_PARAM_VARIABLE_CAPACITY_NAME :Variable capacities
-STR_PARAM_VARIABLE_CAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(1-1200) can be set for capacities.
+STR_PARAM_VARIABLE_CAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
 
 STR_PARAM_LOADING_SETTINGS_NAME :Loading speed
 STR_PARAM_LOADING_SETTINGS_DESC :

@@ -262,7 +262,7 @@ item(FEAT_TRAINS, emu785_5cars) {
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express * 5;
+        cargo_capacity: param_capacity_express;
         weight: 40 * 5 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
@@ -305,7 +305,7 @@ item(FEAT_TRAINS, emu785_4cars) {
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express * 4;
+        cargo_capacity: param_capacity_express;
         weight: 40 * 4 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
@@ -348,7 +348,7 @@ item(FEAT_TRAINS, emu785_2cars) {
         refit_cost: 0;
         power: 190 * 4 * 1 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_express * 2;
+        cargo_capacity: param_capacity_express;
         weight: 40 * 2 ton;
         ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
