@@ -7,19 +7,24 @@ railtypetable {
 
 
 template tmpl_vehicle_basic(x, y) {
-    [x,      y,  8, 24,  -3, -12]
-    [x +  9, y, 22, 20, -14, -12]
-    [x + 32, y, 32, 16, -16, -12]
-    [x + 65, y, 22, 20,  -6, -12]
+    [x,      y,  8, 24,  -3, -16]
+    [x +  9, y, 22, 20, -13, -13]
+    [x + 32, y, 32, 17, -14, -13]
+    [x + 65, y, 22, 20,  -5, -12]
+
+    // [x,      y,  8, 24,  -3, -12]
+    // [x +  9, y, 22, 20, -14, -12]
+    // [x + 32, y, 32, 16, -16, -12]
+    // [x + 65, y, 22, 20,  -6, -12]
 }
 
 // template tmpl_vehicle_4_views(num) {
     // tmpl_vehicle_basic(1, 1 + 25 * num)
 // }
 
-template tmpl_vehicle_8_views(num, reversed) {
-    tmpl_vehicle_basic(reversed ? 89 : 1, 1 + 25 * num)
-    tmpl_vehicle_basic(reversed ? 1 : 89, 1 + 25 * num)
+template tmpl_vehicle_8_views(num, isReversed) {
+    tmpl_vehicle_basic(isReversed ? 89 : 1, 1 + 25 * num)
+    tmpl_vehicle_basic(isReversed ? 1 : 89, 1 + 25 * num)
 }
 
 // xrel, yrelは表示画面のオフセット

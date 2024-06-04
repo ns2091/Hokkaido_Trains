@@ -31,11 +31,11 @@ STR_PARAM_LOADING_SETTINGS_HIGH :High
 
 
 
-STR_721GROUP_CANNOT_ATTACH_OTHER :This type can attach train types only 721, 731, 733 and 735series.
-STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
-STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot attach any train.
-STR_731_CANNOT_ATTACH_OTHER      :This type can attach train types only DC201, 721, 731, 733 and 735series.
-STR_DC201_CANNOT_ATTACH_OTHER    :This type can attach train types only DC201 and EC731series.
+STR_721GROUP_CANNOT_ATTACH_OTHER :This type can only be attached to 721, 731, 733 and 735series.
+STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.
+STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.
+STR_731_CANNOT_ATTACH_OTHER      :This type can only be attached to DC201, 721, 731, 733 and 735series.
+STR_DC201_CANNOT_ATTACH_OTHER    :This type can only be attached to DC201 and EC731series.
 
 STR_721_NAME:EC721 series
 STR_721_3CARS_NAME:EC721 series (3cars)
@@ -109,7 +109,7 @@ STR_LV_DC283_1CAR_INIT_KIHA282_2000      :KiHa282-2000
 
 STR_737_2CARS_NAME :EC737 series
 STR_737_2CARS_DESC :[2cars]{}{BLACK}Local train{BLACK}{}Ready for {GREEN}ONEMAN{BLACK}-operate
-STR_737_2CARS_CANNOT_ATTACH_OTHER :EC737 may not be attached to other types of trains.
+STR_737_2CARS_CANNOT_ATTACH_OTHER :737series can only be attached to same type vehicles.
 
 STR_785_NAME :EC785 series
 STR_785_5CARS_NAME :EC785 series(5cars)
@@ -118,7 +118,7 @@ STR_785_2CARS_NAME :EC785 series(2cars)
 STR_785_5CARS_DESC :[5cars] (consist: 5/5(2+3)){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
 STR_785_4CARS_DESC :[4cars] (consist: 4/2+4){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
 STR_785_2CARS_DESC :[2cars] (consist: 2/2+4/2+2+2){}{RED}Limited Express{BLACK}"Suzuran" "Super Kamui" "Super White Arrow"{}{ORANGE}Rapid{BLACK}"AIRPORT"
-STR_785_CANNOT_ATTACH_OTHER :785series can attach train types only same 785series.
+STR_785_CANNOT_ATTACH_OTHER :785series can only be attached to same type vehicles.
 STR_LV_785_INITIAL :Initial livery(2/4/2+4cars)
 STR_LV_785_INITIAL_2CARS :Initial livery(2cars)
 STR_LV_785_INITIAL_4CARS :Initial livery(4cars)
@@ -133,11 +133,11 @@ STR_H100_NAME :DC H100 series
 STR_H100_DESC :[1car] (consist: 1..){}{BLACK}Local train{BLACK}
 STR_LV_H100_PROTOTYPE :Prototype model
 STR_LV_H100_INITIAL   :Common model
-STR_H100_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+STR_H100_CANNOT_ATTACH_OTHER :This vehicle can only be attached to same type vehicles.
 
 STR_789_1000_NAME :EC789-1000 series
 STR_789_1000_DESC :[5cars] Limited Express "Suzuran"|"Super Kamui" Rapid "AIRPORT"
-STR_789_1000_CANNOT_ATTACH_OTHER :789-1000series can only be attached to MUCar.
+STR_789_1000_CANNOT_ATTACH_OTHER :789-1000series cannot be attached to any type vehicles.
 
 STR_789_0_NAME :EC789-0 series
 STR_789_0_2CARS_NAME :EC789-0 series (2cars)
@@ -146,7 +146,7 @@ STR_789_0_6CARS_NAME :EC789-0 series (6cars)
 STR_789_0_2CARS_DESC :[2cars] (consist: 2+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
 STR_789_0_3CARS_DESC :[3cars] (consist: 2+3/3+3/3+3+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
 STR_789_0_6CARS_DESC :[6cars] (consist: 6/6+2){}{RED}Limited Express{BLACK} "Super Hakucho" "Tsugaru" "Lilac"
-STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
+STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to 789-0/785-300series.
 STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
 STR_LV_789_0_2CARS_HE100 :HE-100 formation (Hakodate side)
 STR_LV_789_0_3CARS_HE100 :HE-100 formation (Hakodate side)
@@ -159,8 +159,8 @@ STR_DC261_0_4CARS_NAME :DC261-0 series (4cars)
 STR_DC261_0_2CARS_NAME :DC261-0 series (2cars)
 STR_DC261_0_4CARS_DESC :[4cars] (consist: 4/2+4/4+2){}{RED}Limited Express{BLACK} "Super Soya" "Sarobetsu"
 STR_DC261_0_2CARS_DESC :[2cars] (consist: 2+2/2+2+2){}{RED}Limited Express{BLACK} "Super Soya" "Sarobetsu"
-STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
-STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
+STR_DC261_0_4CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to same type vehicles.
+STR_DC261_0_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to same type vehicles.
 STR_LV_DC261_0_2CARS_SE100 :SE-100 formation (Sapporo side)
 STR_LV_DC261_0_2CARS_SE200 :SE-200 formation (Asahikawa/Wakkanai side)
 
@@ -175,8 +175,8 @@ STR_DC261_1000_2CARS_DESC :[2cars] (consist: 2+2/2+1..+2){}{RED}Limited Express{
 STR_DC261_1000_1CAR_DESC  :[1car] (consist: 2+1..+2){}{RED}Limited Express{BLACK} "Super Hokuto" "Super Tokachi" and more...
 STR_DC261_1000_7CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
 STR_DC261_1000_5CARS_CANNOT_ATTACH_OTHER :This vehicle cannot be attached to any vehicles.
-STR_DC261_1000_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to trains of same types.
-STR_DC261_1000_1CAR_CANNOT_ATTACH_OTHER  :This vehicle can only be attached to trains of same types.
+STR_DC261_1000_2CARS_CANNOT_ATTACH_OTHER :This vehicle can only be attached to same type vehicles.
+STR_DC261_1000_1CAR_CANNOT_ATTACH_OTHER  :This vehicle can only be attached to same type vehicles.
 STR_LV_DC261_1000_7CARS_INIT     :Init Livery
 STR_LV_DC261_1000_7CARS_RENEW    :Renewal Livery
 STR_LV_DC261_1000_5CARS_INIT     :Init Livery

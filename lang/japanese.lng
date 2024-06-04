@@ -55,12 +55,12 @@ STR_731_NAME :731系電車 3両編成
 STR_731_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"{}201系気動車と連結できます。
 
 STR_DC201_NAME :201系気動車 3両編成
-STR_DC201_DESC :[3cars] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "ニセコライナー" "いしかりライナー"{}731系電車と連結できます。
+STR_DC201_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "ニセコライナー" "いしかりライナー"{}731系電車と連結できます。
 
 STR_733_NAME :733系電車
 STR_733_3CARS_NAME :733系電車 3両編成
 STR_733_6CARS_NAME :733系電車 6両編成
-STR_733_DESC :[3/6cars] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
+STR_733_DESC :[3/6両] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
 STR_733_3CARS_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー" / {PURPLE}はこだてライナー{BLACK}
 STR_733_6CARS_DESC :[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
 STR_LV_733_INITIAL :札幌地区仕様
@@ -124,7 +124,7 @@ STR_LV_785_USEAT         :{RED}u{BLUE}seat{BLACK}連結仕様(2002~)
 STR_LV_785_USEAT_MIDCAB  :{RED}u{BLUE}seat{BLACK}連結 運転台封じ込め車つき仕様(2002~)
 
 STR_785_300_2CARS_NAME :785系電車300番代 2両
-STR_785_300_2CARS_DESC :[増結用2両] 789系"スーパー白鳥"の増結車両としてのみ運用されます。
+STR_785_300_2CARS_DESC :[増結用2両]{}789系"スーパー白鳥"の増結車両としてのみ運用されます。
 STR_785_300_CANNOT_ATTACH_OTHER :789系0番代とのみ連結できます。
 
 STR_H100_NAME :H100形気動車
@@ -135,7 +135,7 @@ STR_H100_CANNOT_ATTACH_OTHER :H100形とのみ連結できます。
 
 STR_789_1000_NAME :789系電車1000番代 5両編成
 STR_789_1000_DESC :[5両] 特急"すずらん"/"スーパーカムイ" 快速"エアポート"
-STR_789_1000_CANNOT_ATTACH_OTHER :MUCarのみ連結できます
+STR_789_1000_CANNOT_ATTACH_OTHER :他車両は連結できません。
 
 STR_789_0_NAME :789系電車0番代
 STR_789_0_2CARS_NAME :789系電車0番代 2両
@@ -145,8 +145,8 @@ STR_789_0_DESC :[5/6/5+3/6+2両]{}特急 "スーパー白鳥" "つがる" "ラ�
 STR_789_0_2CARS_DESC :[2両] (編成例: 2+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
 STR_789_0_3CARS_DESC :[3両] (編成例: 2+3/3+3/3+3+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
 STR_789_0_6CARS_DESC :[6両] (編成例: 6/6+2){}{RED}特急{BLACK} "スーパー白鳥" "つがる" "ライラック"
-STR_789_0_CANNOT_ATTACH_OTHER :789-0series can only be attached to MUCar/789-0/785-300series.
-STR_LV_789_0_INITIAL :[5/6/5+3/6+2cars] Initial livery("Super Hakucho"/"Tsugaru")
+STR_789_0_CANNOT_ATTACH_OTHER :789系0番代車両は、同一車両または785系300番代のみ連結できます。
+STR_LV_789_0_INITIAL :[5/6/5+3/6+2両] Initial livery("Super Hakucho"/"Tsugaru")
 STR_LV_789_0_2CARS_HE100 :HE-100編成(函館方編成)
 STR_LV_789_0_3CARS_HE100 :HE-100編成(函館方編成)
 STR_LV_789_0_3CARS_HE200 :HE-200編成(青森方編成)
