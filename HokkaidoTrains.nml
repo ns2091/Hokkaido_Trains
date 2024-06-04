@@ -39,10 +39,10 @@ grf {
     }
 
     param 2 {
-        param_variable_capacity {
+        param_variable_expcapacity {
             type: int;
-            name: string(STR_PARAM_VARIABLE_CAPACITY_NAME);
-            desc: string(STR_PARAM_VARIABLE_CAPACITY_DESC);
+            name: string(STR_PARAM_VARIABLE_EXPCAPACITY_NAME);
+            desc: string(STR_PARAM_VARIABLE_EXPCAPACITY_DESC);
             min_value: 0;
             max_value: 1200;
             def_value: 60;
@@ -50,6 +50,26 @@ grf {
     }
 
     param 3 {
+        param_variable_urbcapacity {
+            type: int;
+            name: string(STR_PARAM_VARIABLE_URBCAPACITY_NAME);
+            desc: string(STR_PARAM_VARIABLE_URBCAPACITY_DESC);
+            min_value: 0;
+            max_value: 1200;
+            def_value: 60;
+        }
+    }
+    param 4 {
+        param_variable_comcapacity {
+            type: int;
+            name: string(STR_PARAM_VARIABLE_COMCAPACITY_NAME);
+            desc: string(STR_PARAM_VARIABLE_COMCAPACITY_DESC);
+            min_value: 0;
+            max_value: 1200;
+            def_value: 60;
+        }
+    }
+    param 5 {
         param_loading_settings {
             type: int;
             name: string(STR_PARAM_LOADING_SETTINGS_NAME);
@@ -97,10 +117,20 @@ template tmpl_vehicle_single(num, xsize, ysize, xrel, yrel) {
 }
 # 3 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/variables.pnml" 1
-param_capacity_commuter = param_capacity_express * 3 / 2; // param_exp * 1.5
-param_capacity_suburban = param_capacity_express * 4 / 3; // param_exp * (1 + 1/3)
+param_capacity_commuter =
+    param_isenable_variable_capacity ? param_variable_urbcapacity :
+        param_capacity_settings == 0 ? 120 :
+            param_capacity_settings == 1 ? 80 :
+                param_capacity_settings == 2 ? 160 : 240;
+
+param_capacity_suburban =
+    param_isenable_variable_capacity ? param_variable_urbcapacity :
+        param_capacity_settings == 0 ? 90 :
+            param_capacity_settings == 1 ? 55 :
+                param_capacity_settings == 2 ? 105 : 160;
+
 param_capacity_express =
-    param_isenable_variable_capacity ? param_variable_capacity :
+    param_isenable_variable_capacity ? param_variable_expcapacity :
         param_capacity_settings == 0 ? 60 :
             param_capacity_settings == 1 ? 40 :
                 param_capacity_settings == 2 ? 80 : 120;

@@ -14,8 +14,14 @@ STR_PARAM_CAPACITY_SETTINGS_HIGH :高
 STR_PARAM_ISVARIABLE_CAPACITY_NAME :"任意の車両定員"を使用
 STR_PARAM_ISVARIABLE_CAPACITY_DESC :この設定を有効にすると、下の項目に任意の定員を設定できます。
 
-STR_PARAM_VARIABLE_CAPACITY_NAME :任意の車両定員
-STR_PARAM_VARIABLE_CAPACITY_DESC :任意の定員(0~1200名)を設定できます。{}この設定を使用するには、"任意の車両定員を使用"を有効にしている必要があります。
+STR_PARAM_VARIABLE_EXPCAPACITY_NAME :任意の車両定員(特急型車両)
+STR_PARAM_VARIABLE_EXPCAPACITY_DESC :任意の定員(0~1200名)を設定できます。{}この設定を使用するには、"任意の車両定員を使用"を有効にしている必要があります。
+
+STR_PARAM_VARIABLE_URBCAPACITY_NAME :任意の車両定員(近郊型車両)
+STR_PARAM_VARIABLE_URBCAPACITY_DESC :任意の定員(0~1200名)を設定できます。{}この設定を使用するには、"任意の車両定員を使用"を有効にしている必要があります。
+
+STR_PARAM_VARIABLE_COMCAPACITY_NAME :任意の車両定員(通勤型車両)
+STR_PARAM_VARIABLE_COMCAPACITY_DESC :任意の定員(0~1200名)を設定できます。{}この設定を使用するには、"任意の車両定員を使用"を有効にしている必要があります。
 
 STR_PARAM_LOADING_SETTINGS_NAME :乗降速度
 STR_PARAM_LOADING_SETTINGS_DESC :

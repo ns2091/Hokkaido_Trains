@@ -14,8 +14,14 @@ STR_PARAM_CAPACITY_SETTINGS_HIGH :High
 STR_PARAM_ISVARIABLE_CAPACITY_NAME :Using variable capacities
 STR_PARAM_ISVARIABLE_CAPACITY_DESC :Will be able to set any integer for the field below.{}When this setting is enabled, the 'Vehicle capacities' setting is disabled.
 
-STR_PARAM_VARIABLE_CAPACITY_NAME :Variable capacities
-STR_PARAM_VARIABLE_CAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
+STR_PARAM_VARIABLE_EXPCAPACITY_NAME :Variable capacities(Express Train)
+STR_PARAM_VARIABLE_EXPCAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
+
+STR_PARAM_VARIABLE_URBCAPACITY_NAME :Variable capacities(Suburban Train)
+STR_PARAM_VARIABLE_URBCAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
+
+STR_PARAM_VARIABLE_COMCAPACITY_NAME :Variable capacities(Commuter Train)
+STR_PARAM_VARIABLE_COMCAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
 
 STR_PARAM_LOADING_SETTINGS_NAME :Loading speed
 STR_PARAM_LOADING_SETTINGS_DESC :
