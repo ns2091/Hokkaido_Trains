@@ -5,7 +5,7 @@ STR_GRF_DESC                                                    :Adding characte
 
 
 STR_PARAM_CAPACITY_SETTINGS_NAME :Vehicle capacities
-STR_PARAM_CAPACITY_SETTINGS_DESC :Commuter train capacities are more than 50% greater than Express train.{}Suburban train capacities are more than 33% greater than Express train.
+STR_PARAM_CAPACITY_SETTINGS_DESC :Commuter train capacities are more than 50% greater than Express train.{}Suburban train capacities are more than 33% greater than Express train.{}(excluding "Realistic")
 STR_PARAM_CAPACITY_SETTINGS_REAL :Realistic
 # STR_PARAM_CAPACITY_SETTINGS_LOW  :Low
 # STR_PARAM_CAPACITY_SETTINGS_MID  :Medium

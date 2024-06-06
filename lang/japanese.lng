@@ -5,7 +5,7 @@ STR_GRF_DESC                                                    :{GREEN}北海�
 
 
 STR_PARAM_CAPACITY_SETTINGS_NAME :車両定員
-STR_PARAM_CAPACITY_SETTINGS_DESC :近郊型車両の定員は特急型車両の3割増し、通勤型は5割増しです。
+STR_PARAM_CAPACITY_SETTINGS_DESC :近郊型車両の定員は特急型車両の3割増し、通勤型は5割増しです。("現実的"を除く)
 STR_PARAM_CAPACITY_SETTINGS_REAL :現実的
 # STR_PARAM_CAPACITY_SETTINGS_LOW  :低
 # STR_PARAM_CAPACITY_SETTINGS_MID  :中

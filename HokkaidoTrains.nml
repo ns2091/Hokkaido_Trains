@@ -169,19 +169,19 @@ template tmpl_vehicle_single(num, xsize, ysize, xrel, yrel) {
 # 1 "src/variables.pnml" 1
 param_capacity_commuter =
     param_isenable_variable_capacity ? param_variable_urbcapacity :
-        param_capacity_settings == 0 ? 120 :
-            param_capacity_settings == 1 ? 80 :
-                param_capacity_settings == 2 ? 160 : 240;
+        param_capacity_settings == 0 ? 210 :
+            param_capacity_settings == 1 ? 60 :
+                param_capacity_settings == 2 ? 120 : 180;
 
 param_capacity_suburban =
     param_isenable_variable_capacity ? param_variable_urbcapacity :
-        param_capacity_settings == 0 ? 90 :
+        param_capacity_settings == 0 ? 140 :
             param_capacity_settings == 1 ? 55 :
                 param_capacity_settings == 2 ? 105 : 160;
 
 param_capacity_express =
     param_isenable_variable_capacity ? param_variable_expcapacity :
-        param_capacity_settings == 0 ? 60 :
+        param_capacity_settings == 0 ? 70 :
             param_capacity_settings == 1 ? 40 :
                 param_capacity_settings == 2 ? 80 : 120;
 
@@ -4613,7 +4613,7 @@ item(FEAT_TRAINS, emu737_2cars) {
         refit_cost: 0;
         power: 190 * 4 kW;
         dual_headed: 0;
-        cargo_capacity: param_capacity_suburban;
+        cargo_capacity: param_capacity_commuter;
         weight: 75 ton;
         // ai_engine_rank: 0;
         tractive_effort_coefficient: 0.2;
