@@ -126,8 +126,8 @@ item(FEAT_TRAINS, emu737_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 17;
+        running_cost_factor: 45;
         speed: 120 km/h;
         refit_cost: 0;
         power: 190 * 4 kW;

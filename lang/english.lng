@@ -1,15 +1,15 @@
 ##grflangid 0x01
-STR_GRF_NAME                                                    :{GREEN}Hokkaido Trains
-STR_GRF_DESC                                                    :{GREEN}Hokkaido Trains
+STR_GRF_NAME                                                    :Hokkaido Trains
+STR_GRF_DESC                                                    :Adding characteristic vehicles of {GREEN}Hokkaido{BLACK}.
 
 
 
 STR_PARAM_CAPACITY_SETTINGS_NAME :Vehicle capacities
 STR_PARAM_CAPACITY_SETTINGS_DESC :Commuter train capacities are more than 50% greater than Express train.{}Suburban train capacities are more than 33% greater than Express train.
 STR_PARAM_CAPACITY_SETTINGS_REAL :Realistic
-STR_PARAM_CAPACITY_SETTINGS_LOW  :Low
-STR_PARAM_CAPACITY_SETTINGS_MID  :Medium
-STR_PARAM_CAPACITY_SETTINGS_HIGH :High
+# STR_PARAM_CAPACITY_SETTINGS_LOW  :Low
+# STR_PARAM_CAPACITY_SETTINGS_MID  :Medium
+# STR_PARAM_CAPACITY_SETTINGS_HIGH :High
 
 STR_PARAM_ISVARIABLE_CAPACITY_NAME :Using variable capacities
 STR_PARAM_ISVARIABLE_CAPACITY_DESC :Will be able to set any integer for the field below.{}When this setting is enabled, the 'Vehicle capacities' setting is disabled.
@@ -23,12 +23,22 @@ STR_PARAM_VARIABLE_URBCAPACITY_DESC :When this variable is used, the 'Using vari
 STR_PARAM_VARIABLE_COMCAPACITY_NAME :Variable capacities(Commuter Train)
 STR_PARAM_VARIABLE_COMCAPACITY_DESC :When this variable is used, the 'Using variable capacities' setting must be enabled.{}Any integer(0-1200) can be set for capacities.
 
-STR_PARAM_LOADING_SETTINGS_NAME :Loading speed
+STR_PARAM_LOADING_SETTINGS_NAME :Loading speeds
 STR_PARAM_LOADING_SETTINGS_DESC :
-STR_PARAM_LOADING_SETTINGS_LOW  :Low
-STR_PARAM_LOADING_SETTINGS_MID  :Medium
-STR_PARAM_LOADING_SETTINGS_HIGH :High
+# STR_PARAM_LOADING_SETTINGS_LOW  :Low
+# STR_PARAM_LOADING_SETTINGS_MID  :Medium
+# STR_PARAM_LOADING_SETTINGS_HIGH :High
 
+STR_PARAM_BASECOSTBUY_NAME :Purchase costs
+STR_PARAM_BASECOSTBUY_DESC :
+STR_PARAM_BASECOSTRUN_NAME :Running costs
+STR_PARAM_BASECOSTRUN_DESC :
+
+STR_PARAM_VLOW   :Very low
+STR_PARAM_LOW    :Low
+STR_PARAM_NORMAL :Medium
+STR_PARAM_HIGH   :High
+STR_PARAM_VHIGH  :Very high
 
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :This type can only be attached to 721, 731, 733 and 735series.
@@ -130,7 +140,7 @@ STR_785_300_2CARS_DESC :[2cars]Additional Parts of 789-0series "Super Hakucho". 
 STR_785_300_CANNOT_ATTACH_OTHER :This vehicle can only be attached to 789-0series.
 
 STR_H100_NAME :DC H100 series
-STR_H100_DESC :[1car] (consist: 1..){}{BLACK}Local train{BLACK}
+STR_H100_DESC :[1car] (consist: 1..){}{BLACK}Local train{BLACK}{}Ready for {GREEN}ONEMAN{BLACK}-operate
 STR_LV_H100_PROTOTYPE :Prototype model
 STR_LV_H100_INITIAL   :Common model
 STR_H100_CANNOT_ATTACH_OTHER :This vehicle can only be attached to same type vehicles.

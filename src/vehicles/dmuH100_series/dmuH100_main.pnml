@@ -173,8 +173,8 @@ item(FEAT_TRAINS, dmuH100) {
         vehicle_life: 30;
         // reliability_decay: 20;
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 10;
+        running_cost_factor: 25;
         speed: 100 km/h;
         refit_cost: 0;
         power: 105 * 2 kW;

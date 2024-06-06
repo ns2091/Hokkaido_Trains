@@ -19,8 +19,8 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 18;
+        running_cost_factor: 50;
         speed: 140 km/h;
         refit_cost: 0;
         power: 190 * 4 * 1 kW;

@@ -257,7 +257,7 @@ item(FEAT_TRAINS, emu785_5cars) {
         reliability_decay: 20;
         loading_speed: param_loading_express;
         cost_factor: 45;
-        running_cost_factor: 100;
+        running_cost_factor: 138;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
@@ -299,8 +299,8 @@ item(FEAT_TRAINS, emu785_4cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 36;
+        running_cost_factor: 110;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
@@ -342,8 +342,8 @@ item(FEAT_TRAINS, emu785_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 18;
+        running_cost_factor: 55;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 1 kW;

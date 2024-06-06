@@ -35,8 +35,8 @@ item(FEAT_TRAINS, emu733_3cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 22;
+        running_cost_factor: 75;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -80,8 +80,8 @@ item(FEAT_TRAINS, emu733_6cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 44;
+        running_cost_factor: 134;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 2 kW;

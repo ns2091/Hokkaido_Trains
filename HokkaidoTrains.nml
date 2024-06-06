@@ -13,6 +13,40 @@ grf {
     // 設定画面のパラメータを定義する
 
     param 0 {
+        param_basecostbuy {
+            type: int;
+            name: string(STR_PARAM_BASECOSTBUY_NAME);
+            desc: string(STR_PARAM_BASECOSTBUY_DESC);
+            min_value: 0;
+            max_value: 2;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_LOW);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_HIGH);
+            };
+        }
+    }
+
+    param 1 {
+        param_basecostrun {
+            type: int;
+            name: string(STR_PARAM_BASECOSTRUN_NAME);
+            desc: string(STR_PARAM_BASECOSTRUN_DESC);
+            min_value: 0;
+            max_value: 4;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_VLOW);
+                1: string(STR_PARAM_LOW);
+                2: string(STR_PARAM_NORMAL);
+                3: string(STR_PARAM_HIGH);
+                4: string(STR_PARAM_VHIGH);
+            };
+        }
+    }
+
+    param 2 {
         param_capacity_settings {
             type: int;
             name: string(STR_PARAM_CAPACITY_SETTINGS_NAME);
@@ -22,14 +56,14 @@ grf {
             def_value: 0;
             names: {
                 0: string(STR_PARAM_CAPACITY_SETTINGS_REAL);
-                1: string(STR_PARAM_CAPACITY_SETTINGS_LOW);
-                2: string(STR_PARAM_CAPACITY_SETTINGS_MID);
-                3: string(STR_PARAM_CAPACITY_SETTINGS_HIGH);
+                1: string(STR_PARAM_LOW);
+                2: string(STR_PARAM_NORMAL);
+                3: string(STR_PARAM_HIGH);
             };
         }
     }
 
-    param 1 {
+    param 3 {
         param_isenable_variable_capacity {
             type: bool;
             name: string(STR_PARAM_ISVARIABLE_CAPACITY_NAME);
@@ -38,7 +72,7 @@ grf {
         }
     }
 
-    param 2 {
+    param 4 {
         param_variable_expcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_EXPCAPACITY_NAME);
@@ -49,7 +83,7 @@ grf {
         }
     }
 
-    param 3 {
+    param 5 {
         param_variable_urbcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_URBCAPACITY_NAME);
@@ -59,7 +93,7 @@ grf {
             def_value: 60;
         }
     }
-    param 4 {
+    param 6 {
         param_variable_comcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_COMCAPACITY_NAME);
@@ -69,7 +103,7 @@ grf {
             def_value: 60;
         }
     }
-    param 5 {
+    param 7 {
         param_loading_settings {
             type: int;
             name: string(STR_PARAM_LOADING_SETTINGS_NAME);
@@ -78,20 +112,31 @@ grf {
             max_value: 2;
             def_value: 2;
             names: {
-                0: string(STR_PARAM_LOADING_SETTINGS_LOW);
-                1: string(STR_PARAM_LOADING_SETTINGS_MID);
-                2: string(STR_PARAM_LOADING_SETTINGS_HIGH);
+                0: string(STR_PARAM_LOW);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_HIGH);
             };
         }
     }
 }
 # 2 ".\\HokkaidoTrains.pnml" 2
 # 1 "src/utilities.pnml" 1
+train_width_32_px = 1;
+
 railtypetable {
  RAIL,
  ELRL,
  RAILTYPE_ELECTRIC: [NABE, NAAE, RAIL],
  RAILTYPE_DIESEL: [NAAN, RAIL],
+}
+
+
+basecost {
+    PR_BUILD_VEHICLE_TRAIN : param_basecostbuy -1;
+    // PR_BUILD_VEHICLE_WAGON: param_basecostbuy +3;
+    // PR_RUNNING_TRAIN_STEAM: param_basecostrun +1;
+    PR_RUNNING_TRAIN_DIESEL: param_basecostrun +1;
+    PR_RUNNING_TRAIN_ELECTRIC: param_basecostrun +1;
 }
 
 
@@ -1050,8 +1095,8 @@ item(FEAT_TRAINS, emu721_3cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 22;
+        running_cost_factor: 75;
         speed: 130 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -1095,8 +1140,8 @@ item(FEAT_TRAINS, emu721_6cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 44;
+        running_cost_factor: 150;
         speed: 130 km/h;
         refit_cost: 0;
         power: 230 * 4 * 2 kW;
@@ -1151,8 +1196,8 @@ item(FEAT_TRAINS, emu731_3cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 24;
+        running_cost_factor: 75;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -1216,8 +1261,8 @@ item(FEAT_TRAINS, emu733_3cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 22;
+        running_cost_factor: 75;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -1261,8 +1306,8 @@ item(FEAT_TRAINS, emu733_6cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 44;
+        running_cost_factor: 134;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 2 kW;
@@ -1317,8 +1362,8 @@ item(FEAT_TRAINS, emu735_3cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 25;
+        running_cost_factor: 75;
         speed: 120 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -1370,8 +1415,8 @@ item(FEAT_TRAINS, dmu201_3cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_commuter;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 37;
+        running_cost_factor: 90;
         speed: 120 km/h;
         refit_cost: 0;
         power: 450 * 2 * 3 * param_diesel_decay_factor hp;
@@ -1657,7 +1702,7 @@ item(FEAT_TRAINS, emu785_5cars) {
         reliability_decay: 20;
         loading_speed: param_loading_express;
         cost_factor: 45;
-        running_cost_factor: 100;
+        running_cost_factor: 138;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
@@ -1699,8 +1744,8 @@ item(FEAT_TRAINS, emu785_4cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 36;
+        running_cost_factor: 110;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 3 kW;
@@ -1742,8 +1787,8 @@ item(FEAT_TRAINS, emu785_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 18;
+        running_cost_factor: 55;
         speed: 130 km/h;
         refit_cost: 0;
         power: 190 * 4 * 1 kW;
@@ -2079,8 +2124,8 @@ item(FEAT_TRAINS, emu789_0_6cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 54;
+        running_cost_factor: 165;
         speed: 140 km/h;
         refit_cost: 0;
         power: 230 * 4 * 3 kW;
@@ -2120,8 +2165,8 @@ item(FEAT_TRAINS, emu789_0_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 18;
+        running_cost_factor: 55;
         speed: 140 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1 kW;
@@ -2162,8 +2207,8 @@ item(FEAT_TRAINS, emu789_0_3cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 27;
+        running_cost_factor: 82;
         speed: 140 km/h;
         refit_cost: 0;
         power: 230 * 4 * 1.5 kW;
@@ -2210,8 +2255,8 @@ item(FEAT_TRAINS, emu785_300_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 18;
+        running_cost_factor: 50;
         speed: 140 km/h;
         refit_cost: 0;
         power: 190 * 4 * 1 kW;
@@ -2313,7 +2358,7 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
         reliability_decay: 20;
         loading_speed: param_loading_express;
         cost_factor: 45;
-        running_cost_factor: 100;
+        running_cost_factor: 137;
         speed: 130 km/h;
         refit_cost: 0;
         power: 230 * 4 * 2 kW;
@@ -3102,8 +3147,8 @@ item(FEAT_TRAINS, dmu261_1000_7cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 70;
+        running_cost_factor: 210;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 7 / param_diesel_decay_factor hp;
@@ -3144,8 +3189,8 @@ item(FEAT_TRAINS, dmu261_1000_5cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 50;
+        running_cost_factor: 150;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 5 / param_diesel_decay_factor hp;
@@ -3187,8 +3232,8 @@ item(FEAT_TRAINS, dmu261_1000_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 20;
+        running_cost_factor: 60;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 2 / param_diesel_decay_factor hp;
@@ -3230,8 +3275,8 @@ item(FEAT_TRAINS, dmu261_1000_1car) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 10;
+        running_cost_factor: 30;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 1 / param_diesel_decay_factor hp;
@@ -3266,8 +3311,8 @@ spriteset(set_dc261_0_KiHa261_100_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl
 spriteset(set_dc261_0_KiHa261_100_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-spriteset(set_dc261_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-spriteset(set_dc261_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_dc261_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+spriteset(set_dc261_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 spriteset(set_dc261f_0_KiHa261_100_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
@@ -3275,8 +3320,8 @@ spriteset(set_dc261f_0_KiHa261_100_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmp
 spriteset(set_dc261f_0_KiHa261_100_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_rear, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_front, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-spriteset(set_dc261f_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-spriteset(set_dc261f_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_dc261f_0_KiHa260_200, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+spriteset(set_dc261f_0_KiHa260_100, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 alternative_sprites(set_dc261_0_KiHa261_100_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
@@ -3284,8 +3329,8 @@ alternative_sprites(set_dc261_0_KiHa261_100_unlighted, ZOOM_LEVEL_NORMAL, BIT_DE
 alternative_sprites(set_dc261_0_KiHa261_100_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-alternative_sprites(set_dc261_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-alternative_sprites(set_dc261_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_dc261_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+alternative_sprites(set_dc261_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 alternative_sprites(set_dc261f_0_KiHa261_100_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
@@ -3293,8 +3338,8 @@ alternative_sprites(set_dc261f_0_KiHa261_100_unlighted, ZOOM_LEVEL_NORMAL, BIT_D
 alternative_sprites(set_dc261f_0_KiHa261_100_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-alternative_sprites(set_dc261f_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-alternative_sprites(set_dc261f_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_dc261f_0_KiHa260_200, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+alternative_sprites(set_dc261f_0_KiHa260_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_4cars_can_attach_wagon, vehicle_type_id) {
@@ -3469,8 +3514,8 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 46;
+        running_cost_factor: 130;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 4 / param_diesel_decay_factor hp;
@@ -3481,6 +3526,7 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
+        curve_speed_mod: 0.1;
     }
 
     graphics {
@@ -3511,8 +3557,8 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 23;
+        running_cost_factor: 65;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 2 / param_diesel_decay_factor hp;
@@ -3524,6 +3570,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_0_4cars;
+        curve_speed_mod: 0.1;
     }
 
     graphics {
@@ -3546,33 +3593,33 @@ spriteset(set_dc283_init_kiha283_front, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicl
 spriteset(set_dc283_init_kiha283_rear, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 spriteset(set_dc283_init_kiha283_unlighted, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 spriteset(set_dc283_init_kiro282, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
-spriteset(set_dc283_init_kiha282_0, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-spriteset(set_dc283_init_kiha282_100, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-spriteset(set_dc283_init_kiha282_2000, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_dc283_init_kiha282_100, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+spriteset(set_dc283_init_kiha282_2000, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+spriteset(set_dc283_init_kiha282_0, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 
 spriteset(set_dc283f_init_kiha283_front, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
 spriteset(set_dc283f_init_kiha283_rear, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 spriteset(set_dc283f_init_kiha283_unlighted, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_dc283f_init_kiro282, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-spriteset(set_dc283f_init_kiha282_0, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-spriteset(set_dc283f_init_kiha282_100, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-spriteset(set_dc283f_init_kiha282_2000, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_dc283f_init_kiha282_100, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+spriteset(set_dc283f_init_kiha282_2000, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+spriteset(set_dc283f_init_kiha282_0, "gfx/8bpp/dc283-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 
 alternative_sprites(set_dc283_init_kiha283_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
 alternative_sprites(set_dc283_init_kiha283_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 alternative_sprites(set_dc283_init_kiha283_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 alternative_sprites(set_dc283_init_kiro282, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
-alternative_sprites(set_dc283_init_kiha282_0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-alternative_sprites(set_dc283_init_kiha282_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-alternative_sprites(set_dc283_init_kiha282_2000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_dc283_init_kiha282_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+alternative_sprites(set_dc283_init_kiha282_2000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+alternative_sprites(set_dc283_init_kiha282_0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 
 alternative_sprites(set_dc283f_init_kiha283_front, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
 alternative_sprites(set_dc283f_init_kiha283_rear, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 alternative_sprites(set_dc283f_init_kiha283_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 alternative_sprites(set_dc283f_init_kiro282, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-alternative_sprites(set_dc283f_init_kiha282_0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-alternative_sprites(set_dc283f_init_kiha282_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-alternative_sprites(set_dc283f_init_kiha282_2000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_dc283f_init_kiha282_100, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+alternative_sprites(set_dc283f_init_kiha282_2000, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+alternative_sprites(set_dc283f_init_kiha282_0, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc283-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 
 
 
@@ -4061,8 +4108,8 @@ item(FEAT_TRAINS, dmu281_7cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 77;
+        running_cost_factor: 231;
         speed: 130 km/h;
         refit_cost: 0;
         power: 355 * 2 * 7 / param_diesel_decay_factor hp;
@@ -4074,7 +4121,7 @@ item(FEAT_TRAINS, dmu281_7cars) {
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
-        // curve_speed_mod: 0.2;
+        curve_speed_mod: 0.2;
     }
 
     graphics {
@@ -4107,8 +4154,8 @@ item(FEAT_TRAINS, dmu281_1car) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 11;
+        running_cost_factor: 33;
         speed: 130 km/h;
         refit_cost: 0;
         power: 355 * 2 / param_diesel_decay_factor hp;
@@ -4154,8 +4201,8 @@ item(FEAT_TRAINS, dmu283_6cars) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 78;
+        running_cost_factor: 228;
         speed: 130 km/h;
         refit_cost: 0;
         power: 355 * 2 * 6 / param_diesel_decay_factor hp;
@@ -4167,7 +4214,7 @@ item(FEAT_TRAINS, dmu283_6cars) {
         air_drag_coefficient: 0.06;
         length: 8;
         // bitmask_vehicle_info: 0;
-        // curve_speed_mod: 0.3;
+        curve_speed_mod: 0.3;
     }
 
     graphics {
@@ -4200,8 +4247,8 @@ item(FEAT_TRAINS, dmu283_1car) {
         // cargo_allow_refit: [];
         // cargo_disallow_refit: [];
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 13;
+        running_cost_factor: 38;
         speed: 130 km/h;
         refit_cost: 0;
         power: 355 * 2 / param_diesel_decay_factor hp;
@@ -4405,8 +4452,8 @@ item(FEAT_TRAINS, dmuH100) {
         vehicle_life: 30;
         // reliability_decay: 20;
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 10;
+        running_cost_factor: 25;
         speed: 100 km/h;
         refit_cost: 0;
         power: 105 * 2 kW;
@@ -4560,8 +4607,8 @@ item(FEAT_TRAINS, emu737_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_suburban;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 17;
+        running_cost_factor: 45;
         speed: 120 km/h;
         refit_cost: 0;
         power: 190 * 4 kW;

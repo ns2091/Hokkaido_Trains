@@ -6,8 +6,42 @@ grf {
     min_compatible_version: 1;
 
     // 設定画面のパラメータを定義する
-	
+
     param 0 {
+        param_basecostbuy {
+            type: int;
+            name: string(STR_PARAM_BASECOSTBUY_NAME);
+            desc: string(STR_PARAM_BASECOSTBUY_DESC);
+            min_value: 0;
+            max_value: 2;
+            def_value: 1;
+            names: {
+                0: string(STR_PARAM_LOW);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_HIGH);
+            };
+        }
+    }
+
+    param 1 {
+        param_basecostrun {
+            type: int;
+            name: string(STR_PARAM_BASECOSTRUN_NAME);
+            desc: string(STR_PARAM_BASECOSTRUN_DESC);
+            min_value: 0;
+            max_value: 4;
+            def_value: 2;
+            names: {
+                0: string(STR_PARAM_VLOW);
+                1: string(STR_PARAM_LOW);
+                2: string(STR_PARAM_NORMAL);
+                3: string(STR_PARAM_HIGH);
+                4: string(STR_PARAM_VHIGH);
+            };
+        }
+    }
+	
+    param 2 {
         param_capacity_settings {
             type: int;
             name: string(STR_PARAM_CAPACITY_SETTINGS_NAME);
@@ -17,14 +51,14 @@ grf {
             def_value: 0;
             names: {
                 0: string(STR_PARAM_CAPACITY_SETTINGS_REAL);
-                1: string(STR_PARAM_CAPACITY_SETTINGS_LOW);
-                2: string(STR_PARAM_CAPACITY_SETTINGS_MID);
-                3: string(STR_PARAM_CAPACITY_SETTINGS_HIGH);
+                1: string(STR_PARAM_LOW);
+                2: string(STR_PARAM_NORMAL);
+                3: string(STR_PARAM_HIGH);
             };
         }
     }
     
-    param 1 {
+    param 3 {
         param_isenable_variable_capacity {
             type: bool;
             name: string(STR_PARAM_ISVARIABLE_CAPACITY_NAME);
@@ -33,7 +67,7 @@ grf {
         }
     }
 
-    param 2 {
+    param 4 {
         param_variable_expcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_EXPCAPACITY_NAME);
@@ -44,7 +78,7 @@ grf {
         }
     }
 
-    param 3 {
+    param 5 {
         param_variable_urbcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_URBCAPACITY_NAME);
@@ -54,7 +88,7 @@ grf {
             def_value: 60;
         }
     }    
-    param 4 {
+    param 6 {
         param_variable_comcapacity {
             type: int;
             name: string(STR_PARAM_VARIABLE_COMCAPACITY_NAME);
@@ -64,7 +98,7 @@ grf {
             def_value: 60;
         }
     }
-    param 5 {
+    param 7 {
         param_loading_settings {
             type: int;
             name: string(STR_PARAM_LOADING_SETTINGS_NAME);
@@ -73,9 +107,9 @@ grf {
             max_value: 2;
             def_value: 2;
             names: {
-                0: string(STR_PARAM_LOADING_SETTINGS_LOW);
-                1: string(STR_PARAM_LOADING_SETTINGS_MID);
-                2: string(STR_PARAM_LOADING_SETTINGS_HIGH);
+                0: string(STR_PARAM_LOW);
+                1: string(STR_PARAM_NORMAL);
+                2: string(STR_PARAM_HIGH);
             };
         }
     }

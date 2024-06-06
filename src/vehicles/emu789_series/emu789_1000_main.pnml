@@ -72,7 +72,7 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
         reliability_decay: 20;
         loading_speed: param_loading_express;
         cost_factor: 45;
-        running_cost_factor: 100;
+        running_cost_factor: 137;
         speed: 130 km/h;
         refit_cost: 0;
         power: 230 * 4 * 2 kW;

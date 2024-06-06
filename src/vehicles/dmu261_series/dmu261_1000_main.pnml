@@ -764,8 +764,8 @@ item(FEAT_TRAINS, dmu261_1000_7cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 70;
+        running_cost_factor: 210;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 7 / param_diesel_decay_factor hp;
@@ -806,8 +806,8 @@ item(FEAT_TRAINS, dmu261_1000_5cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 50;
+        running_cost_factor: 150;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 5 / param_diesel_decay_factor hp;
@@ -849,8 +849,8 @@ item(FEAT_TRAINS, dmu261_1000_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 20;
+        running_cost_factor: 60;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 2 / param_diesel_decay_factor hp;
@@ -892,8 +892,8 @@ item(FEAT_TRAINS, dmu261_1000_1car) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 10;
+        running_cost_factor: 30;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 1 / param_diesel_decay_factor hp;

@@ -6,8 +6,8 @@ spriteset(set_dc261_0_KiHa261_100_unlighted,   "gfx/8bpp/dc261_0-8bpp.png") { tm
 spriteset(set_dc261_0_KiHa261_100_front,     "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_rear,    "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_front,   "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-spriteset(set_dc261_0_KiHa260_100,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-spriteset(set_dc261_0_KiHa260_200,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+spriteset(set_dc261_0_KiHa260_200,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+spriteset(set_dc261_0_KiHa260_100,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 spriteset(set_dc261_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 spriteset(set_dc261f_0_KiHa261_100_rear,      "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
@@ -15,8 +15,8 @@ spriteset(set_dc261f_0_KiHa261_100_unlighted,   "gfx/8bpp/dc261_0-8bpp.png") { t
 spriteset(set_dc261f_0_KiHa261_100_front,     "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_rear,    "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_front,   "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-spriteset(set_dc261f_0_KiHa260_100,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-spriteset(set_dc261f_0_KiHa260_200,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+spriteset(set_dc261f_0_KiHa260_200,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+spriteset(set_dc261f_0_KiHa260_100,           "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 spriteset(set_dc261f_0_KiRoHa261_200_unlighted, "gfx/8bpp/dc261_0-8bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 alternative_sprites(set_dc261_0_KiHa261_100_rear,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
@@ -24,8 +24,8 @@ alternative_sprites(set_dc261_0_KiHa261_100_unlighted,   ZOOM_LEVEL_NORMAL, BIT_
 alternative_sprites(set_dc261_0_KiHa261_100_front,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_rear,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_front,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
-alternative_sprites(set_dc261_0_KiHa260_100,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
-alternative_sprites(set_dc261_0_KiHa260_200,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
+alternative_sprites(set_dc261_0_KiHa260_200,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 0) }
+alternative_sprites(set_dc261_0_KiHa260_100,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 0) }
 alternative_sprites(set_dc261_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 0) }
 
 alternative_sprites(set_dc261f_0_KiHa261_100_rear,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
@@ -33,8 +33,8 @@ alternative_sprites(set_dc261f_0_KiHa261_100_unlighted,   ZOOM_LEVEL_NORMAL, BIT
 alternative_sprites(set_dc261f_0_KiHa261_100_front,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_rear,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_front,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-alternative_sprites(set_dc261f_0_KiHa260_100,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-alternative_sprites(set_dc261f_0_KiHa260_200,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
+alternative_sprites(set_dc261f_0_KiHa260_200,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
+alternative_sprites(set_dc261f_0_KiHa260_100,           ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 7, 1) }
 alternative_sprites(set_dc261f_0_KiRoHa261_200_unlighted, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc261_0-32bpp.png") { tmpl_vehicle_8_views( 8, 1) }
 
 switch(FEAT_TRAINS, SELF, sw_dc261_0_4cars_can_attach_wagon, vehicle_type_id) {
@@ -209,8 +209,8 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 46;
+        running_cost_factor: 130;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 4 / param_diesel_decay_factor hp;
@@ -221,6 +221,7 @@ item(FEAT_TRAINS, dmu261_0_4cars) {
         tractive_effort_coefficient: 0.2;
         air_drag_coefficient: 0.06;
         length: 8;
+        curve_speed_mod: 0.1;
     }
 
     graphics {
@@ -251,8 +252,8 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         vehicle_life: 30;
         reliability_decay: 20;
         loading_speed: param_loading_express;
-        cost_factor: 45;
-        running_cost_factor: 100;
+        cost_factor: 23;
+        running_cost_factor: 65;
         speed: 130 km/h;
         refit_cost: 0;
         power: 460 * 2 * 2 / param_diesel_decay_factor hp;
@@ -264,6 +265,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
         air_drag_coefficient: 0.06;
         length: 8;
         variant_group: dmu261_0_4cars;
+        curve_speed_mod: 0.1;
     }
 
     graphics {
