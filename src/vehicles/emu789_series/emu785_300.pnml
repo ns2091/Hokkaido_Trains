@@ -38,7 +38,7 @@ item(FEAT_TRAINS, emu785_300_2cars) {
 		purchase          : set_785_300_purchase;
 
         // Below items are depends on consist
-        default           : sw_785_300_2cars_gfx_main;
+        default           : sw_785_300_2cars_formations;
         can_attach_wagon  :	sw_785_300_2cars_can_attach_wagon;
 		additional_text   : string(STR_785_300_2CARS_DESC);
         // cargo_subtype_text: sw_785_300_2cars_subtypes;

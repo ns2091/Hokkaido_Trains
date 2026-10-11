@@ -59,7 +59,7 @@ item(FEAT_TRAINS, emu721_3cars) {
 		purchase          : set_721_purchase;
 
         // Below items are depends on consist
-        default           : sw_721_3cars_gfx_main;
+        default           : sw_721_3cars_formations;
         can_attach_wagon  :	sw_721group_can_attach_wagon;
 		additional_text   : string(STR_721_3CARS_DESC);
         cargo_subtype_text: sw_721_3cars_subtypes;
@@ -105,7 +105,7 @@ item(FEAT_TRAINS, emu721_6cars) {
 		purchase          : set_721_purchase;
 
         // Below items are depends on consist
-        default           : sw_721_6cars_gfx_main;
+        default           : sw_721_6cars_formations;
         can_attach_wagon  :	sw_721_6cars_can_attach_wagon;
 		additional_text   : string(STR_721_6CARS_DESC);
         cargo_subtype_text: sw_721_6cars_subtypes;

@@ -8,10 +8,6 @@ spriteset(set_789_1000_mu,       "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views
 
 spriteset(set_789f_1000_rear_tc,  "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 spriteset(set_789f_1000_front_tc, "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-spriteset(set_789f_1000_mn,       "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-spriteset(set_789f_1000_tp,       "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-spriteset(set_789f_1000_mu,       "gfx/8bpp/789-8bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-
 alternative_sprites(set_789_1000_rear_tc,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
 alternative_sprites(set_789_1000_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
 alternative_sprites(set_789_1000_mn,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
@@ -20,20 +16,8 @@ alternative_sprites(set_789_1000_mu,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "
 
 alternative_sprites(set_789f_1000_rear_tc,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
 alternative_sprites(set_789f_1000_front_tc, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
-alternative_sprites(set_789f_1000_mn,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
-alternative_sprites(set_789f_1000_tp,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
-alternative_sprites(set_789f_1000_mu,       ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/789-32bpp.png") { tmpl_vehicle_8_views( 6, 1) }
-
 switch(FEAT_TRAINS, SELF, sw_789_1000_can_attach_wagon, vehicle_type_id) {
     default: return string(STR_789_1000_CANNOT_ATTACH_OTHER);
-}
-
-switch(FEAT_TRAINS, SELF, sw_789f_1000_formations, position_in_consist) {
-	4: set_789f_1000_rear_tc;
-	3: set_789f_1000_mn;
-	2: set_789f_1000_tp;
-	1: set_789f_1000_mu;
-	0: set_789_1000_front_tc;
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
@@ -43,11 +27,6 @@ switch(FEAT_TRAINS, SELF, sw_789_1000_formations, position_in_consist) {
 	2: set_789_1000_tp;
 	3: set_789_1000_mu;
 	4: set_789f_1000_rear_tc;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_789_1000_rvcheck, vehicle_is_reversed) {
-	1: sw_789f_1000_formations;
-	default: sw_789_1000_formations;
 }
 
 switch(FEAT_TRAINS, PARENT, sw_789_1000_artpart_5cars, extra_callback_info1) {
@@ -86,7 +65,7 @@ item(FEAT_TRAINS, emu789_1000_5cars) {
     }
 	
     graphics {
-        default           : sw_789_1000_rvcheck;
+        default           : sw_789_1000_formations;
 		purchase          : set_789_1000_purchase;
 		additional_text   : string(STR_789_1000_DESC);
         can_attach_wagon  :	sw_789_1000_can_attach_wagon;

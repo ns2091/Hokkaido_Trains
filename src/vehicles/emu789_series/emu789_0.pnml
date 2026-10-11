@@ -64,7 +64,7 @@ item(FEAT_TRAINS, emu789_0_6cars) {
 		purchase          : set_789_0_purchase;
 
         // Below items are depends on consist
-        default           : sw_789_0_6cars_gfx_main;
+        default           : sw_789_0_6cars_formations;
         can_attach_wagon  :	sw_789_0_6cars_can_attach_wagon;
 		additional_text   : string(STR_789_0_6CARS_DESC);
         // cargo_subtype_text: sw_789_0_6cars_subtypes;
@@ -106,7 +106,7 @@ item(FEAT_TRAINS, emu789_0_2cars) {
 		purchase          : set_789_0_purchase;
 
         // Below items are depends on consist
-        default           : sw_789_0_2cars_gfx_main;
+        default           : sw_789_0_2cars_formations;
         can_attach_wagon  :	sw_789_0_2cars_can_attach_wagon;
 		additional_text   : string(STR_789_0_2CARS_DESC);
         cargo_subtype_text: sw_789_0_2cars_subtypes;
@@ -148,7 +148,7 @@ item(FEAT_TRAINS, emu789_0_3cars) {
 		purchase          : set_789_0_purchase;
 
         // Below items are depends on consist
-        default           : sw_789_0_3cars_gfx_main;
+        default           : sw_789_0_3cars_formations;
         can_attach_wagon  :	sw_789_0_3cars_can_attach_wagon;
 		additional_text   : string(STR_789_0_3CARS_DESC);
         cargo_subtype_text: sw_789_0_3cars_subtypes;

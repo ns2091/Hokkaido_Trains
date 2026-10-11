@@ -44,7 +44,7 @@ item(FEAT_TRAINS, emu735_3cars) {
 		purchase          : set_735_purchase;
 
         // Below items are depends on consist
-        default           : sw_735_3cars_gfx_main;
+        default           : sw_735_3cars_formations;
         can_attach_wagon  :	sw_721group_can_attach_wagon;
 		additional_text   : string(STR_735_DESC);
         // cargo_subtype_text: sw_735_subtypes;
