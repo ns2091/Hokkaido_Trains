@@ -162,7 +162,11 @@ STR_LV_789_0_2CARS_HE100 :HE-100 formation (Hakodate side)
 STR_LV_789_0_3CARS_HE100 :HE-100 formation (Hakodate side)
 STR_LV_789_0_3CARS_HE200 :HE-200 formation (Aomori side)
 STR_LV_789_0_2CARS_HE300 :HE-300 formation (Aomori side)
-STR_LV_789_0_6CARS       :Hakodate Area Livery 
+STR_LV_789_0_3CARS_LILAC_HE100 :HE-100 formation (Asahikawa side) Sapporo Area Livery
+STR_LV_789_0_3CARS_LILAC_HE200 :HE-200 formation (Sapporo side) Sapporo Area Livery
+STR_LV_789_0_6CARS         :Hakodate Area Livery 
+STR_LV_789_0_6CARS_LILAC   :Sapporo Area Livery
+STR_LV_789_0_6CARS_HAKUCHO :Hakodate Area Livery
 
 STR_DC261_0_NAME :DC261-0 series
 STR_DC261_0_4CARS_NAME :DC261-0 series (4cars)

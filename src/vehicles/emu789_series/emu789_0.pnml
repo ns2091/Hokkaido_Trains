@@ -4,14 +4,16 @@ switch(FEAT_TRAINS, SELF, sw_789_0_2cars_subtypes, cargo_subtype) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_0_3cars_subtypes, cargo_subtype) {
-	0: string(STR_LV_789_0_3CARS_HE200);
-	1: string(STR_LV_789_0_3CARS_HE100);
+	0: string(STR_LV_789_0_3CARS_LILAC_HE200);
+	1: string(STR_LV_789_0_3CARS_LILAC_HE100);	
+	2: string(STR_LV_789_0_3CARS_HE200);
+	3: string(STR_LV_789_0_3CARS_HE100);
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_0_6cars_subtypes, cargo_subtype) {
-    0: string(STR_LV_789_0_6CARS);
-	// 0: string(STR_LV_789_0_6CARS_LILAC);
-	// 1: string(STR_LV_789_0_6CARS_HAKUCHO);
+    // 0: string(STR_LV_789_0_6CARS);
+	0: string(STR_LV_789_0_6CARS_LILAC);
+	1: string(STR_LV_789_0_6CARS_HAKUCHO);
 }
 
 
@@ -67,7 +69,7 @@ item(FEAT_TRAINS, emu789_0_6cars) {
         default           : sw_789_0_6cars_gfx_main;
         can_attach_wagon  :	sw_789_0_6cars_can_attach_wagon;
 		additional_text   : string(STR_789_0_6CARS_DESC);
-        // cargo_subtype_text: sw_789_0_6cars_subtypes;
+        cargo_subtype_text: sw_789_0_6cars_subtypes;
 		articulated_part  : sw_789_0_6cars_artpart;
     }
 }
