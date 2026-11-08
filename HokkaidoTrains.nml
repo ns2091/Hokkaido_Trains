@@ -7,7 +7,7 @@ grf {
     grfid: "JHT\01";
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC);
-    version: 3;
+    version: 4;
     min_compatible_version: 1;
 
 
@@ -118,6 +118,14 @@ grf {
             };
         }
     }
+ param 8 {
+  param_enable_expert_mode {
+   type: bool;
+            name: string(STR_PARAM_ENABLE_EXPERT_MODE_NAME);
+            desc: string(STR_PARAM_ENABLE_EXPERT_MODE_DESC);
+            def_value: 0;
+  }
+ }
 }
 # 2 ".\\HokkaidoTrains.pnml" 2
 # 1 ".\\src/utilities.pnml" 1
@@ -1801,7 +1809,7 @@ item(FEAT_TRAINS, emu789_0_2cars) {
     property {
         name: string(STR_789_0_2CARS_NAME);
         introduction_date: date(2002, 12, 1);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
@@ -1843,7 +1851,7 @@ item(FEAT_TRAINS, emu789_0_3cars) {
     property {
         name: string(STR_789_0_3CARS_NAME);
         introduction_date: date(2002, 12, 1);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
@@ -1891,7 +1899,7 @@ item(FEAT_TRAINS, emu785_300_2cars) {
     property {
         name: string(STR_785_300_2CARS_NAME);
         introduction_date: date(2010,12, 4);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
@@ -2547,7 +2555,7 @@ item(FEAT_TRAINS, dmu261_1000_2cars) {
     property {
         name: string(STR_DC261_1000_2CARS_NAME);
         introduction_date: date(2007, 10, 01);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
@@ -2590,7 +2598,7 @@ item(FEAT_TRAINS, dmu261_1000_1car) {
     property {
         name: string(STR_DC261_1000_1CAR_NAME);
         introduction_date: date(2007, 10, 01);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
@@ -2793,7 +2801,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
     property {
         name: string(STR_DC261_0_2CARS_NAME);
         introduction_date: date(2000, 3, 11);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
@@ -3226,7 +3234,7 @@ item(FEAT_TRAINS, dmu281_1car) {
     property {
         name: string(STR_DC281_1CAR_NAME);
         introduction_date: date(1994, 3, 1);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;
@@ -3319,7 +3327,7 @@ item(FEAT_TRAINS, dmu283_1car) {
     property {
         name: string(STR_DC283_1CAR_NAME);
         introduction_date: date(1997, 3, 22);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;

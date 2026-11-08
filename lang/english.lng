@@ -40,6 +40,9 @@ STR_PARAM_NORMAL :Medium
 STR_PARAM_HIGH   :High
 STR_PARAM_VHIGH  :Very high
 
+STR_PARAM_ENABLE_EXPERT_MODE_NAME :Expert Mode
+STR_PARAM_ENABLE_EXPERT_MODE_DESC :When expert mode is enabled, trains may be purchased in minimum units.
+
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :This type can only be attached to 721, 731, 733 and 735series.
 STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.

@@ -40,6 +40,8 @@ STR_PARAM_NORMAL :普通
 STR_PARAM_HIGH   :高い
 STR_PARAM_VHIGH  :非常に高い
 
+STR_PARAM_ENABLE_EXPERT_MODE_NAME :エキスパートモード
+STR_PARAM_ENABLE_EXPERT_MODE_DESC :エキスパートモードを有効にすると、車両を最小単位で購入することができるようになります。
 
 STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
 STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます

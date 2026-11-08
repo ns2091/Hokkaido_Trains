@@ -76,7 +76,7 @@ item(FEAT_TRAINS, emu789_0_2cars) {
     property {
         name: string(STR_789_0_2CARS_NAME);
         introduction_date: date(2002, 12, 1);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
@@ -118,7 +118,7 @@ item(FEAT_TRAINS, emu789_0_3cars) {
     property {
         name: string(STR_789_0_3CARS_NAME);
         introduction_date: date(2002, 12, 1);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;

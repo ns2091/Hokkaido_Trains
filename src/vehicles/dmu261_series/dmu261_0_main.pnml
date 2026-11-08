@@ -161,7 +161,7 @@ item(FEAT_TRAINS, dmu261_0_2cars) {
     property {
         name: string(STR_DC261_0_2CARS_NAME);
         introduction_date: date(2000, 3, 11);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_DIESEL;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_DIESEL;

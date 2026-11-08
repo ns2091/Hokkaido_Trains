@@ -2,7 +2,7 @@ grf {
     grfid: "JHT\01";
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC);
-    version: 3;
+    version: 4;
     min_compatible_version: 1;
 
     // 設定画面のパラメータを定義する
@@ -113,4 +113,12 @@ grf {
             };
         }
     }
+	param 8 {
+		param_enable_expert_mode {
+			type: bool;
+            name: string(STR_PARAM_ENABLE_EXPERT_MODE_NAME);
+            desc: string(STR_PARAM_ENABLE_EXPERT_MODE_DESC);
+            def_value: 0;
+		}
+	}
 }

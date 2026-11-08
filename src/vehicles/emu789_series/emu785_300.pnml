@@ -7,7 +7,7 @@ item(FEAT_TRAINS, emu785_300_2cars) {
     property {
         name: string(STR_785_300_2CARS_NAME);
         introduction_date: date(2010,12, 4);
-        climates_available: ALL_CLIMATES;
+        climates_available: param_enable_expert_mode ? ALL_CLIMATES : NO_CLIMATE;
         running_cost_base: RUNNING_COST_ELECTRIC;
         ai_special_flag: AI_FLAG_PASSENGER;
         engine_class: ENGINE_CLASS_ELECTRIC;
