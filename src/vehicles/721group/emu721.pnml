@@ -7,7 +7,7 @@ switch(FEAT_TRAINS, SELF, sw_721_3cars_subtypes, cargo_subtype) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_721_6cars_subtypes, cargo_subtype) {
-	0: string(STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL);
+	0: string(STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID);
 	1: string(STR_LV_721_6CAR_USEAT_RENEWAL_MID);
 	2: string(STR_LV_721_6CAR_USEAT_INITIAL_MID);
 }

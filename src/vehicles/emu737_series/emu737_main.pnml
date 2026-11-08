@@ -35,71 +35,27 @@ switch(FEAT_TRAINS, SELF, sw_737_2cars_can_attach_wagon, vehicle_type_id) {
     default: return string(STR_737_2CARS_CANNOT_ATTACH_OTHER);
 }
 
-switch(FEAT_TRAINS, SELF, sw_737_tc_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-    1: set_737_tc_front;
-    default: set_737_tc_unlighted;
+switch(FEAT_TRAINS, SELF, sw_737_tc, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+	0: set_737_tc_unlighted;
+	1: set_737_tc_front;
+	2: set_737_tc_rear;
 }
 
-switch(FEAT_TRAINS, SELF, sw_737_tc_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-	1: set_737_tc_rear;
-    default: set_737_tc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737_mc_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-    1: set_737_mc_front;
-    default: set_737_mc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737_mc_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-	1: set_737_mc_rear;
-    default: set_737_mc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737f_tc_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-    1: set_737f_tc_front;
-    default: set_737f_tc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737f_tc_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-	1: set_737f_tc_rear;
-    default: set_737f_tc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737f_mc_front, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
-    1: set_737f_mc_front;
-    default: set_737f_mc_unlighted;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737f_mc_rear, (position_in_consist == 0 || position_in_consist_from_end == 0)) {
+switch(FEAT_TRAINS, SELF, sw_737f_mc, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+	0: set_737f_mc_unlighted;
 	1: set_737f_mc_rear;
-    default: set_737f_mc_unlighted;
+	2: set_737f_mc_front;
 }
 
 switch(FEAT_TRAINS, SELF, sw_737_2cars_init, position_in_articulated_veh) {
     // <- Sapporo | Tomakomai ->
-    // Tc737-0 + Mc737-0
-    0: sw_737_tc_front;
-    1: sw_737f_mc_rear;
+    // Tc737-0 + Mc737-0   
+	0: sw_737_tc;
+    1: sw_737f_mc;
 }
 
-switch(FEAT_TRAINS, SELF, sw_737f_2cars_init, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x000000FF, 0x41]%2]) {
-    // <- Sapporo | Tomakomai ->
-    // Tc737-0 + Mc737-0
-    0: sw_737f_tc_rear;
-    1: sw_737_mc_front;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737_2cars_formations, cargo_subtype) {
+switch(FEAT_TRAINS, SELF, sw_737_2cars_gfx_main, cargo_subtype) {
     0: sw_737_2cars_init;
-}
-
-switch(FEAT_TRAINS, SELF, sw_737f_2cars_formations, [STORE_TEMP(position_in_consist_from_end-position_in_consist, 0x10F), var[0x61, 0, 0x0000FFFF, 0xF2]]) {
-    0: sw_737f_2cars_init;
-}
-
-switch(FEAT_TRAINS, PARENT, sw_737_2cars_gfx_main, vehicle_is_reversed) {
-	1: sw_737f_2cars_formations;
-	default: sw_737_2cars_formations;
 }
 
 // switch(FEAT_TRAINS, SELF, sw_737_2cars_subtypes, cargo_subtype) {

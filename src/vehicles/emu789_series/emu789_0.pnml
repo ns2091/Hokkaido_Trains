@@ -4,10 +4,8 @@ switch(FEAT_TRAINS, SELF, sw_789_0_2cars_subtypes, cargo_subtype) {
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_0_3cars_subtypes, cargo_subtype) {
-	0: string(STR_LV_789_0_3CARS_LILAC_HE200);
-	1: string(STR_LV_789_0_3CARS_LILAC_HE100);	
-	2: string(STR_LV_789_0_3CARS_HE200);
-	3: string(STR_LV_789_0_3CARS_HE100);
+	0: string(STR_LV_789_0_3CARS_HE100);
+	1: string(STR_LV_789_0_3CARS_HE200);
 }
 
 switch(FEAT_TRAINS, SELF, sw_789_0_6cars_subtypes, cargo_subtype) {
