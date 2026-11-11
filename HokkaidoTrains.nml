@@ -7,7 +7,7 @@ grf {
     grfid: "JHT\01";
     name: string(STR_GRF_NAME);
     desc: string(STR_GRF_DESC);
-    version: 4;
+    version: 5;
     min_compatible_version: 1;
 
 
@@ -210,6 +210,7 @@ item(FEAT_TRAINS, emu721_6cars , 3012) {}
 item(FEAT_TRAINS, emu731_3cars , 3021) {}
 item(FEAT_TRAINS, emu733_3cars , 3031) {}
 item(FEAT_TRAINS, emu733_6cars , 3032) {}
+item(FEAT_TRAINS, emu739_6cars , 3044) {}
 item(FEAT_TRAINS, emu735_3cars , 3041) {}
 item(FEAT_TRAINS, dmu201_3cars , 3051) {}
 item(FEAT_TRAINS, emu785_0_5cars , 3061) {}
@@ -491,6 +492,36 @@ alternative_sprites(set_dc201f_unlited_mc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "g
 alternative_sprites(set_dc201f_mn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 1) }
 
 
+
+spriteset(set_739_purchase, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_739_purchase, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+
+spriteset(set_739_front_tc_nh, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+spriteset(set_739_rear_tc_nh, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_739_3000_tn, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_739_mp, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+spriteset(set_739_3000_tu, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+
+spriteset(set_739f_front_tc_nh,"gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+spriteset(set_739f_rear_tc_nh, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_739f_3000_tn, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_739f_mp, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+spriteset(set_739f_3000_tu, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+
+alternative_sprites(set_739_front_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_739_rear_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_739_3000_tn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_739_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_739_3000_tu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+
+alternative_sprites(set_739f_front_tc_nh,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_739f_rear_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_739f_3000_tn, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_739f_mp, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_739f_3000_tu, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+
+
+
 switch(FEAT_TRAINS, SELF, sw_721_mc_otaru_hood, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
  0: set_721_unlited_mc_otaru_hood;
  1: set_721_front_mc_otaru_hood;
@@ -752,6 +783,34 @@ switch(FEAT_TRAINS, SELF, sw_dc201_3cars_gfx_main, cargo_subtype) {
  default: sw_dc201_3cars_initial;
 }
 
+
+switch(FEAT_TRAINS, SELF, sw_739_tc_nh, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+
+ 1: set_739_front_tc_nh;
+ 2: set_739_rear_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739f_tc_nh, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+
+ 1: set_739f_rear_tc_nh;
+ 2: set_739f_front_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_3000, position_in_articulated_veh) {
+
+
+ 0: sw_739_tc_nh;
+ 1: set_739_mp;
+ 2: set_739_3000_tu;
+ 3: set_739_3000_tn;
+ 4: set_739_mp;
+ 5: sw_739f_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_gfx_main, cargo_subtype) {
+ 0: sw_739_6cars_3000;
+}
+
 switch(FEAT_TRAINS, SELF, sw_721group_can_attach_wagon, vehicle_type_id) {
  emu721_3cars: CB_RESULT_ATTACH_ALLOW;
  emu731_3cars: CB_RESULT_ATTACH_ALLOW;
@@ -766,6 +825,10 @@ switch(FEAT_TRAINS, SELF, sw_721_6cars_can_attach_wagon, vehicle_type_id) {
 
 switch(FEAT_TRAINS, SELF, sw_733_6cars_can_attach_wagon, vehicle_type_id) {
     default: return string(STR_733_6CARS_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_can_attach_wagon, vehicle_type_id) {
+    default: return string(STR_739_6CARS_CANNOT_ATTACH_OTHER);
 }
 
 switch(FEAT_TRAINS, SELF, sw_731_3cars_can_attach_wagon, vehicle_type_id) {
@@ -898,7 +961,7 @@ item(FEAT_TRAINS, emu721_6cars) {
   articulated_part : sw_721_6cars_artpart;
     }
 }
-# 550 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 612 ".\\src/vehicles/721group/721group_main.pnml" 2
 # 1 ".\\src/vehicles/721group/./emu731.pnml" 1
 
 
@@ -953,7 +1016,7 @@ item(FEAT_TRAINS, emu731_3cars) {
   articulated_part : sw_731_3cars_artpart;
     }
 }
-# 551 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 613 ".\\src/vehicles/721group/721group_main.pnml" 2
 # 1 ".\\src/vehicles/721group/./emu733.pnml" 1
 switch(FEAT_TRAINS, SELF, sw_733_3cars_subtypes, cargo_subtype) {
  0: string(STR_LV_733_INITIAL);
@@ -1064,7 +1127,7 @@ item(FEAT_TRAINS, emu733_6cars) {
   articulated_part : sw_733_6cars_artpart;
     }
 }
-# 552 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 614 ".\\src/vehicles/721group/721group_main.pnml" 2
 # 1 ".\\src/vehicles/721group/./emu735.pnml" 1
 
 
@@ -1119,7 +1182,7 @@ item(FEAT_TRAINS, emu735_3cars) {
   articulated_part : sw_735_3cars_artpart;
     }
 }
-# 553 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 615 ".\\src/vehicles/721group/721group_main.pnml" 2
 # 1 ".\\src/vehicles/721group/./dmu201.pnml" 1
 
 
@@ -1171,7 +1234,60 @@ item(FEAT_TRAINS, dmu201_3cars) {
   articulated_part : sw_dc201_3cars_artpart;
     }
 }
-# 554 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 616 ".\\src/vehicles/721group/721group_main.pnml" 2
+# 1 ".\\src/vehicles/721group/./emu739.pnml" 1
+# 14 ".\\src/vehicles/721group/./emu739.pnml"
+switch(FEAT_TRAINS, SELF, sw_739_6cars_artpart, extra_callback_info1) {
+    0..5: return emu739_6cars;
+ default: return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+item(FEAT_TRAINS, emu739_6cars) {
+    property {
+        name: string(STR_739_6CARS_NAME);
+        introduction_date: date(2027, 3, 1);
+        climates_available: ALL_CLIMATES;
+        running_cost_base: RUNNING_COST_ELECTRIC;
+        ai_special_flag: AI_FLAG_PASSENGER;
+        engine_class: ENGINE_CLASS_ELECTRIC;
+        model_life: VEHICLE_NEVER_EXPIRES;
+        track_type: RAILTYPE_ELECTRIC;
+        sprite_id: SPRITE_ID_NEW_TRAIN;
+        non_refittable_cargo_classes: bitmask();
+        refittable_cargo_classes: bitmask(CC_PASSENGERS);
+        vehicle_life: 30;
+        reliability_decay: 20;
+
+
+        loading_speed: param_loading_commuter;
+        cost_factor: 44;
+        running_cost_factor: 134;
+        speed: 130 km/h;
+        refit_cost: 0;
+        power: 230 * 4 * 2 kW;
+        dual_headed: 0;
+        cargo_capacity: param_capacity_commuter;
+        weight: 220 ton;
+        ai_engine_rank: 0;
+        tractive_effort_coefficient: 0.2;
+        air_drag_coefficient: 0.06;
+        length: 8;
+
+
+    }
+
+    graphics {
+  purchase : set_739_purchase;
+
+
+        default : sw_739_6cars_gfx_main;
+        can_attach_wagon : sw_739_6cars_can_attach_wagon;
+  additional_text : string(STR_739_6CARS_DESC);
+
+  articulated_part : sw_739_6cars_artpart;
+    }
+}
+# 617 ".\\src/vehicles/721group/721group_main.pnml" 2
 # 2 ".\\src/vehicles.pnml" 2
 # 1 ".\\src/vehicles/emu785_series/emu785_0_main.pnml" 1
 spriteset( set_785_purchase, "gfx/8bpp/785-8bpp.png") { tmpl_vehicle_single(1, 64, 14, -25, -10) }
@@ -1433,7 +1549,7 @@ item(FEAT_TRAINS, emu785_4cars) {
         default : sw_785_4cars_gfx_main;
         can_attach_wagon : sw_785_24cars_can_attach_wagon;
   additional_text : string(STR_785_4CARS_DESC);
-        cargo_subtype_text: sw_785_4cars_subtypes;
+
   articulated_part : sw_785_4cars_articulated_part;
     }
 }
@@ -1476,7 +1592,7 @@ item(FEAT_TRAINS, emu785_2cars) {
         default : sw_785_2cars_gfx_main;
         can_attach_wagon : sw_785_24cars_can_attach_wagon;
   additional_text : string(STR_785_2CARS_DESC);
-        cargo_subtype_text: sw_785_2cars_subtypes;
+
   articulated_part : sw_785_2cars_articulated_part;
     }
 }

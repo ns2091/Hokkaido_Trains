@@ -5,6 +5,7 @@ item(FEAT_TRAINS, emu721_6cars     , 3012) {}
 item(FEAT_TRAINS, emu731_3cars     , 3021) {}
 item(FEAT_TRAINS, emu733_3cars     , 3031) {}
 item(FEAT_TRAINS, emu733_6cars     , 3032) {}
+item(FEAT_TRAINS, emu739_6cars     , 3044) {}
 item(FEAT_TRAINS, emu735_3cars     , 3041) {}
 item(FEAT_TRAINS, dmu201_3cars     , 3051) {}
 item(FEAT_TRAINS, emu785_0_5cars   , 3061) {}

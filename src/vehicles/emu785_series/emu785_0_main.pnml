@@ -257,7 +257,7 @@ item(FEAT_TRAINS, emu785_4cars) {
         default           : sw_785_4cars_gfx_main;
         can_attach_wagon  :	sw_785_24cars_can_attach_wagon;
 		additional_text   : string(STR_785_4CARS_DESC);
-        cargo_subtype_text: sw_785_4cars_subtypes;
+        // cargo_subtype_text: sw_785_4cars_subtypes;
 		articulated_part  : sw_785_4cars_articulated_part;
     }
 }
@@ -300,7 +300,7 @@ item(FEAT_TRAINS, emu785_2cars) {
         default           : sw_785_2cars_gfx_main;
         can_attach_wagon  :	sw_785_24cars_can_attach_wagon;
 		additional_text   : string(STR_785_2CARS_DESC);
-        cargo_subtype_text: sw_785_2cars_subtypes;
+        // cargo_subtype_text: sw_785_2cars_subtypes;
 		articulated_part  : sw_785_2cars_articulated_part;
     }
 }

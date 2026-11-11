@@ -43,9 +43,12 @@ STR_PARAM_VHIGH  :非常に高い
 STR_PARAM_ENABLE_EXPERT_MODE_NAME :エキスパートモード
 STR_PARAM_ENABLE_EXPERT_MODE_DESC :エキスパートモードを有効にすると、車両を最小単位で購入することができるようになります。
 
-STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます
-STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます
-STR_DC201_CANNOT_ATTACH_OTHER    :201系気動車, 731系電車とのみ連結することができます
+STR_721GROUP_CANNOT_ATTACH_OTHER :721系, 731系, 733系, 735系とのみ連結することができます。
+STR_721_6CARS_CANNOT_ATTACH_OTHER:この編成に他の車両を連結することはできません。
+STR_733_6CARS_CANNOT_ATTACH_OTHER:この編成に他の車両を連結することはできません。
+STR_739_6CARS_CANNOT_ATTACH_OTHER:この編成に他の車両を連結することはできません。
+STR_731_CANNOT_ATTACH_OTHER      :201系気動車, 721系, 731系, 733系, 735系とのみ連結することができます。
+STR_DC201_CANNOT_ATTACH_OTHER    :201系気動車, 731系電車とのみ連結することができます。
 
 STR_721_NAME:721系電車
 STR_721_3CARS_NAME:721系電車 3両編成
@@ -62,7 +65,6 @@ STR_LV_721_VVVF                        :VVVF制御仕様(3連)
 STR_LV_721_VVVF_6CAR_USEAT_RENEWAL_MID :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(6連)
 STR_LV_721_VVVF_3CAR_USEAT_RENEWAL_CTL :VVVF制御 全室{RED}u{BLUE}seat{BLACK}連結(3連)
 
-
 STR_731_NAME :731系電車 3両編成
 STR_731_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"{}201系気動車と連結できます。
 
@@ -72,7 +74,7 @@ STR_DC201_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "ニセ�
 STR_733_NAME :733系電車
 STR_733_3CARS_NAME :733系電車 3両編成
 STR_733_6CARS_NAME :733系電車 6両編成
-STR_733_DESC :[3/6両] Local / {RED}Rapid{BLACK} "AIRPORT" "{PURPLE}Hakodate Liner{BLACK}"
+STR_733_DESC :[3/6両] 普通 / {RED}快速{BLACK} "エアポート" "{PURPLE}はこだてライナー{BLACK}"
 STR_733_3CARS_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー" / {PURPLE}はこだてライナー{BLACK}
 STR_733_6CARS_DESC :[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート" "いしかりライナー"
 STR_LV_733_INITIAL :札幌地区仕様
@@ -81,6 +83,13 @@ STR_LV_733_3000    :快速エアポート仕様
 
 STR_735_NAME :735系電車 3両編成
 STR_735_DESC :[3両] (編成例: 3/3+3){}普通 / {RED}快速{BLACK} "いしかりライナー"
+
+STR_739_NAME :739系電車
+STR_739_3CARS_NAME :739系電車 3両編成
+STR_739_6CARS_NAME :739系電車 6両編成
+STR_739_DESC :[3/6両] 普通 / {RED}快速{BLACK} "エアポート"
+STR_739_3CARS_DESC :[3両] (編成例: 3/3+3){}普通
+STR_739_6CARS_DESC :[6両] (編成例: 6){}普通 / {RED}快速{BLACK} "エアポート"
 
 STR_DC281_7CARS_NAME      :281系気動車 7両編成
 STR_DC281_1CAR_NAME       :281系気動車 1両

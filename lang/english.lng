@@ -47,6 +47,7 @@ STR_PARAM_ENABLE_EXPERT_MODE_DESC :When expert mode is enabled, trains may be pu
 STR_721GROUP_CANNOT_ATTACH_OTHER :This type can only be attached to 721, 731, 733 and 735series.
 STR_721_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.
 STR_733_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.
+STR_739_6CARS_CANNOT_ATTACH_OTHER:This type cannot be attached to any type vehicles.
 STR_731_CANNOT_ATTACH_OTHER      :This type can only be attached to DC201, 721, 731, 733 and 735series.
 STR_DC201_CANNOT_ATTACH_OTHER    :This type can only be attached to DC201 and EC731series.
 
@@ -84,6 +85,13 @@ STR_LV_733_3000    :{RED}Rapid{BLACK} "AIRPORT" livery (733-3000)
 
 STR_735_NAME :EC735 series (3cars)
 STR_735_DESC :[3cars] (consist: 3/3+3){}Local / {RED}Rapid{BLACK} "Ishikari Liner"
+
+STR_739_NAME :EC739 series
+STR_739_3CARS_NAME :EC739 series(3cars)
+STR_739_6CARS_NAME :EC739 series(6cars)
+STR_739_DESC :[3/6cars] Local / {RED}Rapid{BLACK} "AIRPORT"
+STR_739_3CARS_DESC :[3cars] (consist: 3/3+3){}Local
+STR_739_6CARS_DESC :[6cars] (consist: 6){}Local / {RED}Rapid{BLACK} "AIRPORT"
 
 STR_DC281_7CARS_NAME      :DC281 series (7cars)
 STR_DC281_1CAR_NAME       :DC281 series (1car)

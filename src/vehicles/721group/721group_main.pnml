@@ -253,6 +253,36 @@ alternative_sprites(set_dc201f_rear_mc,   ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "g
 alternative_sprites(set_dc201f_unlited_mc,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 3, 1) }
 alternative_sprites(set_dc201f_mn,        ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/dc201-32bpp_gradient.png") { tmpl_vehicle_8_views( 4, 1) }
 
+
+
+spriteset(set_739_purchase,      "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+alternative_sprites(set_739_purchase,      ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_single(0, 64, 14, -25, -10) }
+
+spriteset(set_739_front_tc_nh, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+spriteset(set_739_rear_tc_nh,  "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+spriteset(set_739_3000_tn,     "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+spriteset(set_739_mp,          "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+spriteset(set_739_3000_tu,     "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+
+spriteset(set_739f_front_tc_nh,"gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+spriteset(set_739f_rear_tc_nh, "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+spriteset(set_739f_3000_tn,    "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+spriteset(set_739f_mp,         "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+spriteset(set_739f_3000_tu,    "gfx/8bpp/739-8bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+
+alternative_sprites(set_739_front_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 1, 0) }
+alternative_sprites(set_739_rear_tc_nh,  ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 2, 0) }
+alternative_sprites(set_739_3000_tn,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 3, 0) }
+alternative_sprites(set_739_mp,          ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 4, 0) }
+alternative_sprites(set_739_3000_tu,     ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 5, 0) }
+
+alternative_sprites(set_739f_front_tc_nh,ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 1, 1) }
+alternative_sprites(set_739f_rear_tc_nh, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 2, 1) }
+alternative_sprites(set_739f_3000_tn,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 3, 1) }
+alternative_sprites(set_739f_mp,         ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 4, 1) }
+alternative_sprites(set_739f_3000_tu,    ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP, "gfx/32bpp/739-32bpp.png") { tmpl_vehicle_8_views( 5, 1) }
+
+
 // 721series
 switch(FEAT_TRAINS, SELF, sw_721_mc_otaru_hood, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
 	0: set_721_unlited_mc_otaru_hood;
@@ -515,6 +545,34 @@ switch(FEAT_TRAINS, SELF, sw_dc201_3cars_gfx_main, cargo_subtype) {
 	default: sw_dc201_3cars_initial;
 }
 
+// 739series
+switch(FEAT_TRAINS, SELF, sw_739_tc_nh, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+	// 0: set_733_unlited_tc_nh;
+	1: set_739_front_tc_nh;
+	2: set_739_rear_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739f_tc_nh, (train_is_driving_backwards+1)*(position_in_consist == 0 || position_in_consist_from_end == 0)) {
+	// 0: set_733_unlited_tc;
+	1: set_739f_rear_tc_nh;
+	2: set_739f_front_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_3000, position_in_articulated_veh) {
+	// <-Otaru Tomakomai->
+	// Tc + Mp + Tu + Tn + Mp + Tc
+	0: sw_739_tc_nh;
+	1: set_739_mp;
+	2: set_739_3000_tu;
+	3: set_739_3000_tn;
+	4: set_739_mp;
+	5: sw_739f_tc_nh;
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_gfx_main, cargo_subtype) {
+	0: sw_739_6cars_3000;
+}
+
 switch(FEAT_TRAINS, SELF, sw_721group_can_attach_wagon, vehicle_type_id) {
 	emu721_3cars: CB_RESULT_ATTACH_ALLOW;
 	emu731_3cars: CB_RESULT_ATTACH_ALLOW;
@@ -529,6 +587,10 @@ switch(FEAT_TRAINS, SELF, sw_721_6cars_can_attach_wagon, vehicle_type_id) {
 
 switch(FEAT_TRAINS, SELF, sw_733_6cars_can_attach_wagon, vehicle_type_id) {
     default: return string(STR_733_6CARS_CANNOT_ATTACH_OTHER);
+}
+
+switch(FEAT_TRAINS, SELF, sw_739_6cars_can_attach_wagon, vehicle_type_id) {
+    default: return string(STR_739_6CARS_CANNOT_ATTACH_OTHER);
 }
 
 switch(FEAT_TRAINS, SELF, sw_731_3cars_can_attach_wagon, vehicle_type_id) {
@@ -551,3 +613,4 @@ switch(FEAT_TRAINS, SELF, sw_dc201_3cars_can_attach_wagon, vehicle_type_id) {
 #include "./emu733.pnml"
 #include "./emu735.pnml"
 #include "./dmu201.pnml"
+#include "./emu739.pnml"
